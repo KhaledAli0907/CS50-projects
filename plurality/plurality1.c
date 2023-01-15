@@ -32,12 +32,18 @@ int main(int argc ,string argv[])
         printf("Maximum Number of candidates is: %i",MAX);
         return 2;
     }
-    for( i = 0; i <candidate_count; i++)
+    for(int i = 0; i <candidate_count; i++)
     {
         candidates[i].name = argv[i+1];
-        candidates[i].votes= 0
+        candidates[i].votes= 0;
     }
+    int voters_count = get_int("Numbers of voters: \n");
 
+    //Loop checking voters
+    for(int i = 0; i < voters_count; i++)
+    {
+        string VotersName= get_string
+    }
 }
 
 bool vote(string name)
