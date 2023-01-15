@@ -29,4 +29,7 @@ bool vote(string name)
     return false
 }
 
-void
+void print_winner(void)
+{
+    
+}
