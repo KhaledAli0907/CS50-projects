@@ -87,12 +87,17 @@ void print_winner(void)
     for(int i =0; i <candidate_count ; i++)
     {
         //fequring the winner's votes
-        if(candidates[i].vote > TopVote)
+        if(candidates[i].votes > TopVote)
         {
-            TopVote = candidates[i].vote;
+            TopVote = candidates[i].votes;
         }
-        
-
+    }
+    for(int i =0; i <candidate_count ; i++)
+    {
+        if(candidates[i].votes == TopVote)
+        {
+            printf("The winner is : %s",candidates[i].name);
+        }
     }
     return;
 }
