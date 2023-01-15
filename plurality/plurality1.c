@@ -22,5 +22,11 @@ int main(int argc ,string argv[])
 
 bool vote(string name)
 {
-    ifcandidates[].name
+    if(vote[] != candidates[].name)
+    {
+        printf("invalid vote")
+    }
+    return false
 }
+
+void
