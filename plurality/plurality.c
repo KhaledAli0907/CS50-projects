@@ -84,6 +84,15 @@ void print_winner(void)
 {
     // TODO
     int TopVote = 0;
-    for(int i =0; i <voters)
+    for(int i =0; i <candidate_count ; i++)
+    {
+        //fequring the winner's votes
+        if(candidates[i].vote > TopVote)
+        {
+            TopVote = candidates[i].vote;
+        }
+        
+
+    }
     return;
 }
