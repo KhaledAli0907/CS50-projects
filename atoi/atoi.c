@@ -28,5 +28,11 @@ int convert(string input)
     // TODO
     long num;
     int i = 0 , sign = 1;
-    while(input)
+    //note spaces
+    while(input[i] = ' ' || input[i] = '\n' || input[i]=\t)
+    {
+        i++
+    }
+    //
+
 }
