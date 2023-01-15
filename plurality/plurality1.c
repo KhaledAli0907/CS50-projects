@@ -1,5 +1,8 @@
 #include<stdio.h>
 #include<cs50.h>
+
+//Max number of candidates
+#define MAX 9
 //Creating Candidate attributes.
 typedf struct
 {
@@ -10,6 +13,7 @@ Candidate;
 
 //creating the array
 Candidate candidates[Max];
+
 
 int main(int argc ,string argv[])
 {
@@ -31,5 +35,5 @@ bool vote(string name)
 
 void print_winner(void)
 {
-    
+
 }
