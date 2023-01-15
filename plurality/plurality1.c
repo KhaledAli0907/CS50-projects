@@ -5,7 +5,7 @@
 //Max number of candidates
 #define MAX 9
 //Creating Candidate attributes.
-typedf struct
+typedef struct
 {
     string name;
     int vote;
@@ -13,7 +13,7 @@ typedf struct
 candidate;
 
 //creating the array
-candidate candidates[Max];
+candidate candidates[MAX];
 int candidate_Count;
 
 bool vote(string name);
@@ -53,16 +53,42 @@ int main(int argc ,string argv[])
     print_winner();
 }
 
+// Update vote totals given a new vote
 bool vote(string name)
 {
-    if(vote[] != candidates[].name)
+    // TODO
+    for(int i =0; i<candidate_count; i++ )
     {
-        printf("invalid vote")
+        //comparing the input and candidates name
+        if(strcmp(candidates[i].name, name) == 0)
+        {
+            candidates[i].votes ++;
+            return true;
+        }
     }
-    return false
+    return false;
 }
 
+// Print the winner (or winners) of the election
 void print_winner(void)
 {
-
+    // TODO
+    int TopVote = 0;
+    for(int i =0; i <candidate_count ; i++)
+    {
+        //fequring the winner's votes
+        if(candidates[i].votes > TopVote)
+        {
+            TopVote = candidates[i].votes;
+        }
+    }
+    for(int i =0; i <candidate_count ; i++)
+    {
+        if(candidates[i].votes == TopVote)
+        {
+            printf("The winner is : %s \n",candidates[i].name);
+        }
+    }
+    return;
 }
+
