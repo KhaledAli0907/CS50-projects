@@ -32,7 +32,7 @@ int main(int argc ,string argv[])
         printf("Maximum Number of candidates is: %i",MAX);
         return 2;
     }
-    
+    for( i = 0; )
 
 }
 
