@@ -42,8 +42,14 @@ int main(int argc ,string argv[])
     //Loop checking voters
     for(int i = 0; i < voters_count; i++)
     {
-        string VotersName= get_string
+        string VotersName= get_string("Voters name: \n");
+        //checkig the vote name
+        if(!vote(name))
+        {
+            printf("Invalid Vote: \n");
+        }
     }
+    print_winner();
 }
 
 bool vote(string name)
