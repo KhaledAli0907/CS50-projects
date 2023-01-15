@@ -67,18 +67,22 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
-    if()
-
-
-    else
+    for(int i =0; i<candidate_count; i++ )
     {
-    return false;
+        //comparing the input and candidates name
+        if(strcmp(candidates[i].name, name) == 0)
+        {
+            candidates[i].votes ++;
+            return true
+        }
     }
+    return false;
 }
 
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
     // TODO
+    //
     return;
 }

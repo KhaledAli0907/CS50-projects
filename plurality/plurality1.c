@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<cs50.h>
+#include <string.h>
 
 //Max number of candidates
 #define MAX 9
