@@ -32,7 +32,11 @@ int main(int argc ,string argv[])
         printf("Maximum Number of candidates is: %i",MAX);
         return 2;
     }
-    for( i = 0; )
+    for( i = 0; i <candidate_count; i++)
+    {
+        candidates[i].name = argv[i+1];
+        candidates[i].votes= 0
+    }
 
 }
 
