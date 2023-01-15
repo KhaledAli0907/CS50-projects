@@ -26,5 +26,7 @@ int main(void)
 int convert(string input)
 {
     // TODO
+    long num;
+    int i = 0 , sign = 1;
     
 }
