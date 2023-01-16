@@ -160,7 +160,7 @@ bool print_winner(void)
 {
     for(int i = 0; i<candidate_count; i++)
     {
-        if(float candidates[i].votes/ float candidate_count >.5)
+        if( candidates[i].votes/ candidate_count >.5)
         {
             printf("%s is the winner",candidates[i].name);
             return true;
