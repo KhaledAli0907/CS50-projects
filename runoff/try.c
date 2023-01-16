@@ -7,6 +7,6 @@ int candidates_count=10;
 
 int main(void)
 {
-    double percent = candidates_votes / candidates_count;
+    float percent = (float) candidates_votes / candidates_count;
     printf("%f \n",percent);
 }
