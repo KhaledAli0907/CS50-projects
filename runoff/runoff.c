@@ -164,7 +164,7 @@ bool print_winner(void)
         float percentage = (float) candidates[i].votes / candidate_count;
         if( percentage >.5)
         {
-            printf("%s is the winner",candidates[i].name);
+            printf("%s is the winner \n",candidates[i].name);
             return true;
         }
     }
