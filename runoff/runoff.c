@@ -158,10 +158,11 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    float percentage = (float) candidates_
+    
     for(int i = 0; i<candidate_count; i++)
     {
-        if( candidates[i].votes/ candidate_count >.5)
+        float percentage = (float) candidates[i].votes / candidates_count;
+        if( percentage >.5)
         {
             printf("%s is the winner",candidates[i].name);
             return true;
