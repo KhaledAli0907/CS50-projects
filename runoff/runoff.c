@@ -148,7 +148,7 @@ void tabulate(void)
         {
             if(candidate[i].eliminated == false)
             {
-                candidates[preferances[i][j]].voters++
+                candidates[preferances[i][j]].votes++
             }
         }
     }
@@ -158,8 +158,14 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    if
-
+    for(int i = 0; i<candidate_count; i++)
+    {
+        if(candidates[i].votes/candidate_count >.5)
+        {
+            printf("%s is the winner",candidates[i].name)
+            return true
+        }
+    }
     return false;
 }
 
