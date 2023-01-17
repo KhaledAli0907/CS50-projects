@@ -100,7 +100,10 @@ int main(int argc, string argv[])
 bool vote(int rank, string name, int ranks[])
 {
     // TODO
-    for(int i = 0 )
+    for(int i = 0; i < voter_count;i++)
+    {
+        if(str)
+    }
     return false;
 }
 
