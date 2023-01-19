@@ -218,5 +218,6 @@ void lock_pairs(void)
 void print_winner(void)
 {
     // TODO
+    for
     return;
 }
