@@ -208,7 +208,7 @@ void lock_pairs(void)
     {
         if(!HasCycle(pairs[i].winner,pairs[i].loser))
         {
-            locked[pairs[i].winner,pairs[i].loser] = true;
+            locked[pairs[i].winner][pairs[i].loser] = true;
         }
     }
     return;
@@ -222,7 +222,7 @@ void print_winner(void)
     for(int col = 0; col< MAX;col++)
     {
         bool FoundSource = true;
-        for(int row; row < MAX; row++)
+        for(int row = 0; row < MAX; row++)
         {
             if(locked[row][col] == true)
             {
