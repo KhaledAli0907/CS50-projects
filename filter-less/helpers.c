@@ -9,9 +9,13 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             //calculate the avreage RGB values
-            float AverageRGB = (image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed) / 3;
+            float AverageRGB = ((image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed) / 3);
+            //Round the Average to the nearest integer
             int Average = round(AverageRGB);
-            
+            //Set the RGB value to the new Average to create the filter
+            image[i][j].rgbtRed = Average;
+            image[i][j].rgbtGreen = Average;
+            image[i][j].rgbtBlue = Average;
         }
     }
     return;
