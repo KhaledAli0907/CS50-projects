@@ -172,6 +172,21 @@ void sort_pairs(void)
     return;
 }
 
+//Cycle Function
+bool HasCycle (int winner, int loser)
+{
+    //back tracing the loob
+    while(winner != -1 && winner != loser)
+    {
+        bool found = false
+        //back tracing and replacing
+        for(int i = 0; i< candidate_count;i++)
+        {
+            if(locked)
+        }
+    }
+}
+
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
