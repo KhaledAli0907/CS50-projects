@@ -182,15 +182,32 @@ bool HasCycle (int winner, int loser)
         //back tracing and replacing
         for(int i = 0; i< candidate_count;i++)
         {
-            if(locked)
+            if(locked[i][winner])
+            {
+                found = true;
+                winner = i;
+            }
+        }
+        //if we returned to the same spot
+        if(!found)
+        {
+            winner = -1;
         }
     }
+    if(winner==loser)
+    {
+        return = true;
+    }
+    return false;
 }
 
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    // TODO
+    for(int i = 0; i< candidate_count;i++)
+    {
+        if
+    }
     return;
 }
 
