@@ -155,14 +155,14 @@ void sort_pairs(void)
     for(int i= 0; i < candidate_count; i++)
         {
             int MaxIndex = i;
-            int CurrentStrength = prefernces[pairs[i].winner][paires[i].loser]-prefernces[pairs[i].loser][pairs[i].winner];
+            int CurrentStrength = preferences[pairs[i].winner][pairs[i].loser]-preferences[pairs[i].loser][pairs[i].winner];
             for(int j= i+1; j < candidate_count; j++)
                 {
-                    int NewStrength =prefernces[pairs[j].winner][paires[j].loser]-prefernces[pairs[j].loser][pairs[j].winner];
+                    int NewStrength =preferences[pairs[j].winner][pairs[j].loser]-preferences[pairs[j].loser][pairs[j].winner];
                     if(NewStrength > CurrentStrength)
                     {
                          MaxIndex = j;
-                         CurrentStrength = prefernces[pairs[j].winner][paires[j].loser]-prefernces[pairs[j].loser][pairs[j].winner];
+                         CurrentStrength = preferences[pairs[j].winner][pairs[j].loser]-preferences[pairs[j].loser][pairs[j].winner];
                     }
                 }
             pair temp = pairs[MaxIndex];
