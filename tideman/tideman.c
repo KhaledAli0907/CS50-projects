@@ -119,7 +119,7 @@ void record_preferences(int ranks[])
     {
         for(int j= i+1 ; j< candidate_count; j++)
         {
-            preferences[rank[i]][rank[j]]++;
+            preferences[ranks[i]][ranks[j]]++;
         }
     }
     return;
@@ -134,13 +134,15 @@ void add_pairs(void)
          {
             if(preferences[i][j] > preferences[j][i])
             {
-                pair[pair_count].winner = i;
-                pair[pair_count].loser = j;
+                pairs[pair_count].winner = i;
+                pairs[pair_count].loser = j;
+                pair_count++;
             }
             else if(preferences[i][j] < preferences[j][i])
             {
-                pair[pair_count].winner = j;
-                pair[pair_count].loser = i;
+                pairs[pair_count].winner = j;
+                pairs[pair_count].loser = i;
+                pair_count++;
             }
          }
      }
@@ -153,14 +155,14 @@ void sort_pairs(void)
     for(int i= 0; i < candidate_count; i++)
         {
             int MaxIndex = i;
-            int CurrentStrength = Prefernces[pairs[i].winner][paires[i].loser]-prefernces[pairs[i].loser][pairs[i].winner];
+            int CurrentStrength = prefernces[pairs[i].winner][paires[i].loser]-prefernces[pairs[i].loser][pairs[i].winner];
             for(int j= i+1; j < candidate_count; j++)
                 {
-                    int NewStrength =Prefernces[pairs[j].winner][paires[j].loser]-prefernces[pairs[j].loser][pairs[j].winner];
+                    int NewStrength =prefernces[pairs[j].winner][paires[j].loser]-prefernces[pairs[j].loser][pairs[j].winner];
                     if(NewStrength > CurrentStrength)
                     {
                          MaxIndex = j;
-                         CurrentStrength = Prefernces[pairs[j].winner][paires[j].loser]-prefernces[pairs[j].loser][pairs[j].winner];
+                         CurrentStrength = prefernces[pairs[j].winner][paires[j].loser]-prefernces[pairs[j].loser][pairs[j].winner];
                     }
                 }
             pair temp = pairs[MaxIndex];
