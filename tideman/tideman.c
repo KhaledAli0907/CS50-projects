@@ -206,7 +206,10 @@ void lock_pairs(void)
 {
     for(int i = 0; i< candidate_count;i++)
     {
-        if
+        if(!HasCycle(pairs[i].winner,pairs[i].loser))
+        {
+            locked[pairss[i].winner,pairs[i].loser] = true;
+        }
     }
     return;
 }
