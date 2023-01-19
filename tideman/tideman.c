@@ -218,6 +218,22 @@ void lock_pairs(void)
 void print_winner(void)
 {
     // TODO
-    for(int col)
+    //finding the source to print it
+    for(int col = 0; col< MAX;col++)
+    {
+        bool FoundSource = true;
+        for(int row; row < MAX; row++)
+        {
+            if(locked[row][col] == true)
+            {
+                FoundSource = false;
+                break;
+            }
+        }
+        if(FoundSource)
+        {
+            printf("The Winner is : %s",C)
+        }
+    }
     return;
 }
