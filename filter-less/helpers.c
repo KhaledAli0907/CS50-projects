@@ -12,7 +12,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             float AverageRGB = ((image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed) / 3);
             //Round the Average to the nearest integer
             int Average = round(AverageRGB);
-            //Set the RGB value to the new Average to create the filter
+            //Set the RGB values to the new Average to create the filter
             image[i][j].rgbtRed = Average;
             image[i][j].rgbtGreen = Average;
             image[i][j].rgbtBlue = Average;
@@ -24,6 +24,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 // Convert image to sepia
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
+    
     return;
 }
 
