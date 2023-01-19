@@ -178,7 +178,7 @@ bool HasCycle (int winner, int loser)
     //back tracing the loob
     while(winner != -1 && winner != loser)
     {
-        bool found = false
+        bool found = false;
         //back tracing and replacing
         for(int i = 0; i< candidate_count;i++)
         {
@@ -196,7 +196,7 @@ bool HasCycle (int winner, int loser)
     }
     if(winner==loser)
     {
-        return = true;
+        return true;
     }
     return false;
 }
@@ -208,7 +208,7 @@ void lock_pairs(void)
     {
         if(!HasCycle(pairs[i].winner,pairs[i].loser))
         {
-            locked[pairss[i].winner,pairs[i].loser] = true;
+            locked[pairs[i].winner,pairs[i].loser] = true;
         }
     }
     return;
@@ -232,7 +232,8 @@ void print_winner(void)
         }
         if(FoundSource)
         {
-            printf("The Winner is : %s",C)
+            printf("The Winner is : %s \n",candidates[col]);
+            return;
         }
     }
     return;
