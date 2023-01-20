@@ -37,18 +37,21 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                 {
                     SepiaRed = MaxValue;
                 }
+                else{return;}
                 float SepiaGreenf = .349 * image[i][j].rgbtRed + .686 *  image[i][j].rgbtGreen + .168 * image[i][j].rgbtBlue;
                 int SepiaGreen = round(SepiaGreenf);
                 if(SepiaGreen > MaxValue)
                 {
                     SepiaGreen = MaxValue;
                 }
+                else{return;}
                 float SepiaBluef = .272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue;
                 int SepiaBlue = round(SepiaBluef);
                 if(SepiaBlue > MaxValue)
                 {
                     SepiaBlue = MaxValue;
                 }
+                else{return;}
         }
 
     return;
