@@ -50,10 +50,11 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     }
 }
 
+void 
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-    
+
 
     return;
 }
