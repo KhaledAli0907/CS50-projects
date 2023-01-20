@@ -2,7 +2,7 @@
 #include <math.h>
 
 //Declaring the Varuables
-int MaxValue = 255;
+
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
@@ -33,10 +33,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                 //feeding the sepia filter equations and rounding
                 float SepiaRedf = .393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 * image[i][j].rgbtBlue;
                 int SepiaRed = round(SepiaRedf);
-                if(SepiaRed > MaxValue) //making sure that the values between 0 and 255
+                if(SepiaRed > 255) //making sure that the values between 0 and 255
                 {
-                    SepiaRed = MaxValue;
-                    image[i][j].rgbtRed = SepiaRed;
+                    image[i][j].rgbtRed = 255;
                 }
                 else
                 {
@@ -44,10 +43,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                 }
                 float SepiaGreenf = .349 * image[i][j].rgbtRed + .686 *  image[i][j].rgbtGreen + .168 * image[i][j].rgbtBlue;
                 int SepiaGreen = round(SepiaGreenf);
-                if(SepiaGreen > MaxValue)
+                if(SepiaGreen > 255)
                 {
-                    SepiaGreen = MaxValue;
-                    image[i][j].rgbtGreen = SepiaGreen;
+                    image[i][j].rgbtGreen = 255 ;
                 }
                 else
                 {
@@ -55,10 +53,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                 }
                 float SepiaBluef = .272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue;
                 int SepiaBlue = round(SepiaBluef);
-                if(SepiaBlue > MaxValue)
+                if(SepiaBlue > 255)
                 {
-                    SepiaBlue = MaxValue;
-                    image[i][j].rgbtBlue = SepiaBlue;
+                    image[i][j].rgbtBlue = 255;
                 }
                 else
                 {
