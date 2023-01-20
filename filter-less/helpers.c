@@ -11,7 +11,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         for ( int j = 0; j < width; j++)
         {
             //calculate the avreage RGB values
-            float AverageRGB = ((image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue) / 3);
+            float AverageRGB = ((image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue) / 3.0);
             //Round the Average to the nearest integer
             int Average = round(AverageRGB);
             //Set the RGB values to the Average to create the filter
