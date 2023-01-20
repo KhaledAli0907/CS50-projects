@@ -42,7 +42,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
              //RedPixels
              image[i][j].rgbtRed = (SepiaRed > 255) ? 255 : SepiaRed;
              //GreenPixels
-             image[i][j].rgbtGreed = ()
+             image[i][j].rgbtGreen = (SepiaGreen > 255) ? 255 : SepiaGreen;
+             //BluePixels
+             image[]
 
         }
 
