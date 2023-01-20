@@ -3,11 +3,6 @@
 
 //Declaring the Varuables
 int MaxValue = 255;
-int i;
-int j;
-int originalRed = image[i][j].rgbtRed;
-int originalBlue = image[i][j].rgbtBlue;
-int originalGreen = image[i][j].rgbtGreen;
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
@@ -16,13 +11,13 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         for ( j = 0; j < width; j++)
         {
             //calculate the avreage RGB values
-            float AverageRGB = ((originalRed + originalGreen + originalBlue) / 3);
+            float AverageRGB = ((image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue) / 3);
             //Round the Average to the nearest integer
             int Average = round(AverageRGB);
             //Set the RGB values to the Average to create the filter
-            originalRed = Average;
-            originalGreen = Average;
-            originalBlue = Average;
+            image[i][j].rgbtRed = Average;
+            image[i][j].rgbtGreen = Average;
+            image[i][j].rgbtBlue = Average;
         }
     }
     return;
@@ -36,17 +31,17 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         for (j = 0; j < width; j++)
         {
                 //feeding the sepia filter equations
-                int SepiaRed = round(.393 * originalRed + .769 * originalGreen + .189 * originalBlue);
+                int SepiaRed = round(.393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 * image[i][j].rgbtBlue);
                 //if(SepiaRed > MaxValue) //making sure that the values between 0 and 255
                 //{
                    // SepiaRed = MaxValue;
                 //}
-                int SepiaGreen = round(.349 * originalRed + .686 * originalGreen + .168 * originalBlue);
+                int SepiaGreen = round(.349 * image[i][j].rgbtRed + .686 *  image[i][j].rgbtGreen + .168 * image[i][j].rgbtBlue);
                 //if(SepiaGreen > MaxValue)
                 //{
                     //SepiaGreen = MaxValue;
                 //}
-                int SepiaBlue = round(.272 * originalRed + .534 * originalGreen + .131 * originalBlue);
+                int SepiaBlue = round(.272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue);
                 //if(SepiaBlue > MaxValue)
                //{
                   //  SepiaBlue = MaxValue;
