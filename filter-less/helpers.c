@@ -33,14 +33,11 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            do
-            {
                 //feeding the sepia filter equation
                 int SepiaRed = round(.393 * originalRed + .769 * originalGreen + .189 * originalBlue);
                 int SepiaGreen = round(.349 * originalRed + .686 * originalGreen + .168 * originalBlue);
                 int SepiaBlue = round(.272 * originalRed + .534 * originalGreen + .131 * originalBlue);
-            }
-            while(SepiaRed = )
+
         }
     return;
     }
