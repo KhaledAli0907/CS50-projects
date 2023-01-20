@@ -52,7 +52,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 
 void swap(RGBTRIPLE image[height][width])
 {
-    int temp = *a
+    RGBTRIPLE temp = *a
     *a = *b
     *b = temp
 }
