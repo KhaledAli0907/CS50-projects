@@ -32,27 +32,22 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         {
                 //feeding the sepia filter equations
                 int SepiaRed = round(.393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 * image[i][j].rgbtBlue);
-                //if(SepiaRed > MaxValue) //making sure that the values between 0 and 255
-                //{
-                   // SepiaRed = MaxValue;
-                //}
-                int SepiaGreen = round(.349 * image[i][j].rgbtRed + .686 *  image[i][j].rgbtGreen + .168 * image[i][j].rgbtBlue);
-                //if(SepiaGreen > MaxValue)
-                //{
-                    //SepiaGreen = MaxValue;
-                //}
-                int SepiaBlue = round(.272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue);
-                //if(SepiaBlue > MaxValue)
-               //{
-                  //  SepiaBlue = MaxValue;
-                //}
-                if (SepiaRed > MaxValue || SepiaGreen > MaxValue || SepiaBlue > MaxValue)
+                if(SepiaRed > MaxValue) //making sure that the values between 0 and 255
                 {
                     SepiaRed = MaxValue;
+                }
+                int SepiaGreen = round(.349 * image[i][j].rgbtRed + .686 *  image[i][j].rgbtGreen + .168 * image[i][j].rgbtBlue);
+                if(SepiaGreen > MaxValue)
+                {
                     SepiaGreen = MaxValue;
+                }
+                int SepiaBlue = round(.272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue);
+                if(SepiaBlue > MaxValue)
+                {
                     SepiaBlue = MaxValue;
                 }
         }
+
     return;
     }
 }
