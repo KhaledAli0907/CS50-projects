@@ -55,6 +55,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     for (int i = 0; i < height; i++)
     {
+        //if the width even number
         if (width % 2 == 0 )
         {
             for (int j = 0; j < width; j++)
@@ -68,6 +69,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 
             }
         }
+        //if the width an odd number
         if (width % 2 != 0 )
         {
             for (int j = 0; j < (width-1); j++)
@@ -76,11 +78,10 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                 RGBTRIPLE temp[height][width];
                 //swaping the pixels
                 temp[i][j] = image[i][j];
-                image[i][j]= image
-
+                image[i][j]= image[i][width - (j+1)];
+                image[i][width - (j+1)] = temp[i][j];
             }
         }
-
     }
     return;
 }
