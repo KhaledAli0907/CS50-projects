@@ -36,7 +36,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
              //Green equation
              int SepiaGreen = round(.349 * image[i][j].rgbtRed + .686 *  image[i][j].rgbtGreen + .168 * image[i][j].rgbtBlue);
              //Blue equation
-             int SepiaBlue = round(.272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue;)
+             int SepiaBlue = round(.272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue);
 
             //Feeding pixels with the new data
              //RedPixels
@@ -44,8 +44,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
              //GreenPixels
              image[i][j].rgbtGreen = (SepiaGreen > 255) ? 255 : SepiaGreen;
              //BluePixels
-             image[]
-
+             image[i][j].rgbtBlue = (SepiaBlue > 255) ? 255 : SepiaBlue;
         }
 
     return;
