@@ -32,12 +32,17 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         {
             //sepia filter equations and rounding
              //Red equation
-            int SepiaRed = round(.393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 * image[i][j].rgbtBlue);
+             int SepiaRed = round(.393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 * image[i][j].rgbtBlue);
              //Green equation
-            int SepiaGreen = round(.349 * image[i][j].rgbtRed + .686 *  image[i][j].rgbtGreen + .168 * image[i][j].rgbtBlue);
+             int SepiaGreen = round(.349 * image[i][j].rgbtRed + .686 *  image[i][j].rgbtGreen + .168 * image[i][j].rgbtBlue);
              //Blue equation
-            int SepiaBlue = round(.272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue;)
+             int SepiaBlue = round(.272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue;)
 
+            //Feeding pixels with the new data
+             //RedPixels
+             image[i][j].rgbtRed = (SepiaRed > 255) ? 255 : SepiaRed;
+             //GreenPixels
+             image[i][j].rgbtGreed = ()
 
         }
 
