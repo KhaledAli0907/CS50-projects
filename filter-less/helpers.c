@@ -1,6 +1,7 @@
 #include "helpers.h"
 #include <math.h>
 
+//Declaring the Varuables
 int MaxInteger = 255;
 int originalRed = image[i][j].rgbtRed;
 int originalBlue = image[i][j].rgbtBlue;
