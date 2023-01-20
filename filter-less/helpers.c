@@ -33,15 +33,28 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-                //feeding the sepia filter equation
+                //feeding the sepia filter equations
                 int SepiaRed = round(.393 * originalRed + .769 * originalGreen + .189 * originalBlue);
-                if(SepiaRed > MaxValue)
+                //if(SepiaRed > MaxValue) //making sure that the values between 0 and 255
+                //{
+                   // SepiaRed = MaxValue;
+                //}
+                int SepiaGreen = round(.349 * originalRed + .686 * originalGreen + .168 * originalBlue);
+                //if(SepiaGreen > MaxValue)
+                //{
+                    //SepiaGreen = MaxValue;
+                //}
+                int SepiaBlue = round(.272 * originalRed + .534 * originalGreen + .131 * originalBlue);
+                //if(SepiaBlue > MaxValue)
+               //{
+                  //  SepiaBlue = MaxValue;
+                //}
+                if (SepiaRed > MaxValue || SepiaGreen > MaxValue || SepiaBlue > MaxValue)
                 {
                     SepiaRed = MaxValue;
+                    SepiaGreen = MaxValue;
+                    SepiaBlue = MaxValue;
                 }
-                int SepiaGreen = round(.349 * originalRed + .686 * originalGreen + .168 * originalBlue);
-                int SepiaBlue = round(.272 * originalRed + .534 * originalGreen + .131 * originalBlue);
-
         }
     return;
     }
