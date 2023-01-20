@@ -3,15 +3,17 @@
 
 //Declaring the Varuables
 int MaxValue = 255;
+int i;
+int j;
 int originalRed = image[i][j].rgbtRed;
 int originalBlue = image[i][j].rgbtBlue;
 int originalGreen = image[i][j].rgbtGreen;
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
-    for (int i = 0; i < height; i++)
+    for (i = 0; i < height; i++)
     {
-        for (int j = 0; j < width; j++)
+        for ( j = 0; j < width; j++)
         {
             //calculate the avreage RGB values
             float AverageRGB = ((originalRed + originalGreen + originalBlue) / 3);
@@ -29,9 +31,9 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 // Convert image to sepia
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
-    for (int i = 0; i < height; i++)
+    for (i = 0; i < height; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (j = 0; j < width; j++)
         {
                 //feeding the sepia filter equations
                 int SepiaRed = round(.393 * originalRed + .769 * originalGreen + .189 * originalBlue);
