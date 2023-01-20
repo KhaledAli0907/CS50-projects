@@ -30,20 +30,20 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-                //feeding the sepia filter equations and rounding
+                feeding the sepia filter equations and rounding
                 float SepiaRedf = .393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 * image[i][j].rgbtBlue;
                 int SepiaRed = round(SepiaRedf);
-                //if(SepiaRed > MaxValue) //making sure that the values between 0 and 255
-               // {
-                   // SepiaRed = MaxValue;
-                //}
-                //else{return;}
+                if(SepiaRed > MaxValue) //making sure that the values between 0 and 255
+                {
+                    SepiaRed = MaxValue;
+                }
+                else{return;}
                 float SepiaGreenf = .349 * image[i][j].rgbtRed + .686 *  image[i][j].rgbtGreen + .168 * image[i][j].rgbtBlue;
                 int SepiaGreen = round(SepiaGreenf);
-                //if(SepiaGreen > MaxValue)
-                //{
-                   // SepiaGreen = MaxValue;
-                //}
+                if(SepiaGreen > MaxValue)
+                {
+                    SepiaGreen = MaxValue;
+                }
                 //else{return;}
                 float SepiaBluef = .272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue;
                 int SepiaBlue = round(SepiaBluef);
