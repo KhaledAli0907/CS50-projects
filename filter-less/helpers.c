@@ -2,7 +2,7 @@
 #include <math.h>
 
 //Declaring the Varuables
-int MaxInteger = 255;
+int MaxValue = 255;
 int originalRed = image[i][j].rgbtRed;
 int originalBlue = image[i][j].rgbtBlue;
 int originalGreen = image[i][j].rgbtGreen;
@@ -35,6 +35,10 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         {
                 //feeding the sepia filter equation
                 int SepiaRed = round(.393 * originalRed + .769 * originalGreen + .189 * originalBlue);
+                if(SepiaRed > MaxValue)
+                {
+                    SepiaRed = MaxValue;
+                }
                 int SepiaGreen = round(.349 * originalRed + .686 * originalGreen + .168 * originalBlue);
                 int SepiaBlue = round(.272 * originalRed + .534 * originalGreen + .131 * originalBlue);
 
