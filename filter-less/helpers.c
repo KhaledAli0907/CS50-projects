@@ -6,9 +6,9 @@ int MaxValue = 255;
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
-    for (i = 0; i < height; i++)
+    for (int i = 0; i < height; i++)
     {
-        for ( j = 0; j < width; j++)
+        for ( int j = 0; j < width; j++)
         {
             //calculate the avreage RGB values
             float AverageRGB = ((image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue) / 3);
@@ -26,9 +26,9 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 // Convert image to sepia
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
-    for (i = 0; i < height; i++)
+    for (int i = 0; i < height; i++)
     {
-        for (j = 0; j < width; j++)
+        for (int j = 0; j < width; j++)
         {
                 //feeding the sepia filter equations
                 int SepiaRed = round(.393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 * image[i][j].rgbtBlue);
