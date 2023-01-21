@@ -34,8 +34,12 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             float SepiaRed, SepiaGreen, SepiaBlue;
             int OriginalRed, OriginalGreen, OriginalBlue;
             //Give Values to the Originals
-            OriginalRed
-            //sepia filter equations and rounding
+            OriginalRed = image[i][j].rgbtRed;
+            OriginalGreen = image[i][j].rgbtGreen;
+            OriginalBlue = image[i][j].rgbtBlue;
+            //sepia filter equations
+             //Red equation
+             
 
 
 
