@@ -88,8 +88,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            //make Variable to count the current Position
-            int CurrentPos = 0;
+            //make Variable to know Box Pixels count
+            int Count = 0;
             //make an array for colums and row to declare the square we are changin
             int RowCords[] = {i-1, i, i+1};
             int ColCords[] = {j-1, j, j+1};
@@ -106,11 +106,21 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     //check if the pixels in the valid range
                     if(CurRow >= 0 && CurRow < width && CurCol >= 0 && CurCol < height)
                         {
-                            
+                            //Make A box image from these colums and rows
+                            RGBTRIPLE Box[CurCol][CurRow];
+                            //Calculate the total values
+                            TotalRed += Box.rgbtRed;
+                            TotalGreen += Box.rgbtGreen;
+                            TotalBlue += Box.rgbtBlue;
+                            Count++;
                         }
 
                 }
             }
+            //Pass the Values to the Temp image
+            temp[i][j].rgbtRed = round(TotalRed / Count);
+            temp[i][j].rgbtGreen = round(TotalGreen / Count);
+            temp[i][j].rgbtBlue = round(TotalBlue / Count);
         }
     }
      //copy the temp to the image
