@@ -22,10 +22,8 @@ int main(int argc, char *argv[])
 
     size_t BytesRead;
     //repeat untill end of the card
-    while(true)
+    while(fread(buffer, sizeof(BYTE), BlockSize, MemoryCard))
         {
-            //read 512 bytes intobuffer
-            fread(buffer, sizeof(BYTE), BlockSize, MemoryCard)
             if(BytesRead == 0)
             {
                 break;
