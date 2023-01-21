@@ -138,10 +138,14 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     {
                         //Create the box Array
                         RGBTRIPLE Box = image[CurRow][CurCol];
-                        TotalRed += Box.rgbtRed;
-                        TotalGreen += Box.rgbtGreen;
-                        TotalBlue += Box.rgbtBlue;
-                        Count++;
+                        //calculate Gx and Gy Values
+                        GxRed += Gx[r][c] * Box.rgbtRed;
+                        GxGreen += Gx[r][c] * Box.rgbtGreen;
+                        GxBlue += Gx[r][c] * Box.rgbtBlue;
+
+                        GyRed += Gy[r][c] * Box.rgbtRed;
+                        GyGreen += Gy[r][c] * Box.rgbtGreen;
+                        GyBlue += Gy[r][c] * Box.rgbtBlue;
                     }
                 }
             }
