@@ -107,6 +107,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     //create a temp array
     RGBTRIPLE temp[height][width];
+    //create Gx and Gy arrays
     int Gx[3][3] = {{-1, 0, 1},
                     {-2, 0, 2},
                     {-1, 0, 1}};
@@ -118,17 +119,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int col = 0; col < width; col++)
         {
-            //declare a variable to know the pixles count in the box
-            int Count = 0;
             //take the coordinates of Rows and Colums
             int RowCords[] = {row - 1, row, row + 1};
             int ColCords[] = {col - 1, col, col + 1};
             //Declare the Total RGB values variables
-            float TotalRed = 0, TotalGreen = 0, TotalBlue = 0;
-            //create Gx and Gy arrays
-
-            //int GxBlack[] = {0}, {0}, {0};
-            //int GyBlack[] = {0, 0, 0};
             float GxRed = 0, GxGreen = 0, GxBlue = 0;
             float GyRed = 0, GyGreen = 0, GyBlue = 0;
             //create a new nested loop to go through the box's pixel
