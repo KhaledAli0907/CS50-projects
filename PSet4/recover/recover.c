@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
         {
             //read 512 bytes intobuffer
             fread(Buffer, sizeof(BYTE), BlockSize, MemoryCard)
-            if()
+            for(int i = 0; i)
         }
 }
 
