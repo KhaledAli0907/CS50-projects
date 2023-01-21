@@ -17,8 +17,10 @@ int main(int argc, char *argv[])
         printf("Error while opining the card \n")
         return 1;
     }
+    typedef uint8_t BYTE;
+    BYTE Buffer[BlockSize];
     //repeat untill end of the card
-    while(fread())
+    while(fread(Buffer, sizeof(BYTE), BlockSize, MemoryCard))
         //read 512 bytes intobuffer
         //if start of new JPEG
             //if first JPEG
