@@ -162,8 +162,17 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int NewGreen = GxGreen ^ 2 + GyGreen ^ 2;
             int NewBlue = GxBlue ^ 2 + GyBlue ^ 2;
             //passing in the values into temp array
-            temp[row][col].rgbtRed = NewRed;
-            temp[row][col]
+            temp[row][col].rgbtRed = (NewRed > 255) ? 255 : NewRed;
+            temp[row][col].rgbtGreen = (NewGreen > 255) ? 255 : NewGreen;
+            temp[row][col].rgbtBlue = (NewBlue > 255) ? 255 : NewBlue;
+        }
+    }
+    //copy the temp array into image
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j]=temp[i][j];
         }
     }
     return;
