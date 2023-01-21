@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-#define 
+#define BlockSize 512
 
 int main(int argc, char *argv[])
 {
@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     //repeat untill end of the card
-
+    while(fread())
         //read 512 bytes intobuffer
         //if start of new JPEG
             //if first JPEG
