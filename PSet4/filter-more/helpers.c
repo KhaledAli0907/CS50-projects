@@ -122,7 +122,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             //take the coordinates of Rows and Colums
             int RowCords[] = {row - 1, row, row + 1};
             int ColCords[] = {col - 1, col, col + 1};
-            //Declare the Total RGB values variables
+            //Declare the Gx and Gy variables
             float GxRed = 0, GxGreen = 0, GxBlue = 0;
             float GyRed = 0, GyGreen = 0, GyBlue = 0;
             //create a new nested loop to go through the box's pixel
