@@ -149,17 +149,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     }
                 }
             }
-            //calculate the Gx and Gy for every Channel
-            int GxRed = round(TotalRed * Gx[row][col]);
-            int GxGreen = round(TotalGreen * Gx[row][col]);
-            int GxBlue = round(TotalBlue * Gx[row][col]);
-            int GyRed = round(TotalRed * Gy[row][col]);
-            int GyGreen = round(TotalGreen * Gy[row][col]);
-            int GyBlue = round(TotalBlue * Gy[row][col]);
-            //Get the new channels Value
-            int NewRed = GxRed ^ 2 + GyRed ^ 2;
-            int NewGreen = GxGreen ^ 2 + GyGreen ^ 2;
-            int NewBlue = GxBlue ^ 2 + GyBlue ^ 2;
+            //Get the new channels Values
+            int NewRed = round(GxRed ^ 2 + GyRed ^ 2);
+            int NewGreen = round(GxGreen ^ 2 + GyGreen ^ 2);
+            int NewBlue = round(GxBlue ^ 2 + GyBlue ^ 2);
             //passing in the values into temp array
             temp[row][col].rgbtRed = (NewRed > 255) ? 255 : NewRed;
             temp[row][col].rgbtGreen = (NewGreen > 255) ? 255 : NewGreen;
