@@ -59,7 +59,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             //declare a variable to know the pixles count in the box
             int Count = 0;
-            //take the co
+            //take the coordinates of Rows and Colums
             int RowCords[] = {row - 1, row, row + 1};
             int ColCords[] = {col - 1, col, col + 1};
             //create a new nested loop to go through the box's pixel
@@ -73,7 +73,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     //make sure the pixels are in the validn range
                     if (CurRow >= 0 && CurRow < height && CurCol >= 0 && CurCol < width)
                     {
-                        //create a box Array of
+                        //create a box Array of these Rows And Col.
+                        RGBTRIPLE Box[CurRow][CurCol];
+                        //
                     }
                 }
             }
