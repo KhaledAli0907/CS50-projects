@@ -94,7 +94,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int RowCords[] = {i-1, i, i+1};
             int ColCords[] = {j-1, j, j+1};
             //Declare total RGB Values varables
-            int TotalRed = 0, TotalGreen = 0, TotalBlue = 0;
+            float TotalRed = 0, TotalGreen = 0, TotalBlue = 0;
             //make nested loop to calculate and check all the box Pixels
             for(int R = 0; R < 3; R++)
             {
