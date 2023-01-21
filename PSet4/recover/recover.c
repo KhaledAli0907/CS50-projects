@@ -20,13 +20,17 @@ int main(int argc, char *argv[])
     typedef uint8_t BYTE;
     BYTE Buffer[BlockSize];
 
-    size_t
+    size_t BytesRead;
     //repeat untill end of the card
     while(true)
         {
             //read 512 bytes intobuffer
             fread(Buffer, sizeof(BYTE), BlockSize, MemoryCard)
-            for(int i = 0; i)
+            if(BytesRead == 0)
+            {
+                break;
+            }
+            if
         }
 }
 
