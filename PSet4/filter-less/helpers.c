@@ -30,36 +30,21 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            //Declair variables
-            int OriginalRed, OriginalGreen, OriginalBlue;
-            float SepiaRed, SepiaGreen, SepiaBlue;
+            //sepia filter equations and rounding
+             //Red equation
+             int SepiaRed = round(.393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 * image[i][j].rgbtBlue);
+             //Green equation
+             int SepiaGreen = round(.349 * image[i][j].rgbtRed + .686 *  image[i][j].rgbtGreen + .168 * image[i][j].rgbtBlue);
+             //Blue equation
+             int SepiaBlue = round(.272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue);
 
-            //Give Values to the Originals
-            OriginalRed = image[i][j].rgbtRed;
-            OriginalGreen = image[i][j].rgbtGreen;
-            OriginalBlue = image[i][j].rgbtBlue;
-
-            //sepia filter equations
-             SepiaRed = .393 * OriginalRed + .769 * OriginalGreen + .189 * OriginalBlue;
-             SepiaGreen = .349 * OriginalRed + .686 * OriginalGreen + .168 * OriginalBlue;
-             SepiaBlue = .272 * OriginalRed + .534 * OriginalGreen + .131 * OriginalBlue;
-
-            //round the nums to the nearest int
-            SepiaRed = round(SepiaRed);
-            SepiaGreen = round(SepiaGreen);
-            SepiaBlue = round(SepiaBlue);
-
-            //Feeding pixels with the new data
-             //check if any value exceded the 255
-             SepiaRed = (SepiaRed > 255) ? 255 : SepiaRed;
-             SepiaGreen = (SepiaGreen > 255) ? 255 : SepiaGreen;
-             SepiaBlue = (SepiaBlue > 255) ? 255 : SepiaBlue;
+            //Feeding pixels with the new data and checking the exceded values
              //RedPixels
-             image[i][j].rgbtRed = SepiaRed;
+             image[i][j].rgbtRed = (SepiaRed > 255) ? 255 : SepiaRed;
              //GreenPixels
-             image[i][j].rgbtGreen = SepiaGreen;
+             image[i][j].rgbtGreen = (SepiaGreen > 255) ? 255 : SepiaGreen;
              //BluePixels
-             image[i][j].rgbtBlue = SepiaBlue;
+             image[i][j].rgbtBlue = (SepiaBlue > 255) ? 255 : SepiaBlue;
         }
     return;
     }
