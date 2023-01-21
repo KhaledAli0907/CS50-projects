@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     }
     // Open input file for reading
     // TODO #2
-    FILE  *
+    FILE *Input = fopen
 
     // Read header into an array
     // TODO #3
