@@ -125,7 +125,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             //Declare the Gx and Gy variables
             float GxRed = 0, GxGreen = 0, GxBlue = 0;
             float GyRed = 0, GyGreen = 0, GyBlue = 0;
-            //create a new nested loop to go through the box's pixel
+            //create a new nested loop to go through the box's pixels
             for (int r = 0; r < 3; r++)
             {
                 for (int c = 0; c < 3; c++)
