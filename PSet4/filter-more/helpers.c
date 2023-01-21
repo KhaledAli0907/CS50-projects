@@ -127,7 +127,17 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                        {0, 0, 0},
                        {1, 2, 1};
             //create a new nested loop to go through the box's pixel
+            for (int r = 0; r < 3; r++)
+            {
+                for (int c = 0; c < 3; c++)
+                {
+                    //Declare Current Row and Colom
+                    int CurRow = RowCords[r];
+                    int CurCol = ColCords[c];
+                    //make sure all pixels in the valid range
 
+                }
+            }
         }
     }
     return;
