@@ -23,7 +23,18 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-    
+    //create a temp RGPTRIBLE array
+    RGBTRIPLE temp[height][width];
+    //create nested loop to go through pixels
+    for (int i = 0; i < height; i++)
+    {
+        //make a varible to keep track on the position
+        int CurPosition = 0;
+        for (int j = width - 1; j >=0; j--, CurPosition++)
+        {
+            temp[i][]
+        }
+    }
 
 
 
