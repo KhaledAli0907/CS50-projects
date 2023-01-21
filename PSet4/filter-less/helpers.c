@@ -41,14 +41,14 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 
             //Feeding pixels with the new data and checking the exceded values
              //RedPixels
-             image[i][j].rgbtRed = (SepiaRed > 255) ? 255 : SepiaRed;
+             image[i][j].rgbtRed = SepiaRed > 255 ? 255 : SepiaRed;
              //GreenPixels
-             image[i][j].rgbtGreen = (SepiaGreen > 255) ? 255 : SepiaGreen;
+             image[i][j].rgbtGreen = SepiaGreen > 255 ? 255 : SepiaGreen;
              //BluePixels
-             image[i][j].rgbtBlue = (SepiaBlue > 255) ? 255 : SepiaBlue;
+             image[i][j].rgbtBlue = SepiaBlue > 255 ? 255 : SepiaBlue;
         }
-    return;
     }
+    return;
 }
 
 // Reflect image horizontally
