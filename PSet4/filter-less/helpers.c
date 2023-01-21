@@ -59,14 +59,14 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     //reflect the pixles
     for(int i = 0; i < height; i++)
         {
-            for(int j = width-1; j >= 0 ; j--)
-             {
+            //declare a variable to track the position
+            int Position = 0;
+            for(int j = width-1; j >= 0 ; j--, Position++)
+            {
+                temp[i][Position] = image[i][j];
 
-
-             }
+            }
         }
-
-
     //copy the temp to the image
     for (int i = 0; i < height; i++)
     {
@@ -75,7 +75,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             image[i][j] = temp[i][j];
         }
     }
-
+    return;
 }
 
 // Blur image
