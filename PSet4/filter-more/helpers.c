@@ -150,12 +150,20 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     }
                 }
             }
-            //calculate the SumGx and SumGy to create the
+            //calculate the Gx and Gy for every Channel
             int GxRed = round(TotalRed * Gx);
             int GxGreen = round(TotalGreen * Gx);
-            int GxBlue = Round(TotalBlue * Gx)
-            int SumGy = round((TotalRed + TotalGreen + TotalBlue) * Gx);
-            int Sobel = SumGx ^ 2 + SumGy ^ 2;
+            int GxBlue = round(TotalBlue * Gx);
+            int GyRed = round(TotalRed * Gy);
+            int GyGreen = round(TotalGreen * Gy);
+            int GyBlue = round(TotalBlue * Gy);
+            //Get the new channels Value
+            int NewRed = GxRed ^ 2 + GyRed ^ 2;
+            int NewGreen = GxGreen ^ 2 + GyGreen ^ 2;
+            int NewBlue = GxBlue ^ 2 + GyBlue ^ 2;
+            //passing in the values into temp array
+            temp[row][col].rgbtRed = NewRed;
+            temp[row][col]
         }
     }
     return;
