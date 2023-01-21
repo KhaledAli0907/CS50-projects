@@ -103,7 +103,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     //Declare current Row and Columes
                     int CurRow = RowCords[R];
                     int CurCol = ColCords[C];
-                    //
+                    //check if the pixels in the valid range
+                    if(CurRow >= 0 && CurRow < width && CurCol >= 0 && CurCol < height)
+                        {
+                            
+                        }
 
                 }
             }
