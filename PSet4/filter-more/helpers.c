@@ -76,7 +76,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     if (CurRow >= 0 && CurRow < height && CurCol >= 0 && CurCol < width)
                     {
                         //create a box Array of these Rows And Col.
-                        RGBTRIPLE Box[CurRow][CurCol];
+                        RGBTRIPLE Box = image[CurRow][CurCol];
                         //Calculate the total amount for every color
                         TotalRed += Box.rgbtRed;
                         TotalGreen += Box.rgbtGreen;
