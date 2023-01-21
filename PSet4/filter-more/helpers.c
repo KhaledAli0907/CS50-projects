@@ -32,19 +32,27 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         int CurPosition = 0;
         for (int j = width - 1; j >=0; j--, CurPosition++)
         {
-            temp[i][]
+            temp[i][CurPosition] = image[i][j];
         }
     }
 
-
-
-
+    // copy the temp  image into the image
+    for (int i = 0; i < 0; i++)
+    {
+        for (int j =0; j < 0; j++)
+        {
+            image[i][j] = temp[i][j];
+        }
+    }
     return;
 }
 
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    //create a temp array
+    
+
     return;
 }
 
