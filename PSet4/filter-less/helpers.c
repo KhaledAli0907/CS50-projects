@@ -54,37 +54,28 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
+    //temp array to reflect pixels in it then recopy to the original image
+    RGBTRIPLE temp[height][width];
+    //reflect the pixles
+    for(int i = 0; i < height; i++)
+        {
+            for(int j = width-1; j >= 0 ; j--)
+             {
+
+
+             }
+        }
+
+
+    //copy the temp to the image
     for (int i = 0; i < height; i++)
     {
-        //if the width even number
-        if (width % 2 == 0 )
+        for (int j = 0; j < width; j++)
         {
-            for (int j = 0; j < width; j++)
-            {
-                //store pixels info in temp 2D array
-                RGBTRIPLE temp[height][width];
-                //swaping the pixels
-                temp[i][j] = image[i][j];
-                image[i][j] = image[i][width - (j + 1)];
-                image[i][width - (j + 1)] = temp[i][j];
-
-            }
-        }
-        //if the width an odd number
-        if (width % 2 != 0 )
-        {
-            for (int j = 0; j < (width-1); j++)
-            {
-                //store the data in a temp 2D array
-                RGBTRIPLE temp[height][width];
-                //swaping the pixels
-                temp[i][j] = image[i][j];
-                image[i][j]= image[i][width - (j+1)];
-                image[i][width - (j+1)] = temp[i][j];
-            }
+            image[i][j] = temp[i][j];
         }
     }
-    return;
+
 }
 
 // Blur image
