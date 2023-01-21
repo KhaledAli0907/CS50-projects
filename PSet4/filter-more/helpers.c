@@ -123,13 +123,13 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int Gx[3][3] ={
                             {-1, 0, 1},
                             {-2, 0, 2},
-                            {-1, 0, 1};
-                          }
-            int Gy[] = {{-1, -2, -1},
+                            {-1, 0, 1}
+                          };
+            int Gy[3][3] = {{-1, -2, -1},
                        {0, 0, 0},
                        {1, 2, 1}};
-            int GxBlack[] = {0}, {0}, {0};
-            int GyBlack[] = {0, 0, 0};
+            //int GxBlack[] = {0}, {0}, {0};
+            //int GyBlack[] = {0, 0, 0};
             float GxRed = 0, GxGreen = 0, GxBlue = 0;
             float GyRed = 0, GyGreen = 0, GyBlue = 0;
             //create a new nested loop to go through the box's pixel
