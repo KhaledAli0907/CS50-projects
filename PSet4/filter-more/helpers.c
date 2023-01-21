@@ -150,8 +150,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     }
                 }
             }
-            //calculate the SumGx and SumGy to create the 
-            int SumGx = round((TotalRed + TotalGreen + TotalBlue) * Gx);
+            //calculate the SumGx and SumGy to create the
+            int SumGxRed = round(TotalRed * Gx);
+            int SumGxBlue = 
             int SumGy = round((TotalRed + TotalGreen + TotalBlue) * Gx);
             int Sobel = SumGx ^ 2 + SumGy ^ 2;
         }
