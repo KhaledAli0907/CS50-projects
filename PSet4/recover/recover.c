@@ -22,8 +22,17 @@ int main(int argc, char *argv[])
 
     size_t
     //repeat untill end of the card
-    while(fread(Buffer, sizeof(BYTE), BlockSize, MemoryCard))
-        //read 512 bytes intobuffer
+    while(true)
+        {
+            //read 512 bytes intobuffer
+            fread(Buffer, sizeof(BYTE), BlockSize, MemoryCard)
+            if()
+        }
+}
+
+
+
+//read 512 bytes intobuffer
         //if start of new JPEG
             //if first JPEG
                 //start writing new
@@ -31,4 +40,3 @@ int main(int argc, char *argv[])
                 //keep writing
         //else
             //if alreadyfound JPEG
-}
