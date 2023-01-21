@@ -85,10 +85,20 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     }
                 }
             }
-        
+            //Pass The Total Values to the temp array
+            temp[row][col].rgbtRed = round(TotalRed / Count);
+            temp[row][col].rgbtGreen = round(TotalGreen / Count);
+            temp[row][col].rgbtBlue = round(TotalBlue / Count);
         }
     }
-
+    //copy the temp array to the image array
+    for (int i = 0 ; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j] = temp[i][j];
+        }
+    }
     return;
 }
 
