@@ -128,7 +128,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                        {1, 2, 1};
             int GxBlack[] = {0}, {0}, {0};
             int GyBlack[] = {0, 0, 0};
-            int SumGxRed = 0, SumGxGreen = 0, SumGxBlue = 0;
+            float GxRed = 0, GxGreen = 0, GxBlue = 0;
+            float GyRed = 0, GyGreen = 0, GyBlue = 0;
             //create a new nested loop to go through the box's pixel
             for (int r = 0; r < 3; r++)
             {
@@ -142,7 +143,17 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     {
                         //Create the box Array
                         RGBTRIPLE Box = image[CurRow][CurCol];
+
                         TotalRed += Box.rgbtRed;
+                        GxRed = TotalRed * Gx;
+                        GyRed = TotalRed * Gy;
+
+                        TotalGreen += Box.rgbtGreen;
+                        GxGreen = TotalGreen * Gx;
+                        GyGreen = TotalGreen * Gy;
+
+                        TotalBlue += Box.rgbtBlue;
+                        Gx
                     }
 
                 }
