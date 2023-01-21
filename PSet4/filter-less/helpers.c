@@ -88,7 +88,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            //
+            //make Variable to count the current Position
+            int CurrentPos = 0;
+            //make an array for colums and row to declare the square we are changin
+            
+            //calculate the total RGB values in the box
         }
     }
      //copy the temp to the image
