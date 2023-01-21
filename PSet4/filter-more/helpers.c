@@ -52,7 +52,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     //create a temp array
     RGBTRIPLE temp[height][width];
-    //create a nested loob
+    //create a nested loob to go through every pixel
     for (int row = 0; row < height; row++)
     {
         for (int col = 0; col < width; col++)
@@ -105,5 +105,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 // Detect edges
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
+    
     return;
 }
