@@ -105,6 +105,30 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 // Detect edges
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
-    
+    //create a temp array
+    RGBTRIPLE temp[height][width];
+    //create a nested loob to go through every pixel
+    for (int row = 0; row < height; row++)
+    {
+        for (int col = 0; col < width; col++)
+        {
+            //declare a variable to know the pixles count in the box
+            int Count = 0;
+            //take the coordinates of Rows and Colums
+            int RowCords[] = {row - 1, row, row + 1};
+            int ColCords[] = {col - 1, col, col + 1};
+            //Declare the Total RGB values variables
+            float TotalRed = 0, TotalGreen = 0, TotalBlue = 0;
+            //create Gx and Gy arrays
+            int Gx[] = {-1, 0, 1},
+                       {-2, 0, 2},
+                       {-1, 0, 1};
+            int Gy[] = {-1, -2, -1},
+                       {0, 0, 0},
+                       {1, 2, 1};
+            //create a new nested loop to go through the box's pixel
+
+        }
+    }
     return;
 }
