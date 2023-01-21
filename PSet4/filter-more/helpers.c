@@ -107,6 +107,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     //create a temp array
     RGBTRIPLE temp[height][width];
+    int Gx[3][3] = {{-1, 0, 1},
+                    {-2, 0, 2},
+                    {-1, 0, 1}};
+    int Gy[3][3] = {{-1, -2, -1},
+                    {0, 0, 0},
+                    {1, 2, 1}};
     //create a nested loob to go through every pixel
     for (int row = 0; row < height; row++)
     {
@@ -120,14 +126,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             //Declare the Total RGB values variables
             float TotalRed = 0, TotalGreen = 0, TotalBlue = 0;
             //create Gx and Gy arrays
-            int Gx[3][3] ={
-                            {-1, 0, 1},
-                            {-2, 0, 2},
-                            {-1, 0, 1}
-                          };
-            int Gy[3][3] = {{-1, -2, -1},
-                       {0, 0, 0},
-                       {1, 2, 1}};
+
             //int GxBlack[] = {0}, {0}, {0};
             //int GyBlack[] = {0, 0, 0};
             float GxRed = 0, GxGreen = 0, GxBlue = 0;
