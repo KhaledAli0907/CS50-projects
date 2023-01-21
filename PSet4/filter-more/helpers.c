@@ -51,7 +51,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     //create a temp array
-    RGBTRIPLE temp[height][width]
+    RGBTRIPLE temp[height][width];
     //create a nested loob
     for (int row = 0; row < height; row++)
     {
@@ -59,15 +59,22 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             //declare a variable to know the pixles count in the box
             int Count = 0;
-            //make array of 3*3 pixels
-            int RowCords[] = {row - 1, row, row + 1}
-            int ColCords[] = {col - 1, col, col + 1}
+            //take the co
+            int RowCords[] = {row - 1, row, row + 1};
+            int ColCords[] = {col - 1, col, col + 1};
             //create a new nested loop to go through the box's pixel
             for (int r = 0; r < 3; r++)
             {
                 for (int c = 0; c < 3; c++)
                 {
-                    
+                    //Declare Current Row and Colom
+                    int CurRow = RowCords[r];
+                    int CurCol = ColCords[c];
+                    //make sure the pixels are in the validn range
+                    if (CurRow >= 0 && CurRow < height && CurCol >= 0 && CurCol < width)
+                    {
+                        //create a box Array of
+                    }
                 }
             }
         }
