@@ -104,7 +104,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     int CurRow = RowCords[R];
                     int CurCol = ColCords[C];
                     //check if the pixels in the valid range
-                    if(CurRow >= 0 && CurRow < width && CurCol >= 0 && CurCol < height)
+                    if(CurRow >= 0 && CurRow < height && CurCol >= 0 && CurCol < width)
                         {
                             //Make A box image from these colums and rows
                             RGBTRIPLE Box = image[CurCol][CurRow];
