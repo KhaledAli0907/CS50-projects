@@ -18,10 +18,16 @@ int main(int argc, char *argv[])
     }
     // Open input file for reading
     // TODO #2
-    FILE *Input = fopen(argv[])
+    FILE *Inputptr = fopen(*argv[1], "r");
+    if(Inputptr == NULL)
+    {
+        printf("Input file invalid");
+        return 1;
+    }
 
     // Read header into an array
     // TODO #3
+    fread()
 
     // Use check_format to ensure WAV format
     // TODO #4
