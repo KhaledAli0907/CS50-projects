@@ -11,7 +11,10 @@ int main(int argc, char *argv[])
 {
     // Ensure proper usage
     // TODO #1
-
+    if (argc != 3)
+    {
+        printf("Usa")
+    }
     // Open input file for reading
     // TODO #2
 
