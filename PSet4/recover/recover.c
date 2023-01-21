@@ -4,6 +4,7 @@
 int main(int argc, char *argv[])
 {
     //open memory card
+    fopen *
     //repeat untill end of the card
         //read 512 bytes intobuffer
         //if start of new JPEG
