@@ -31,17 +31,23 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             //Declair variables
-            float SepiaRed, SepiaGreen, SepiaBlue;
             int OriginalRed, OriginalGreen, OriginalBlue;
+            float SepiaRed, SepiaGreen, SepiaBlue;
+
             //Give Values to the Originals
             OriginalRed = image[i][j].rgbtRed;
             OriginalGreen = image[i][j].rgbtGreen;
             OriginalBlue = image[i][j].rgbtBlue;
+
             //sepia filter equations
-             //Red equation
-             
+             SepiaRed = .393 * OriginalRed + .769 * OriginalGreen + .189 * OriginalBlue;
+             SepiaGreen = .349 * OriginalRed + .686 * OriginalGreen + .168 * OriginalBlue;
+             SepiaBlue = .272 * OriginalRed + .534 * OriginalGreen + .131 * OriginalBlue;
 
-
+            //round the nums to the nearest int
+            SepiaRed = round(SepiaRed);
+            SepiaGreen = round(SepiaGreen);
+            SepiaBlue = round(SepiaBlue);
 
             //Feeding pixels with the new data
              //check if any value exceded the 255
