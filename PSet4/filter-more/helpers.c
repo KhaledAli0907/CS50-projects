@@ -145,21 +145,15 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         RGBTRIPLE Box = image[CurRow][CurCol];
 
                         TotalRed += Box.rgbtRed;
-                        GxRed = TotalRed * Gx;
-                        GyRed = TotalRed * Gy;
-
                         TotalGreen += Box.rgbtGreen;
-                        GxGreen = TotalGreen * Gx;
-                        GyGreen = TotalGreen * Gy;
-
                         TotalBlue += Box.rgbtBlue;
-                        GxBlue = TotalBlue * Gx;
-                        GyBlue = TotalBlue * Gy;
                         Count++;
                     }
-
                 }
             }
+            int SumGx = round((TotalRed + TotalGreen + TotalBlue) * Gx);
+            int SumGy = round((TotalRed + TotalGreen + TotalBlue) * Gx);
+            int 
         }
     }
     return;
