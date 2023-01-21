@@ -30,7 +30,11 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            //Declai
+            //Declair variables
+            float SepiaRed, SepiaGreen, SepiaBlue;
+            int OriginalRed, OriginalGreen, OriginalBlue;
+            //Give Values to the Originals
+            OriginalRed
             //sepia filter equations and rounding
 
 
