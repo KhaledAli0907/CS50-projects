@@ -18,19 +18,22 @@ int main(int argc, char *argv[])
         return 1;
     }
     typedef uint8_t BYTE;
-    BYTE Buffer[BlockSize];
+    BYTE buffer[BlockSize];
 
     size_t BytesRead;
     //repeat untill end of the card
     while(true)
         {
             //read 512 bytes intobuffer
-            fread(Buffer, sizeof(BYTE), BlockSize, MemoryCard)
+            fread(buffer, sizeof(BYTE), BlockSize, MemoryCard)
             if(BytesRead == 0)
             {
                 break;
             }
-            if
+            if(buffer[0] == 0xff || buffer[1] == 0xd8 || buffer[2] == 0xff ||(buffer[3] & 0xf0) == 0xe0)
+            {
+                fwrite()
+            }
         }
 }
 
