@@ -143,7 +143,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     {
                         //Create the box Array
                         RGBTRIPLE Box = image[CurRow][CurCol];
-
                         TotalRed += Box.rgbtRed;
                         TotalGreen += Box.rgbtGreen;
                         TotalBlue += Box.rgbtBlue;
@@ -151,9 +150,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     }
                 }
             }
+            //calculate the SumGx and SumGy to create the 
             int SumGx = round((TotalRed + TotalGreen + TotalBlue) * Gx);
             int SumGy = round((TotalRed + TotalGreen + TotalBlue) * Gx);
-            int 
+            int Sobel = SumGx ^ 2 + SumGy ^ 2;
         }
     }
     return;
