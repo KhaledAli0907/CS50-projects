@@ -153,7 +153,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         GyGreen = TotalGreen * Gy;
 
                         TotalBlue += Box.rgbtBlue;
-                        Gx
+                        GxBlue = TotalBlue * Gx;
+                        GyBlue = TotalBlue * Gy;
+                        Count++;
                     }
 
                 }
