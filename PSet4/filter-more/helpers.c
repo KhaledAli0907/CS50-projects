@@ -30,7 +30,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         //make a varible to keep track on the position
         int CurPosition = 0;
-        for (int j = width - 1; j >=0; j--, CurPosition++)
+        for (int j = width - 1; j >= 0; j--, CurPosition++)
         {
             temp[i][CurPosition] = image[i][j];
         }
