@@ -19,6 +19,8 @@ int main(int argc, char *argv[])
     }
     typedef uint8_t BYTE;
     BYTE Buffer[BlockSize];
+
+    size_t
     //repeat untill end of the card
     while(fread(Buffer, sizeof(BYTE), BlockSize, MemoryCard))
         //read 512 bytes intobuffer
