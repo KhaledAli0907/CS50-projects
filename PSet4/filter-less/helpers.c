@@ -114,7 +114,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                             TotalBlue += Box.rgbtBlue;
                             Count++;
                         }
-
                 }
             }
             //Pass the Values to the Temp image
