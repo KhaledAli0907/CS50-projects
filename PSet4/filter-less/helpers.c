@@ -61,11 +61,11 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             for (int j = 0; j < width; j++)
             {
                 //store pixels info in temp 2D array
-                RGBTRIPLE temp[*height][*width];
+                RGBTRIPLE temp[height][width];
                 //swaping the pixels
-                temp[i][j] = *image[i][j];
-                *image[i][j] = *image[i][width - (j + 1)];
-                *image[i][width - (j + 1)] = temp[i][j];
+                temp[i][j] = image[i][j];
+                image[i][j] = image[i][width - (j + 1)];
+                image[i][width - (j + 1)] = temp[i][j];
 
             }
         }
@@ -75,11 +75,11 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             for (int j = 0; j < (width-1); j++)
             {
                 //store the data in a temp 2D array
-                RGBTRIPLE temp[*height][*width];
+                RGBTRIPLE temp[height][width];
                 //swaping the pixels
-                temp[i][j] = *image[i][j];
-                *image[i][j]= *image[i][width - (j+1)];
-                *image[i][width - (j+1)] = temp[i][j];
+                temp[i][j] = image[i][j];
+                image[i][j]= image[i][width - (j+1)];
+                image[i][width - (j+1)] = temp[i][j];
             }
         }
     }
