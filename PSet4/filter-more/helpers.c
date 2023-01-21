@@ -150,9 +150,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
             //Get the new channels Values
-            int NewRed = round(pow(GxRed, 2) + pow(GyRed, 2));
-            int NewGreen = round(pow(GxGreen, 2) + pow(GyGreen, 2));
-            int NewBlue = round(pow(GxBlue, 2) + pow(GyBlue, 2));
+            int NewRed = round(sqrt(pow(GxRed, 2) + pow(GyRed, 2)));
+            int NewGreen = round(sqrt(pow(GxGreen, 2) + pow(GyGreen, 2)));
+            int NewBlue = round(sqrt(pow(GxBlue, 2) + pow(GyBlue, 2)));
             //passing in the values into temp array
             temp[row][col].rgbtRed = (NewRed > 255) ? 255 : NewRed;
             temp[row][col].rgbtGreen = (NewGreen > 255) ? 255 : NewGreen;
