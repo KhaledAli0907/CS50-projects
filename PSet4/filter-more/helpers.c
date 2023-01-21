@@ -62,6 +62,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             //take the coordinates of Rows and Colums
             int RowCords[] = {row - 1, row, row + 1};
             int ColCords[] = {col - 1, col, col + 1};
+            //Declare the Total RGB values variables
+            float TotalRed = 0, TotalGreen = 0, TotalBlue = 0;
             //create a new nested loop to go through the box's pixel
             for (int r = 0; r < 3; r++)
             {
@@ -75,10 +77,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     {
                         //create a box Array of these Rows And Col.
                         RGBTRIPLE Box[CurRow][CurCol];
-                        //
+                        //Calculate the total amount for every color
+                        TotalRed += Box.rgbtRed;
+                        TotalGreen += Box.rgbtGreen;
+                        TotalBlue += Box.rgbtBlue;
+                        Count++;
                     }
                 }
             }
+        
         }
     }
 
