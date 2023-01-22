@@ -49,7 +49,8 @@ int main(int argc, char *argv[])
 int check_format(WAVHEADER header)
 {
     // TODO #4
-    bool HeaderCheck;
+    char *Format = fgetc()
+    bool HeaderCheck = false;
     if(header.format == "WAVE")
     {
         HeaderCheck = true;
