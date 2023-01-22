@@ -5,6 +5,12 @@
 
 int main(int argc, char *argv[])
 {
+    //declaring variables
+    typedef uint8_t BYTE;
+    BYTE buffer[BlockSize];
+    size_t BytesRead;
+
+    //make sure the input command is right
     if (argc != 2)
     {
         printf("Usage : ./recover image \n");
@@ -17,12 +23,10 @@ int main(int argc, char *argv[])
         printf("Error while opining the card \n")
         return 1;
     }
-    typedef uint8_t BYTE;
-    BYTE buffer[BlockSize];
-    size_t BytesRead;
+
     //repeat untill end of the card
     //read 512 bytes intobuffer
-    while(fread(buffer, sizeof(BYTE), BlockSize, MemoryCard) == BlockSize)
+    while(BytesRead = fread(buffer, sizeof(BYTE), BlockSize, MemoryCard) == BlockSize)
         {
             //if start of new JPEG
             if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
