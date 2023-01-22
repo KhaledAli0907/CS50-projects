@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 
     //repeat untill end of the card
     //read 512 bytes intobuffer
-    while(BytesRead == BlockSize )
+    while(BytesRead == BlockSize || feof(MemoryCard) == 0)
         {
             if (BytesRead == 0)
             {
