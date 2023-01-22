@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     }
     // Open input file for reading
     // TODO #2
-    FILE *Inputptr = fopen(*argv[1], "r");
+    FILE *Inputptr = fopen(argv[1], "r");
     if(Inputptr == NULL)
     {
         printf("Input file invalid");
