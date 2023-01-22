@@ -9,6 +9,8 @@ int get_block_size(WAVHEADER header);
 
 int main(int argc, char *argv[])
 {
+    int bytes;
+    FILE *Inputptr;
     // Ensure proper usage
     // TODO #1
     if (argc != 3)
@@ -18,7 +20,7 @@ int main(int argc, char *argv[])
     }
     // Open input file for reading
     // TODO #2
-    FILE *Inputptr = fopen(argv[1], "r");
+    Inputptr = fopen(argv[1], "r");
     if(Inputptr == NULL)
     {
         printf("Input file invalid");
@@ -28,7 +30,7 @@ int main(int argc, char *argv[])
     // Read header into an array
     // TODO #3
     BYTE buffer[4];
-    fread(buffer, sizeof(BYTE), 4, Inputptr);
+    bytes = fread(buffer, sizeof(BYTE), 4, Inputptr);
 
     // Use check_format to ensure WAV format
     // TODO #4
@@ -56,7 +58,7 @@ int check_format(WAVHEADER header)
 {
      // TODO #4
 
-    char 
+    char
     if(Format == "WAVE")
     {
         HeaderCheck = true;
