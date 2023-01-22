@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
     //Read 512 bytes into a buffer
     while (fread(buffer, sizeof(BYTE), BlockSize, MemoryCard) == BlockSize)
     {
-        //if start of a new JPG
+        //if it's a start of a new JPG
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
             //Check if this old JPG and close it
