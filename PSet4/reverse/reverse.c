@@ -48,8 +48,15 @@ int main(int argc, char *argv[])
 int check_format(WAVHEADER header)
 {
     // TODO #4
-    bool Headercheck;
-    if()
+    bool HeaderCheck;
+    if(header.format == "WAVE")
+    {
+        HeaderCheck = true;
+    }
+    else
+    {
+        H
+    }
 
 
     return 0;
