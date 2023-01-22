@@ -27,8 +27,8 @@ int main(int argc, char *argv[])
 
     // Read header into an array
     // TODO #3
-    DWORD buffer[chunkSize];
-    fread(buffer, sizeof(int), BYTE, Inputptr);
+    BYTE buffer[chunkID];
+    fread(buffer, sizeof(BYTE), BYTE, Inputptr);
 
     // Use check_format to ensure WAV format
     // TODO #4
