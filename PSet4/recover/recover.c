@@ -7,7 +7,9 @@
 int main(int argc, char *argv[])
 {
     //declare varuables
-
+    typedef uint8_t BYTE;
+    FILE *img = NULL;
+    BYTE buffer[BlockSize];
     //check if the input argument is valid
     if (argc != 2)
     {
@@ -23,6 +25,7 @@ int main(int argc, char *argv[])
         return 2;
     }
     //Repeat until end of card:
+    while(fread(MemoryCard))
         //Read 512 bytes into a buffer
 
         //if start of a new JPEG
