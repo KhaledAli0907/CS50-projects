@@ -55,6 +55,7 @@ int main(int argc, char *argv[])
 int check_format(WAVHEADER header)
 {
     // TODO #4
+    
     char *Format = fgets(Inputptr.format);
     bool HeaderCheck = false;
     if(Format == "WAVE")
