@@ -62,7 +62,7 @@ int check_format(WAVHEADER header)
      // TODO #4
 
     char Format;
-    while((c = fgetc(Inputptr)) != EOF)
+    while((Format= fgets(Inputptr)) != EOF)
     {
         if(Format == "WAVE")
         {
