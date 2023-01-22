@@ -35,6 +35,7 @@ int main(int argc, char *argv[])
 
     // Open output file for writing
     // TODO #5
+    fwrite()
 
     // Write header to file
     // TODO #6
