@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 int check_format(WAVHEADER header)
 {
      // TODO #4
-    char *Format;
+    BYTE Format;
     bool HeaderCheck = false;
     for (int i = 0; i <= 4; i++)
     {
