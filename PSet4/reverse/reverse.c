@@ -56,7 +56,7 @@ int check_format(WAVHEADER header)
 {
      // TODO #4
 
-    
+    char 
     if(Format == "WAVE")
     {
         HeaderCheck = true;
