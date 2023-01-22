@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     //Open MemoryCard
-    FILE *MemoryCard = fopen (argv[1], "r");
+    FILE *MemoryCard = fopen(argv[1], "r");
     // check if this isn't a nullptr
     if (MemoryCard == NULL)
     {
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
             //Write into ###.JPG
             sprintf(CurrentImg, "%03i.jpg", count);
             count++;
-            img = fopen(CurrentImg,"w");
+            img = fopen(CurrentImg, "w");
         }
         //Keep Writing if it is not a new JPEG
         if (img != NULL)
@@ -51,12 +51,12 @@ int main(int argc, char *argv[])
 
     }
     //close any remaining files
-     //close the outptr
+    //close the outptr
     if (img != NULL)
     {
         fclose(img);
     }
-     //close the inptr
+    //close the inptr
     fclose(MemoryCard);
     return 0;
 }
