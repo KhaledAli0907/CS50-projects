@@ -59,22 +59,10 @@ int main(int argc, char *argv[])
 
 int check_format(WAVHEADER header)
 {
-     // TODO #4
+    // TODO #4
+    
+    return 0;
 
-    char Format;
-    while((Format= fgets(Inputptr)) != EOF)
-    {
-        if(Format == "WAVE")
-        {
-            header = 1;
-        }
-        else
-        {
-            printf("Invalid file format");
-            return;
-        }
-        return 0;
-    }
 
 }
 
