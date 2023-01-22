@@ -49,7 +49,8 @@ int check_format(WAVHEADER header)
 {
     // TODO #4
     bool Headercheck;
-    
+    if()
+
 
     return 0;
 }
