@@ -41,12 +41,12 @@ int main(int argc, char *argv[])
             //Write into ###.JPG
             sprintf(CurrentImg, "%03i.JPG", count);
             count++;
-            img = fopen (CurrentImg,"w");
+            img = fopen(CurrentImg,"w");
         }
         //Keep Writing if it is not a new JPEG
         if (img != NULL)
         {
-            fwrite(buffer, sizeof(BYTE), 1, img);
+            fwrite(buffer, sizeof(BYTE), BlockSize, img);
         }
 
     }
