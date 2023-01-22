@@ -11,6 +11,9 @@ int main(int argc, char *argv[])
     BYTE buffer[BlockSize];
     size_t BytesRead;
     bool FirstJPEG = false;
+    FILE *Outputptr;
+    FILE *MemoryCard;
+    int counter = 0;
 
     //make sure the input command is right
     if (argc != 2)
@@ -19,7 +22,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     //open memory card
-    FILE *MemoryCard = fopen(argv[1], "r");
+    MemoryCard = fopen(argv[1], "r");
     if (MemoryCard == NULL)
     {
         printf("Error while opining the card \n")
