@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include <stdbool.h>
 #define BlockSize 512
 
 int main(int argc, char *argv[])
@@ -15,43 +14,51 @@ int main(int argc, char *argv[])
     //check if the input argument is valid
     if (argc != 2)
     {
-        printf("Usage: ./recover IMAGE")
+        printf("Usage: ./recover IMAGE");
         return 1;
     }
     //Open MemoryCard
     FILE *MemoryCard = fopen (argv[1], "r");
     // check if this isn't a nullptr
-    if (MemoryCard == NUll)
+    if (MemoryCard == NULL)
     {
-        printf("Error While Opining the Image")
+        printf("Error While Opining the Image");
         return 2;
     }
     //Repeat until end of card:
     //Read 512 bytes into a buffer
     while (fread(buffer, sizeof(BYTE), BlockSize, MemoryCard) == BlockSize)
     {
-        //if start of a new JPEG
+        //if start of a new JPG
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            //Check if this old JPEG and close it
+            //Check if this old JPG and close it
             if (img != NULL)
             {
                 fclose(img);
             }
             //if first JPEG
-            //Write into ###.JPEG
-            sprintf(CurrentImg, "%03i.JPEG", count);
+            //Write into ###.JPG
+            sprintf(CurrentImg, "%03i.JPG", count);
             count++;
             img = fopen (argv[2],"w");
         }
         //Keep Writing if it is not a new JPEG
         else if (img != NULL)
         {
-            fwrite()
+            fwrite(buffer, sizeof(BYTE), 1, img);
         }
 
-
-    //close any remaining files
     }
-
+    //close any remaining files
+     //close the outptr
+    if (img != NULL)
+    {
+        fclose(img);
+    }
+     //close MemoryCard
+    if (MemoryCard != NULL)
+    {
+        fclose(MemoryCard);
+    }
 }
