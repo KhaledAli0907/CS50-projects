@@ -31,7 +31,6 @@ int main(int argc, char *argv[])
 
     // Read header into an array
     // TODO #3
-    WAVHEADER InputHeader[BuffSize];
     bytes = fread(InputHeader, sizeof(WAVHEADER), BuffSize, Inputptr);
 
     // Use check_format to ensure WAV format
@@ -59,7 +58,7 @@ int main(int argc, char *argv[])
 int check_format(WAVHEADER header)
 {
     // TODO #4
-    if (InputHeader)
+    if (InputHeader == )
     {
         for (int i = 0; i < 4; i++)
         {
