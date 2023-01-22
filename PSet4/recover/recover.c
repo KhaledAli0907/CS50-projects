@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
             }
             if (img != NULL)
             {
-                fwrite(buffer, sizeof(BYTE), BlockSize, img);
+                fwrite(buffer, sizeof(buffer), 1, img);
             }
         }
         //close the opend files
