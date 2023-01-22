@@ -44,11 +44,12 @@ int main(int argc, char *argv[])
                 sprintf(filename, "%03i.JPG", counter);
                 img = fopen(filename, "w");
                 counter++;
-
-                if ()
-                fwrite(buffer[0], sizeof(BYTE), BlockSize, MemoryCard);
-
             }
+            if (img != NULL)
+            {
+                fwrite(filename, sizeof(BYTE), BlockSize, img);
+            }
+            else
         }
 }
 
@@ -57,7 +58,7 @@ int main(int argc, char *argv[])
 
 
 
-                //start writing new
+
             //else
                 //keep writing
         //else
