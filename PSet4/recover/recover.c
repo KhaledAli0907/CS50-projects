@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
             {
                 fwrite(buffer, sizeof(BYTE), BlockSize, img);
             }
-            if (BytesRead = BlockSize)
+            if (BytesRead == BlockSize)
             {
                 break;
             }
