@@ -6,64 +6,22 @@
 
 int main(int argc, char *argv[])
 {
-    //declaring variables
-    typedef uint8_t BYTE;
-    BYTE buffer[BlockSize];
-    bool FirstJPEG = false;
-    FILE *img = NULL;
-    FILE *MemoryCard = NULL;
-    size_t BytesRead = fread(buffer, sizeof(BYTE), BlockSize, MemoryCard);
-    int counter = 0;
-    char filename[8]; // 8 because of the 7 characters and the null pointer
+    //declare varuables
 
-    //make sure the input command is right
-    if (argc != 2)
-    {
-        printf("Usage : ./recover image \n");
-        return 1;
-    }
-    //open memory card
-    MemoryCard = fopen(argv[1], "r");
-    if (MemoryCard == NULL)
-    {
-        printf("Error while opining the card \n");
-        return 1;
-    }
+    //check if the input argument is valid
 
-    //repeat untill end of the card
-    //read 512 bytes intobuffer
-    while(BytesRead == BlockSize || feof(MemoryCard) == 0)
-        {
-            if (BytesRead == 0)
-            {
-                break;
-            }
-            //if start of new JPEG
-            if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
-            {
-                if (img != NULL)
-                {
-                    fclose(img);
-                }
-                sprintf(filename, "%03i.JPG", counter);
-                img = fopen(filename, "w");
-                counter++;
-            }
-            if (img != NULL)
-            {
-                fwrite(buffer, sizeof(buffer), 1, img);
-            }
-        }
-        //close the opend files
-        fclose(MemoryCard);
-        fclose(img);
+    //Open MemoryCard
 
-}
-//start writing new
+    //Repeat until end of card:
+        //Read 512 bytes into a buffer
 
-
+        //if start of a new JPEG
+            //if first JPEG
 
             //else
-                //keep writing
+
         //else
-            //if alreadyfound JPEG
+            // if already found the JPEG
+
+    //close any remaining files
+}
