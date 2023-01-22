@@ -49,10 +49,6 @@ int main(int argc, char *argv[])
             {
                 fwrite(buffer, sizeof(BYTE), BlockSize, img);
             }
-            if (BytesRead == BlockSize)
-            {
-                break;
-            }
         }
         //close the opend files
         fclose(MemoryCard);
