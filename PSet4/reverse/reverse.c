@@ -4,6 +4,8 @@
 #include <cs50.h>
 #include "wav.h"
 
+#define BuffeSize 1500;
+
 int check_format(WAVHEADER header);
 int get_block_size(WAVHEADER header);
 
@@ -29,7 +31,7 @@ int main(int argc, char *argv[])
 
     // Read header into an array
     // TODO #3
-    BYTE buffer[4];
+    BYTE buffer[BuffeSize];
     bytes = fread(buffer, sizeof(BYTE), 4, Inputptr);
 
     // Use check_format to ensure WAV format
