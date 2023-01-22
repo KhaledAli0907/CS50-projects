@@ -44,10 +44,12 @@ int main(int argc, char *argv[])
             count++;
             img = fopen (argv[2],"w");
         }
+        //Keep Writing if it is not a new JPEG
+        else if (img != NULL)
+        {
+            
+        }
 
-
-        //else
-            // if already found the JPEG
 
     //close any remaining files
     }
