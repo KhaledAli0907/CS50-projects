@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include <
+#include <stdbool.h>
 #define BlockSize 512
 
 int main(int argc, char *argv[])
@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
     typedef uint8_t BYTE;
     BYTE buffer[BlockSize];
     size_t BytesRead;
+    bool FirstJPEG = false;
 
     //make sure the input command is right
     if (argc != 2)
@@ -33,6 +34,7 @@ int main(int argc, char *argv[])
             if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
             {
                 //if first JPEG
+                if ()
                 fwrite(buffer[0], sizeof(BYTE), BlockSize, MemoryCard);
 
             }
