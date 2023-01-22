@@ -21,10 +21,13 @@ int main(int argc, char *argv[])
     BYTE buffer[BlockSize];
     size_t BytesRead;
     //repeat untill end of the card
+    //read 512 bytes intobuffer
     while(fread(buffer, sizeof(BYTE), BlockSize, MemoryCard) == BlockSize)
         {
+            //if start of new JPEG
             if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
             {
+                //if first JPEG
                 fwrite(buffer[0], sizeof(BYTE), BlockSize, MemoryCard);
 
             }
@@ -33,9 +36,9 @@ int main(int argc, char *argv[])
 
 
 
-//read 512 bytes intobuffer
-        //if start of new JPEG
-            //if first JPEG
+
+
+
                 //start writing new
             //else
                 //keep writing
