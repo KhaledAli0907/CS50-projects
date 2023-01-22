@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 
     // Read header into an array
     // TODO #3
-    DWORD buffer[BYTE];
+    int buffer[BYTE];
     fread(buffer, sizeof(int), BYTE, Inputptr);
 
     // Use check_format to ensure WAV format
