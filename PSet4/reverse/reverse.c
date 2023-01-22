@@ -27,8 +27,8 @@ int main(int argc, char *argv[])
 
     // Read header into an array
     // TODO #3
-    
-    fread(WAVHEADER.header, sizeof(BYTE), WAVHEADER.audioFormat, Inputptr);
+    int buffer[512];
+    fread(buffer, sizeof(BYTE), WAVHEADER.audioFormat, Inputptr);
 
     // Use check_format to ensure WAV format
     // TODO #4
