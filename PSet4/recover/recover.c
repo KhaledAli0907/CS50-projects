@@ -9,10 +9,10 @@ int main(int argc, char *argv[])
     //declaring variables
     typedef uint8_t BYTE;
     BYTE buffer[BlockSize];
-    size_t BytesRead;
     bool FirstJPEG = false;
     FILE *img = NULL;
     FILE *MemoryCard;
+    size_t BytesRead = fread(buffer, sizeof(BYTE), BlockSize, MemoryCard);
     int counter = 0;
     char filename[8]; // 8 because of the 7 characters and the null pointer
 
@@ -32,8 +32,12 @@ int main(int argc, char *argv[])
 
     //repeat untill end of the card
     //read 512 bytes intobuffer
-    while(fread(buffer, sizeof(BYTE), BlockSize, MemoryCard) == BlockSize)
+    while(BytesRead == BlockSize )
         {
+            if (BytesRead == 0)
+            {
+                break;
+            }
             //if start of new JPEG
             if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
             {
