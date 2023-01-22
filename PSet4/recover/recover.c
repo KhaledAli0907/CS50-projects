@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     FILE *img = NULL;
     BYTE buffer[BlockSize];
     char CurrentImg[8];
-    int count = 1;
+    int count = 0;
     //check if the input argument is valid
     if (argc != 2)
     {
@@ -44,9 +44,9 @@ int main(int argc, char *argv[])
             img = fopen (argv[2],"w");
         }
         //Keep Writing if it is not a new JPEG
-        else if (img != NULL)
+        if (img != NULL)
         {
-            fwrite(buffer, sizeof(BYTE), BlockSize, img);
+            fwrite(buffer, sizeof(BYTE), 1, img);
         }
 
     }
