@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 
     // Read header into an array
     // TODO #3
-    BYTE buffer[4];
+    WAVHEADER 
     bytes = fread(buffer, sizeof(BYTE), 4, Inputptr);
 
     // Use check_format to ensure WAV format
