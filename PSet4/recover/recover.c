@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
     FILE *img = NULL;
     BYTE buffer[BlockSize];
     char CurrentImg[8];
+    int count = 0;
     //check if the input argument is valid
     if (argc != 2)
     {
@@ -38,7 +39,10 @@ int main(int argc, char *argv[])
                 fclose(img);
             }
             //if first JPEG
-            sprintf(CurrentImg, "%03i.JPEG",)
+            //Write into ###.JPEG
+            sprintf(CurrentImg, "%03i.JPEG", count);
+            img = 
+
 
             //else
         }
