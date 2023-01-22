@@ -41,9 +41,7 @@ int main(int argc, char *argv[])
             //if first JPEG
             //Write into ###.JPEG
             sprintf(CurrentImg, "%03i.JPEG", count);
-            img = 
-
-
+            img = fopen (argv[2],"w");
             //else
         }
 
