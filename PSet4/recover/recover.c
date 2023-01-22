@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
             }
             if (img != NULL)
             {
-                fwrite(filename, sizeof(BYTE), BlockSize, img);
+                fwrite(buffer, sizeof(BYTE), BlockSize, img);
             }
         }
 }
