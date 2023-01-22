@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     BYTE buffer[BlockSize];
     bool FirstJPEG = false;
     FILE *img = NULL;
-    FILE *MemoryCard;
+    FILE *MemoryCard = NULL;
     size_t BytesRead = fread(buffer, sizeof(BYTE), BlockSize, MemoryCard);
     int counter = 0;
     char filename[8]; // 8 because of the 7 characters and the null pointer
