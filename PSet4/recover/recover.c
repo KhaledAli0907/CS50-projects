@@ -49,13 +49,9 @@ int main(int argc, char *argv[])
             {
                 fwrite(filename, sizeof(BYTE), BlockSize, img);
             }
-            else
         }
 }
-
-
-
-
+//start writing new
 
 
 
