@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
             }
             //if first JPEG
             //Write into ###.JPG
-            sprintf(CurrentImg, "%03i.JPG", count);
+            sprintf(CurrentImg, "%03i.jpg", count);
             count++;
             img = fopen(CurrentImg,"w");
         }
@@ -58,4 +58,5 @@ int main(int argc, char *argv[])
     }
 
     fclose(MemoryCard);
+    return 0;
 }
