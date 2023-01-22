@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 
     // Read header into an array
     // TODO #3
-    int buffer[BYTE];
+    DWORD buffer[BYTE];
     fread(buffer, sizeof(int), BYTE, Inputptr);
 
     // Use check_format to ensure WAV format
@@ -35,7 +35,12 @@ int main(int argc, char *argv[])
 
     // Open output file for writing
     // TODO #5
-    fwrite()
+    FILE *output = fopen(argv[2], "w");
+    if (output == NULL)
+    {
+        printf("Error while writing the file")
+        return 2;
+    }
 
     // Write header to file
     // TODO #6
