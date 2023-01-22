@@ -36,6 +36,7 @@ int main(int argc, char *argv[])
 
     // Use check_format to ensure WAV format
     // TODO #4
+    check_format(Inputptr);
 
     // Open output file for writing
     // TODO #5
@@ -60,17 +61,21 @@ int check_format(WAVHEADER header)
 {
      // TODO #4
 
-    char
-    if(Format == "WAVE")
+    char Format;
+    while((c = fgetc(Inputptr)) != EOF)
     {
-        HeaderCheck = true;
+        if(Format == "WAVE")
+        {
+            header = 1;
+        }
+        else
+        {
+            printf("Invalid file format");
+            return;
+        }
+        return 0;
     }
-    else
-    {
-        printf("Invalid file format");
-        return;
-    }
-    return 0;
+
 }
 
 int get_block_size(WAVHEADER header)
