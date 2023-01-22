@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     //check if the input argument is valid
     if (argc != 2)
     {
-        printf("Usage: ./recover IMAGE");
+        printf("Usage: ./recover IMAGE \n");
         return 1;
     }
     //Open MemoryCard
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     // check if this isn't a nullptr
     if (MemoryCard == NULL)
     {
-        printf("Error While Opining the Image");
+        printf("Error While Opining Image \n");
         return 2;
     }
     //Repeat until end of card:
