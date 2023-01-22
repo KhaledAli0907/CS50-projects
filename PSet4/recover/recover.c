@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
             //Write into ###.JPG
             sprintf(CurrentImg, "%03i.JPG", count);
             count++;
-            img = fopen (argv[2],"w");
+            img = fopen (CurrentImg,"w");
         }
         //Keep Writing if it is not a new JPEG
         if (img != NULL)
