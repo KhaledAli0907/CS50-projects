@@ -54,10 +54,14 @@ int main(int argc, char *argv[])
 
 int check_format(WAVHEADER header)
 {
-    // TODO #4
-    
-    char *Format = fgets(Inputptr.format);
+     // TODO #4
+    char *Format;
     bool HeaderCheck = false;
+    for (int i = 0; i <= 4; i++)
+    {
+       Format = fgetc(header.format[i]);
+       return Format;
+    }
     if(Format == "WAVE")
     {
         HeaderCheck = true;
@@ -67,8 +71,6 @@ int check_format(WAVHEADER header)
         printf("Invalid file format");
         return;
     }
-
-
     return 0;
 }
 
