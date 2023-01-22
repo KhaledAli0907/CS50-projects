@@ -8,7 +8,7 @@
 
 int check_format(WAVHEADER header);
 int get_block_size(WAVHEADER header);
-
+WAVHEADER InputHeader[BuffSize];
 int main(int argc, char *argv[])
 {
     int bytes;
@@ -66,15 +66,14 @@ int check_format(WAVHEADER header)
             strcmp(InputHeader.format[i], header.format[i]);
             if (strcmp == 0)
             {
-                return
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
-
     }
-
-    return 0;
-
-
 }
 
 int get_block_size(WAVHEADER header)
