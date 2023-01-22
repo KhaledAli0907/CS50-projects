@@ -23,10 +23,6 @@ int main(int argc, char *argv[])
     //repeat untill end of the card
     while(fread(buffer, sizeof(BYTE), BlockSize, MemoryCard) == BlockSize)
         {
-            if ()
-            {
-
-            }
             if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
             {
                 fwrite(buffer[0], sizeof(BYTE), BlockSize, MemoryCard);
