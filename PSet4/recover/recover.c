@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     BYTE buffer[BlockSize];
     size_t BytesRead;
     bool FirstJPEG = false;
-    FILE *img;
+    FILE *img = NULL;
     FILE *MemoryCard;
     int counter = 0;
     char filename[8]; // 8 because of the 7 characters and the null pointer
@@ -37,10 +37,13 @@ int main(int argc, char *argv[])
             //if start of new JPEG
             if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
             {
-                //if first JPEG
+                if (img == NULL)
+                {
+                    fclose(img);
+                }
                 sprintf(filename, "%03i.JPG", counter);
                 img = fopen(filename, "w");
-                
+                counter++;
 
                 if ()
                 fwrite(buffer[0], sizeof(BYTE), BlockSize, MemoryCard);
