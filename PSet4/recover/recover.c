@@ -39,7 +39,8 @@ int main(int argc, char *argv[])
             {
                 //if first JPEG
                 sprintf(filename, "%03i.JPG", counter);
-                img = fopen(ar)
+                img = fopen(filename, "w");
+                
 
                 if ()
                 fwrite(buffer[0], sizeof(BYTE), BlockSize, MemoryCard);
