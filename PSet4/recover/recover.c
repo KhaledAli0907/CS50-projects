@@ -56,9 +56,6 @@ int main(int argc, char *argv[])
     {
         fclose(img);
     }
-     //close MemoryCard
-    if (MemoryCard != NULL)
-    {
-        fclose(MemoryCard);
-    }
+
+    fclose(MemoryCard);
 }
