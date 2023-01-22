@@ -27,8 +27,8 @@ int main(int argc, char *argv[])
 
     // Read header into an array
     // TODO #3
-    BYTE buffer[chunkID];
-    fread(buffer, sizeof(BYTE), BYTE, Inputptr);
+    BYTE buffer[4];
+    fread(buffer, sizeof(BYTE), 4, Inputptr);
 
     // Use check_format to ensure WAV format
     // TODO #4
@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
     FILE *output = fopen(argv[2], "w");
     if (output == NULL)
     {
-        printf("Error while writing the file")
+        printf("Error while writing the file");
         return 2;
     }
 
