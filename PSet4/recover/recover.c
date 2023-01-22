@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
         //Keep Writing if it is not a new JPEG
         else if (img != NULL)
         {
-            
+            fwrite()
         }
 
 
