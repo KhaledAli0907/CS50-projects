@@ -5,12 +5,11 @@
 #include <string.h>
 #include "wav.h"
 
-#define BuffSize 150
+#define HeaderSize 44
 
 int check_format(WAVHEADER header);
 int get_block_size(WAVHEADER header);
-WAVHEADER InputHeader[BuffSize];
-uint8_t header[Header_Size];
+uint8_t InputHeader[HeaderSize];
 
 int main(int argc, char *argv[])
 {
