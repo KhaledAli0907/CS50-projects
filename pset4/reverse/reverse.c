@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
     // Read header into an array
     // TODO #3
-    bytes[] = fread(InputHeader, sizeof(WAVHEADER), 4, Inputptr);
+    bytes = fread(InputHeader, sizeof(WAVHEADER), 4, Inputptr);
 
     // Use check_format to ensure WAV format
     // TODO #4
@@ -62,7 +62,7 @@ int check_format(WAVHEADER header)
     // TODO #4
     for (int i = 0; i < 4; i++)
     {
-        strcmp(InputHeader.format[i], header.format[i]);
+        strcmp(bytes.format[i], header.format[i]);
         if (strcmp == 0)
         {
             return true;
