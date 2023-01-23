@@ -62,8 +62,8 @@ int check_format(WAVHEADER header)
     // TODO #4
     for (int i = 0; i < 4; i++)
     {
-        strcmp(Header.format[i], header.format[i]);
-        if (strcmp == 0)
+        int headerchecker = strcmp(Header.format[i], header.format[i]);
+        if (headerchecker == 0)
         {
             return true;
         }
