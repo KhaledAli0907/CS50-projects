@@ -10,6 +10,7 @@
 int check_format(WAVHEADER header);
 int get_block_size(WAVHEADER header);
 WAVHEADER InputHeader[BuffSize];
+
 int main(int argc, char *argv[])
 {
     int bytes;
