@@ -59,18 +59,20 @@ int main(int argc, char *argv[])
 
 int check_format(WAVHEADER header)
 {
+    int headerchecker;
     // TODO #4
-    for (int i = 0; i < 4; i++)
+    for (int i = 8; 7 < i < 12; i++)
     {
-        int headerchecker = strcmp(Header.format[i], header.format[i]);
-        if (headerchecker == 0)
-        {
-            return true;
-        }
+        headerchecker = strcmp(Header[i], header[i]);
+
+    }
+    if (headerchecker == 0)
+    {
+        return true;
+    }
         else
-        {
-           return false;
-        }
+    {
+        return false;
     }
 }
 
