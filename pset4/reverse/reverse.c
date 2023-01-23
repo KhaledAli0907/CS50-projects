@@ -9,7 +9,7 @@
 
 int check_format(WAVHEADER header);
 int get_block_size(WAVHEADER header);
-uint8_t Header[HeaderSize];
+uint8_t InputHeader[HeaderSize];
 
 int main(int argc, char *argv[])
 {
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
     // Read header into an array
     // TODO #3
-    fread(Header, HeaderSize, 1, Inputptr);
+    fread(InputHeader, HeaderSize, 1, Inputptr);
 
     // Use check_format to ensure WAV format
     // TODO #4
@@ -59,14 +59,9 @@ int main(int argc, char *argv[])
 
 int check_format(WAVHEADER header)
 {
-    int headerchecker;
-    // TODO #4
-    for (int i = 8; 7 < i < 12; i++)
-    {
-        headerchecker = strcmp(Header[i], header[i]);
 
-    }
-    if (headerchecker == 0)
+    // TODO #4
+    if ()
     {
         return true;
     }
