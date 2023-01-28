@@ -19,18 +19,18 @@ void printlist(node_t* head)
     printf("\n");
 }
 
-node_t CreateNewNode(int value)
+node_t *CreateNewNode(int value)
 {
     node_t *result = malloc(sizeof(node_t));
     result->value = value;
     result->next = NULL;
-    return *result;
+    return result;
 }
 
-node_t InsertAtHead(node_t *head, node_t* NodeToInsert)
+node_t *InsertAtHead(node_t *head, node_t* NodeToInsert)
 {
     NodeToInsert->next = head;
-    return *NodeToInsert;
+    return NodeToInsert;
 }
 
 int main()
@@ -39,7 +39,7 @@ int main()
     node_t *head;
     for (int i = 0; i < 25; i++)
     {
-        tmp = CreatNewNode(i);
+        tmp = CreateNewNode(i);
         head = InsertAtHead(head, tmp);
     }
     printlist(head);
