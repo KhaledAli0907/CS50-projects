@@ -68,15 +68,22 @@ node_t *remove(node_t **head, node_t NodeToRemove)
     if (*head == NodeToRemove)
     {
         *head = NodeToRemove->next;
-        if (*head != NodeToRemove)
+        if (*head != NULL)
         {
-            *head->next = 
+            *head->prev = NULL;
         }
     }
     else
     {
-        NodeToRemove ->
+        NodeToRemove->prev->next = NodeToRemove->next;
+        if (NodeToRemove->next != NULL)
+        {
+            NodeToRemove->next->prev = NodeToRemove->prev;
+        }
     }
+    NodeToRemove->prev=NULL;
+    NodeToRemove->next=NULL;
+    return;
 }
 
 int main()
@@ -94,6 +101,7 @@ int main()
 
     InsertAfterNode(tmp, CreateNewNode(75));
 
+    remove(&head, head);
     printlist(head);
     return 0;
 
