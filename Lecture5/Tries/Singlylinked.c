@@ -5,7 +5,6 @@ struct node
 {
     int value;
     struct node *next;
-    struct node *prev;
 };
 typedef struct node node_t;
 
@@ -24,7 +23,6 @@ node_t *CreateNewNode(int value)
 {
     node_t *result = malloc(sizeof(node_t));
     result->value = value;
-    result->prev = NULL;
     result->next = NULL;
     return result;
 }
@@ -32,7 +30,6 @@ node_t *CreateNewNode(int value)
 node_t *InsertAtHead(node_t **head, node_t* NodeToInsert)
 {
     NodeToInsert->next = *head;
-    (*head)->prev = NodeToInsert;
     *head = NodeToInsert;
     return NodeToInsert;
 }
