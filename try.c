@@ -100,7 +100,7 @@ int main()
     printf("Found Number: %d \n", tmp->value);
 
     InsertAfterNode(tmp, CreateNewNode(75));
-    
+    remove(&head, temp)
     remove(&head, head);
     printlist(head);
     return 0;
