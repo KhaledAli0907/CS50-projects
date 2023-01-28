@@ -32,8 +32,12 @@ node_t *CreateNewNode(int value)
 node_t *InsertAtHead(node_t **head, node_t* NodeToInsert)
 {
     NodeToInsert->next = *head;
-    (*head)->prev = NodeToInsert;
+    if (*head != NULL)
+    {
+        (*head)->prev = NodeToInsert;
+    }
     *head = NodeToInsert;
+    NodeToInsert->prev = NULL;
     return NodeToInsert;
 }
 
