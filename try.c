@@ -63,7 +63,7 @@ node_t *Find(node_t *head, int value)
     return NULL;
 }
 
-node_t *remove(node_t **head, node_t NodeToRemove)
+void *remove(node_t **head, node_t NodeToRemove)
 {
     if (*head == NodeToRemove)
     {
@@ -100,7 +100,7 @@ int main()
     printf("Found Number: %d \n", tmp->value);
 
     InsertAfterNode(tmp, CreateNewNode(75));
-
+    
     remove(&head, head);
     printlist(head);
     return 0;
