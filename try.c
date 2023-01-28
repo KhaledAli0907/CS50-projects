@@ -27,11 +27,14 @@ node_t *CreateNewNode(int value)
     return result;
 }
 
-node_t *InsertAtHead(node_t *head, node_t* NodeToInsert)
+node_t *InsertAtHead(node_t **head, node_t* NodeToInsert)
 {
-    NodeToInsert->next = head;
+    NodeToInsert->next = *head;
+    *head = NodeToInsert;
     return NodeToInsert;
 }
+
+
 
 int main()
 {
@@ -40,7 +43,7 @@ int main()
     for (int i = 0; i < 25; i++)
     {
         tmp = CreateNewNode(i);
-        head = InsertAtHead(head, tmp);
+        InsertAtHead(&head, tmp);
     }
     printlist(head);
     return 0;
