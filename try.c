@@ -34,18 +34,30 @@ node_t *InsertAtHead(node_t **head, node_t* NodeToInsert)
     return NodeToInsert;
 }
 
-
+node_t *Find(node_t *head, int value)
+{
+    node_t *tmp = head;
+    while (tmp != NULL)
+    {
+        if (tmp->value == value) return tmp;
+        tmp = tmp->next;
+    }
+    return NULL;
+}
 
 int main()
 {
     node_t *tmp;
-    node_t *head;
+    node_t *head = NULL;
     for (int i = 0; i < 25; i++)
     {
         tmp = CreateNewNode(i);
         InsertAtHead(&head, tmp);
     }
     printlist(head);
+
+    tmp = Find(head, 15);
+    printf("Found Number: %d \n", tmp->value);
     return 0;
 
 }
