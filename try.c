@@ -22,7 +22,7 @@ void printlist(node_t* head)
 int main()
 {
     node_t n1, n2, n3;
-    ndoe_t *head;
+    node_t *head;
 
     n1.value = 32;
     n2.value = 16;
