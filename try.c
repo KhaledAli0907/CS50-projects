@@ -63,7 +63,7 @@ node_t *Find(node_t *head, int value)
     return NULL;
 }
 
-void remove_node(node_t **head, node_t NodeToRemove)
+void remove(node_t **head, node_t NodeToRemove)
 {
     if (*head == NodeToRemove)
     {
