@@ -63,7 +63,7 @@ node_t *Find(node_t *head, int value)
     return NULL;
 }
 
-node_t *remove(node_t **head, node_t nextnode)
+node_t *remove(node_t **head, node_t NodeToRemove)
 {
     
 }
