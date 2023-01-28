@@ -81,8 +81,8 @@ void remove(node_t **head, node_t NodeToRemove)
             NodeToRemove->next->prev = NodeToRemove->prev;
         }
     }
-    NodeToRemove->prev=NULL;
     NodeToRemove->next=NULL;
+    NodeToRemove->prev=NULL;
     return;
 }
 
