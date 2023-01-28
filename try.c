@@ -60,13 +60,13 @@ int main()
         tmp = CreateNewNode(i);
         InsertAtHead(&head, tmp);
     }
-    printlist(head);
-
 
     tmp = Find(head, 15);
     printf("Found Number: %d \n", tmp->value);
 
     InsertAfterNode(tmp, CreateNewNode(75));
+
+    printlist(head);
     return 0;
 
 }
