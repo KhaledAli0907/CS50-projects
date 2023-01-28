@@ -4,10 +4,11 @@
 struct node
 {
     int value;
-    struct *next;
-}
+    struct node *next;
+};
+typedef struct node node_t;
 
 int main()
 {
-
+    node
 }
