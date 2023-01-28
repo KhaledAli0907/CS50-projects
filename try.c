@@ -34,9 +34,9 @@ node_t *InsertAtHead(node_t **head, node_t* NodeToInsert)
     return NodeToInsert;
 }
 
-void InsertAfterNode (node_t NodeToInsertAfter, node_t NewNode)
+void InsertAfterNode (node_t *NodeToInsertAfter, node_t *NewNode)
 {
-    NewNode->Next = NodeToInsertAfter->Next;
+    NewNode->next = NodeToInsertAfter->next;
     NodeToInsertAfter = NewNode;
 }
 
@@ -62,8 +62,11 @@ int main()
     }
     printlist(head);
 
+
     tmp = Find(head, 15);
     printf("Found Number: %d \n", tmp->value);
+
+    InsertAfterNode(tmp, CreateNewNode(75));
     return 0;
 
 }
