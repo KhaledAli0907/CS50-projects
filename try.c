@@ -75,7 +75,7 @@ node_t *remove(node_t **head, node_t NodeToRemove)
     }
     else
     {
-        NodeToRemove
+        NodeToRemove -> 
     }
 }
 
