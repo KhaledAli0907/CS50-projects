@@ -8,7 +8,7 @@ struct node
 };
 typedef struct node node_t;
 
-void printlist (node_t* head)
+void printlist(node_t* head)
 {
     node_t *temporary = head;
     while (temporary != NULL)
@@ -33,7 +33,7 @@ int main()
     n2.next = &n1;
     n1.next = NULL;
 
-    printf(head);
+    printlist(head);
     return 0;
 
 }
