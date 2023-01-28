@@ -34,6 +34,12 @@ node_t *InsertAtHead(node_t **head, node_t* NodeToInsert)
     return NodeToInsert;
 }
 
+void InsertAfterNode (node_t NodeToInsertAfter, node_t NewNode)
+{
+    NewNode->Next = NodeToInsertAfter->Next;
+    NodeToInsertAfter = NewNode;
+}
+
 node_t *Find(node_t *head, int value)
 {
     node_t *tmp = head;
