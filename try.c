@@ -63,14 +63,14 @@ node_t *Find(node_t *head, int value)
     return NULL;
 }
 
-void remove(node_t **head, node_t NodeToRemove)
+void remove_node(node_t **head, node_t *NodeToRemove)
 {
-    if (*head = NodeToRemove)
+    if (*head == NodeToRemove)
     {
         *head = NodeToRemove->next;
         if (*head != NULL)
         {
-            *head->prev = NULL;
+            (*head)->prev = NULL;
         }
     }
     else
@@ -103,8 +103,8 @@ int main()
 
     printlist(head);
 
-    remove(&head, tmp);
-    remove(&head, head);
+    remove_node(&head, tmp);
+    remove_node(&head, head);
     printlist(head);
     return 0;
 
