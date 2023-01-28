@@ -44,7 +44,7 @@ node_t *InsertAtHead(node_t **head, node_t* NodeToInsert)
 void InsertAfterNode (node_t *NodeToInsertAfter, node_t *NewNode)
 {
     NewNode->next = NodeToInsertAfter->next;
-    if (NewNode->Next != NULL)
+    if (NewNode->next != NULL)
     {
         NewNode->next->prev = NodeToInsertAfter;
     }
