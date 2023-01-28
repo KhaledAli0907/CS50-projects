@@ -65,7 +65,7 @@ node_t *Find(node_t *head, int value)
 
 void remove(node_t **head, node_t NodeToRemove)
 {
-    if (*head == NodeToRemove)
+    if (*head = NodeToRemove)
     {
         *head = NodeToRemove->next;
         if (*head != NULL)
