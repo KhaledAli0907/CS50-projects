@@ -70,12 +70,12 @@ node_t *remove(node_t **head, node_t NodeToRemove)
         *head = NodeToRemove->next;
         if (*head != NodeToRemove)
         {
-            *head->next =
-        };
+            *head->next = 
+        }
     }
     else
     {
-        NodeToRemove -> 
+        NodeToRemove ->
     }
 }
 
