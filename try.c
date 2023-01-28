@@ -3,7 +3,7 @@
 
 struct
 
-int main(void)
+int main()
 {
 
 }
