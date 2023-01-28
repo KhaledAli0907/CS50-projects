@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct
+struct node
+{
+    int value;
+    node *next = 
+}
 
 int main()
 {
