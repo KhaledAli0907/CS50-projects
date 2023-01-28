@@ -19,6 +19,20 @@ void printlist(node_t* head)
     printf("\n");
 }
 
+node_t CreateNewNode(int value)
+{
+    node_t *result = malloc(sizeof(node_t));
+    result->value = value;
+    result->next = NULL;
+    return result;
+}
+
+node_t insert(node_t *head, node_t* NodeToInsert)
+{
+    NodeToInsert->next = head;
+    return NodeToInsert;
+}
+
 int main()
 {
     node_t n1, n2, n3;
@@ -32,6 +46,7 @@ int main()
     n3.next = &n2;
     n2.next = &n1;
     n1.next = NULL;
+    CreateNewNode(72);
 
     printlist(head);
     return 0;
