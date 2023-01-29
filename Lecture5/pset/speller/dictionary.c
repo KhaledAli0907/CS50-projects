@@ -56,7 +56,7 @@ bool load(const char *dictionary)
     //read words into file
     while (fscanf(f, "%s", word) != EOF)
     {
-        //create new node
+        //create new node for each word
         node *WordNode == malloc(sizeof(node));
         //check there is enough memory
         if (WordNode == NULL)
@@ -64,6 +64,7 @@ bool load(const char *dictionary)
             printf("No enough memory");
             return false;
         }
+        
         strcpy(WordNode->word, Word);
         WordNode->next = NULL;
     }
