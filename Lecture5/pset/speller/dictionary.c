@@ -41,7 +41,7 @@ bool load(const char *dictionary)
 {
     // TODO
     node *temp = NULL;
-    char* word;
+    char *word[LENGTH + 1];
     FILE *f = fopen(dictionary, "r");
     if (f == NULL)
     {
