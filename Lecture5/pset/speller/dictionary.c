@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <strings.h>
+#include <stdlib.h>
 
 #include "dictionary.h"
 
@@ -42,15 +43,19 @@ bool load(const char *dictionary)
     // TODO
     node *temp = NULL;
     char *word[LENGTH + 1];
+    //Open File
     FILE *f = fopen(dictionary, "r");
+    //make its't null
     if (f == NULL)
     {
         printf("Can't open file");
         return false;
     }
+    //read words into file
     while (fscanf(f, "%s", word) != EOF)
     {
-
+        //create new node
+        node *WordNode == malloc(sizeof(node));
     }
 
 
