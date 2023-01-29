@@ -61,6 +61,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
+    
     int sum = 0;
     for (int i = 0, n = strlen(word); i < n; i++)
     {
@@ -126,5 +127,10 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
+    node *cursor = table[BucketSize];
+    while (cursor != NULL)
+    {
+
+    }
     return false;
 }
