@@ -52,6 +52,7 @@ bool check(const char *word)
         {
             return true;
         }
+        //setting the cursor ptr to the next ptr
         cursor= cursor->next;
     }
     return false;
