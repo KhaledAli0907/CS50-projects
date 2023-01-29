@@ -113,6 +113,7 @@ bool load(const char *dictionary)
         }
         WordsCount++;
     }
+    //close the opening file to prevent memory leaks
     fclose(f);
     return true;
 }
@@ -128,16 +129,20 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    for (int i = 0; i < N; i++)
+    //go through the nodes
+    for (int i = 0; i < BucketSize; i++)
     {
-        node *head = table[i];
-        node *cursor = head;
+
+        node *cursor = table[i];
         node *tmp = cursor;
 
         while (cursor != NULL)
         {
+            //moving the cursor to the next node
             cursor = cursor->next;
+            //deleting the first one
             free(tmp);
+            //setting the temp ptr to the next ptr
             tmp = cursor;
         }
     }
