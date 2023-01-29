@@ -111,21 +111,8 @@ int main(int argc, char *argv[])
 bool check(char* word)
 {
     node *cursor = root;
-    char* ChildName;
-
-    while (cursor != NULL)
-    {
-        for (int i = 0; i < SIZE_OF_ALPHABET; i++)
-        {
-            ChildName = (char*)cursor->children[i];
-            return ChildName;
-        }
-    }
-    if (strcmp(ChildName, word) == 0)
-    {
-        return true;
-    }
-    else return false;
+    for (int i = 0 )
+    return false;
 }
 
 // Unload trie from memory
