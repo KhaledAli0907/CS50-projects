@@ -58,7 +58,7 @@ bool load(const char *dictionary)
     // TODO
     //declaring varablies
     node *temp = NULL;
-    char *Word[LENGTH + 1];
+    char *word[LENGTH + 1];
     //Open File
     FILE *f = fopen(dictionary, "r");
     //make sure its't null
@@ -68,7 +68,7 @@ bool load(const char *dictionary)
         return false;
     }
     //read words into file
-    while (fscanf(f, "%s", Word) != EOF)
+    while (fscanf(f, "%s", word) != EOF)
     {
         //create new node for each word
         node *WordNode = malloc(sizeof(node));
