@@ -112,10 +112,8 @@ bool check(char* word)
 {
     node *cursor = root;
     const char* tword = word;
-    while (cursor != NULL)
-    {
+    int index = 0;
 
-    }
     return false;
 }
 
