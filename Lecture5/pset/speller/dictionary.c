@@ -41,6 +41,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
+    //declaring varablies
     node *temp = NULL;
     char *word[LENGTH + 1];
     //Open File
