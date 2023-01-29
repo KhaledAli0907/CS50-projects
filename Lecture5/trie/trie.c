@@ -120,8 +120,8 @@ bool check(char* word)
     {
         for (int i; i < SIZE_OF_ALPHABET; i++)
         {
-            if (strcmp(word, name) == '0') return cursor;
-            cursor = cursor->childern;
+            if (strcmp(word, ChildName) == 0) return cursor;
+            cursor = cursor->children;
         }
     }
     return false;
