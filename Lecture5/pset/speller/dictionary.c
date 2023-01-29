@@ -113,6 +113,7 @@ bool load(const char *dictionary)
         }
         WordsCount++;
     }
+    fclose(f);
     return true;
 }
 
