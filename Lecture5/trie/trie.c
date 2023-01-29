@@ -117,7 +117,7 @@ bool check(char* word)
     }
     for (int i; i < 26; i++)
     {
-        curser->
+        curser->children[i];
     }
     return false;
 }
