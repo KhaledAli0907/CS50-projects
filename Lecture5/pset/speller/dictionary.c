@@ -58,7 +58,10 @@ bool load(const char *dictionary)
         //create new node
         node *WordNode == malloc(sizeof(node));
         //check there is enough memory
-        if ()
+        if (WordNode == NULL)
+        {
+            printf(cant)
+        }
     }
 
 
