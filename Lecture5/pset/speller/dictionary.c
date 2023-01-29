@@ -67,6 +67,11 @@ bool load(const char *dictionary)
         //copy word into node
         strcpy(WordNode->word, Word);
         WordNode->next = NULL;
+
+        //Hashing the word
+        int HashOrder = hash(Word);
+        //insert in the correct hash index
+        
     }
 
 
