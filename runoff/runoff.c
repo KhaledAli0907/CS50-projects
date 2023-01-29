@@ -160,10 +160,10 @@ void tabulate(void)
 bool print_winner(void)
 {
 
-    for(int i = 0; i<candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         float percentage = (float) candidates[i].votes / candidate_count;
-        if( percentage >.5)
+        if (percentage > .5)
         {
             printf("%s is the winner \n",candidates[i].name);
             return true;
