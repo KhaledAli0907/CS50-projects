@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
-
+#include <strings.h>
 
 #include "dictionary.h"
 
@@ -48,7 +48,7 @@ bool load(const char *dictionary)
     }
     while (fscanf(f, "%s", word) != EOF)
     {
-        
+
     }
 
 
