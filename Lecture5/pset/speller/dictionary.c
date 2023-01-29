@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <strings.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "dictionary.h"
 
@@ -60,8 +61,10 @@ bool load(const char *dictionary)
         //check there is enough memory
         if (WordNode == NULL)
         {
-            printf(cant)
+            printf("No enough memory");
+            return false;
         }
+        strcpy(WordNode, f);
     }
 
 
