@@ -111,6 +111,10 @@ int main(int argc, char *argv[])
 bool check(char* word)
 {
     node *courser;
+    if (courser == NULL)
+    {
+        return 1;
+    }
     
     return false;
 }
