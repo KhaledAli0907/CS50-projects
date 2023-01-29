@@ -113,13 +113,8 @@ bool check(char* word)
     node *cursor = root;
     while (cursor != NULL)
     {
-        for (int i = 0; i < SIZE_OF_ALPHABET; i++)
-        {
-            if (word[i] == cursor->childern[i])
-            {
-                return true
-            }
-        }
+       if (cursor->children == word) return cursor;
+       cursor = cursor->children;
     }
     return false;
 }
