@@ -9,6 +9,9 @@
 
 #include "dictionary.h"
 
+//decalre variables
+int WordsCount= 0;
+
 // Represents a node in a hash table
 typedef struct node
 {
@@ -78,6 +81,7 @@ bool load(const char *dictionary)
         //copy word into node
         strcpy(WordNode->word, Word);
         WordNode->next = NULL;
+        WordsCount++;
 
         //Hashing the word
         int HashOrder = hash(Word);
@@ -99,7 +103,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    return 0;
+    return WordsCount;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
