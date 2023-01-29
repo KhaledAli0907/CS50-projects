@@ -40,9 +40,11 @@ node *InsertAtHead(node *head, node*NewNode)
 bool check(const char *word)
 {
     // TODO
-    create a copy of words to 
-
-    node *cursor = table[]
+    //get hash index
+    int HashIndex = hash(word);
+    //cursor to go through all the words
+    node *cursor = table[HashIndex];
+    //
     return false;
 }
 
