@@ -76,10 +76,16 @@ bool load(const char *dictionary)
 
         //Hashing the word
         int HashOrder = hash(Word);
-        //insert at hash order
-        if ()
-        InsertAtHead(table, WordNode)
-
+        //insert at hash order if it's empty
+        if (table[HashOrder] == NULL)
+        {
+            table[HashOrder] = WordNode;
+        }
+        //else if it isn't
+        else
+        {
+            InsertAtHead(table[HashOrder], WordNode);
+        }
     }
 
 
