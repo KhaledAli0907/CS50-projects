@@ -129,12 +129,15 @@ bool unload(void)
     // TODO
     for (int i = 0; i < WordsCount; i++)
     {
-        node *cursor = table[BucketSize];
+        node *cursor = table[i];
+        node *tmp = cursor;
+
+        while (cursor != NULL)
+        {
+            tmp = 
+        }
     }
 
-    while (cursor != NULL)
-    {
 
-    }
     return false;
 }
