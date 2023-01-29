@@ -21,7 +21,7 @@ typedef struct node
 node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 17,576;
+const unsigned int N = 17576;
 
 // Hash table
 node *table[N];
@@ -45,7 +45,7 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     int sum = 0;
-    for (int i = 0, n < strlen(word); i < n; i++)
+    for (int i = 0, n = strlen(word); i < n; i++)
     {
         sum += word[i];
     }
@@ -68,10 +68,10 @@ bool load(const char *dictionary)
         return false;
     }
     //read words into file
-    while (fscanf(f, "%s", word) != EOF)
+    while (fscanf(f, "%s", Word) != EOF)
     {
         //create new node for each word
-        node *WordNode == malloc(sizeof(node));
+        node *WordNode = malloc(sizeof(node));
         //check there is enough memory
         if (WordNode == NULL)
         {
