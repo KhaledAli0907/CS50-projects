@@ -64,7 +64,8 @@ bool load(const char *dictionary)
             printf("No enough memory");
             return false;
         }
-        strcpy(WordNode->word, f);
+        strcpy(WordNode->word, Word);
+        WordNode->next = NULL;
     }
 
 
