@@ -134,10 +134,10 @@ bool unload(void)
 
         while (cursor != NULL)
         {
-            tmp = 
+            cursor = cursor->next;
+            free(tmp);
+            tmp = cursor;
         }
     }
-
-
     return false;
 }
