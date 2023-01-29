@@ -127,10 +127,14 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    node *cursor = table[BucketSize];
+    for (int i = 0; i < WordsCount; i++)
+    {
+        node *cursor = table[BucketSize];
+    }
+
     while (cursor != NULL)
     {
-        
+
     }
     return false;
 }
