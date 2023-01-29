@@ -76,7 +76,8 @@ bool load(const char *dictionary)
 
         //Hashing the word
         int HashOrder = hash(Word);
-        //insert in hashindex
+        //insert at hash order
+        if ()
         InsertAtHead(table, WordNode)
 
     }
