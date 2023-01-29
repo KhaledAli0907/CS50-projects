@@ -40,11 +40,13 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
+    node *temp = NULL;
     char* word;
     FILE *f = fopen(dictionary, "r");
     if (f == NULL)
     {
-        return 1;
+        printf("Can't open file");
+        return false;
     }
     while (fscanf(f, "%s", word) != EOF)
     {
