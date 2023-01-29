@@ -40,12 +40,16 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
+    char* word;
     FILE *f = fopen(dictionary, "r");
     if (f == NULL)
     {
         return 1;
     }
-    while (fscanf(f, "%s", word))
+    while (fscanf(f, "%s", word) != EOF)
+    {
+        
+    }
 
 
     return false;
