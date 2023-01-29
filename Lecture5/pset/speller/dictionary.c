@@ -44,7 +44,11 @@ bool check(const char *word)
     int HashIndex = hash(word);
     //cursor to go through all the words
     node *cursor = table[HashIndex];
-    //
+    //check if it is not null
+    while (cursor != NULL)
+    {
+        if (strcasecmp())
+    }
     return false;
 }
 
