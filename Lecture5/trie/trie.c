@@ -111,6 +111,7 @@ int main(int argc, char *argv[])
 bool check(char* word)
 {
     node *cursor;
+    char* ChildName = cursor->children;
     if (cursor == NULL)
     {
         return 1;
@@ -119,7 +120,7 @@ bool check(char* word)
     {
         for (int i; i < SIZE_OF_ALPHABET; i++)
         {
-            if (strcmp(word, cursor->children) == '0') return cursor;
+            if (strcmp(word, name) == '0') return cursor;
             cursor = cursor->childern;
         }
     }
