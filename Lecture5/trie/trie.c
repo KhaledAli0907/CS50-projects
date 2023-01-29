@@ -111,7 +111,7 @@ int main(int argc, char *argv[])
 bool check(char* word)
 {
     node *cursor;
-    if (courser == NULL)
+    if (cursor == NULL)
     {
         return 1;
     }
@@ -119,7 +119,8 @@ bool check(char* word)
     {
         for (int i; i < SIZE_OF_ALPHABET; i++)
         {
-            cursor
+            if (word[i] == cursor[i]) return cursor;
+            cursor = curso
         }
     }
     return false;
