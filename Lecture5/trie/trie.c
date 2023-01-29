@@ -113,8 +113,7 @@ bool check(char* word)
     node *cursor = root;
     while (cursor != NULL)
     {
-       if (strcmp(word, cursor->children) == 0) return cursor;
-       cursor = cursor->children
+       
     }
     return false;
 }
