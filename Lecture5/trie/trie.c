@@ -113,7 +113,7 @@ bool check(char* word)
     node *cursor = root;
     while (cursor != NULL)
     {
-       
+        
     }
     return false;
 }
