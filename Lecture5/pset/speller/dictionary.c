@@ -41,6 +41,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
+    int sum = 0;
     
     return toupper(word[0]) - 'A';
 }
