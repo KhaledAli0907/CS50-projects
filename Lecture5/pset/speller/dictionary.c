@@ -37,6 +37,7 @@ node *InsertAtHead(node *head, node*NewNode)
 bool check(const char *word)
 {
     // TODO
+    node *cursor = NULL
     return false;
 }
 
@@ -57,7 +58,6 @@ bool load(const char *dictionary)
 {
     // TODO
     //declaring varablies
-    node *temp = NULL;
     char word[LENGTH + 1];
     //Open File
     FILE *f = fopen(dictionary, "r");
