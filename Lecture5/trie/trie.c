@@ -110,19 +110,17 @@ int main(int argc, char *argv[])
 // TODO: Complete the check function, return true if found, false if not found
 bool check(char* word)
 {
-    node *cursor;
-    char* ChildName = (char*)cursor->children;
-    if (cursor == NULL)
-    {
-        return 1;
-    }
+    node *cursor = NULL;
+    char* ChildName;
+
     while (cursor != NULL)
     {
-        for (int i; i < SIZE_OF_ALPHABET; i++)
+        for (int i = 0; i < SIZE_OF_ALPHABET; i++)
         {
-            if (strcmp(word, ChildName) == 0) return cursor;
-            cursor = cursor->children;
+            ChildName = (char*)cursor->children[i];
+            return ChildName;
         }
+        if (strcmp(ChildName, word) == 0) return word;
     }
     return false;
 }
