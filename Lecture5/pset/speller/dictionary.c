@@ -11,7 +11,7 @@
 
 //define BucketSize = (26*to the power of 3) + 1
 #define BucketSize 17577
-//decalre variables
+//decalre variable to keep the words count
 int WordsCount= 0;
 
 // Represents a node in a hash table
