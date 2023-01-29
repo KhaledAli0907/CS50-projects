@@ -81,7 +81,6 @@ bool load(const char *dictionary)
         //copy word into node
         strcpy(WordNode->word, Word);
         WordNode->next = NULL;
-        WordsCount++;
 
         //Hashing the word
         int HashOrder = hash(Word);
@@ -95,6 +94,7 @@ bool load(const char *dictionary)
         {
             InsertAtHead(table[HashOrder], WordNode);
         }
+        WordsCount++;
     }
     return false;
 }
