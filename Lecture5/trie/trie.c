@@ -111,7 +111,16 @@ int main(int argc, char *argv[])
 bool check(char* word)
 {
     node *cursor = root;
-    for (int i = 0 )
+    while (cursor != NULL)
+    {
+        for (int i = 0; i < SIZE_OF_ALPHABET; i++)
+        {
+            if (word[i] == cursor->childern[i])
+            {
+                return true
+            }
+        }
+    }
     return false;
 }
 
