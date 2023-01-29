@@ -111,7 +111,7 @@ int main(int argc, char *argv[])
 bool check(char* word)
 {
     node *cursor;
-    char* ChildName = cursor->children;
+    char* ChildName = (char*)cursor->children;
     if (cursor == NULL)
     {
         return 1;
