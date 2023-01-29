@@ -119,7 +119,7 @@ bool check(char* word)
     {
         for (int i; i < SIZE_OF_ALPHABET; i++)
         {
-            if (strcmr) return cursor;
+            if (strcmp(word, cursor->children) == '0') return cursor;
             cursor = cursor->childern;
         }
     }
