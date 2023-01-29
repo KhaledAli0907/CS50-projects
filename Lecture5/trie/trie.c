@@ -120,16 +120,12 @@ bool check(char* word)
             ChildName = (char*)cursor->children[i];
             return ChildName;
         }
-        if (strcmp(ChildName, word) == 0)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
     }
-
+    if (strcmp(ChildName, word) == 0)
+    {
+        return true;
+    }
+    else return false;
 }
 
 // Unload trie from memory
