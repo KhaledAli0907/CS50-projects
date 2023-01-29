@@ -132,7 +132,7 @@ bool unload(void)
     //go through the nodes
     for (int i = 0; i < BucketSize; i++)
     {
-
+        //setting the ptrs
         node *cursor = table[i];
         node *tmp = cursor;
 
@@ -142,7 +142,7 @@ bool unload(void)
             cursor = cursor->next;
             //deleting the first one
             free(tmp);
-            //setting the temp ptr to the next ptr
+            //setting the temp ptr to cursor ptr
             tmp = cursor;
         }
     }
