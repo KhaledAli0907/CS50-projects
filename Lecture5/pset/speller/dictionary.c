@@ -26,7 +26,9 @@ node *table[N];
 //function to insert nodes at head
 node *InsertAtHead(node **head, node*NewNode)
 {
-
+    NewNode->next = *head;
+    *head = NewNode;
+    return NewNode;
 }
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
@@ -74,7 +76,8 @@ bool load(const char *dictionary)
 
         //Hashing the word
         int HashOrder = hash(Word);
-        //insert in the correct hash index
+        //insert in hashindex
+        InsertAtHead()
 
     }
 
