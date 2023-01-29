@@ -9,6 +9,8 @@
 
 #include "dictionary.h"
 
+//define BucketSize = (26*to the power of 3) + 1
+#define BucketSize 17577
 //decalre variables
 int WordsCount= 0;
 
@@ -21,7 +23,8 @@ typedef struct node
 node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 17577;
+const unsigned int N = BucketSize;
+
 
 // Hash table
 node *table[N];
@@ -37,7 +40,9 @@ node *InsertAtHead(node *head, node*NewNode)
 bool check(const char *word)
 {
     // TODO
-    node *cursor = NULL
+    create a copy of words to 
+
+    node *cursor = table[]
     return false;
 }
 
