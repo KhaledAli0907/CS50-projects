@@ -42,8 +42,11 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     int sum = 0;
-    
-    return toupper(word[0]) - 'A';
+    for (int i = 0, n < strlen(word); i < n; i++)
+    {
+        sum += word[i];
+    }
+    return sum % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
