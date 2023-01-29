@@ -87,8 +87,6 @@ bool load(const char *dictionary)
             InsertAtHead(table[HashOrder], WordNode);
         }
     }
-
-
     return false;
 }
 
