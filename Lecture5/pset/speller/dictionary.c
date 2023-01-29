@@ -58,7 +58,7 @@ bool load(const char *dictionary)
     // TODO
     //declaring varablies
     node *temp = NULL;
-    char *word[LENGTH + 1];
+    char word[LENGTH + 1];
     //Open File
     FILE *f = fopen(dictionary, "r");
     //make sure its't null
@@ -79,11 +79,11 @@ bool load(const char *dictionary)
             return false;
         }
         //copy word into node
-        strcpy(WordNode->word, Word);
+        strcpy(WordNode->word, word);
         WordNode->next = NULL;
 
         //Hashing the word
-        int HashOrder = hash(Word);
+        int HashOrder = hash(word);
         //insert at hash order if it's empty
         if (table[HashOrder] == NULL)
         {
