@@ -117,11 +117,9 @@ bool check(char* word)
     }
     while (cursor != NULL)
     {
-        for (int i; i < SIZE_OF_ALPHABET; i++)
-        {
-            if (cursor[i] == word[i]) return cursor;
-            cursor = cursor->childern;
-        }
+        if (cursor[i] == word[i]) return cursor;
+        cursor = cursor->childern;
+
     }
     return false;
 }
