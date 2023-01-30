@@ -11,4 +11,4 @@ figlet = Figlet()
 if len(sys.argv = 2):
     FigList = figlet.getFonts()
     FigList.setFont(argv[1])
-    print()
+    print(figlet.renderText(argv[2]))
