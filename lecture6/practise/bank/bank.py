@@ -1,3 +1,4 @@
 greet = input("Greeting: ")
 
-if
+if greet = "Hello":
+    print("0$")
