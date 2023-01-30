@@ -2,7 +2,8 @@
 
 greet = input("Greeting: ")
 greet = greet.lower()
-while greet in ["i]
+if greet in ["hello"]:
     print("0$")
+if greet in []
 
 while
