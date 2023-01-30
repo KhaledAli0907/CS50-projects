@@ -10,8 +10,8 @@ if len(sys.argv) == 2:
 figlet = Figlet()
 
 if len(sys.argv) == 3:
-    FigList = figlet.getFonts()
-    FigList.setFont(argv[1])
+    figlet.getFonts()
+    figlet.setFont(sys.argv[1])
     print(figlet.renderText(argv[2]))
 
 if len(sys.argv) == 1:
