@@ -1,4 +1,6 @@
 greet = input("Greeting: ")
 
-if greet = "Hello":
+while "hello" in greet:
     print("0$")
+
+while
