@@ -110,9 +110,14 @@ int main(int argc, char *argv[])
 // TODO: Complete the check function, return true if found, false if not found
 bool check(char* word)
 {
-    node *cursor = root;
-    const char* tword = word;
     int index = 0;
+    node *cursor = root;
+    if (cursor != NULL)
+    {
+        return false;
+    }
+
+    for (int i = 0; i < )
 
     return false;
 }
