@@ -117,8 +117,12 @@ bool check(char* word)
         return false;
     }
 
-    for (int i = 0; i < )
-
+    for (int i = 0; i < SIZE_OF_ALPHABET; i++)
+    {
+        char name =cursor->childern[i];
+        return name;
+    }
+    
     return false;
 }
 
