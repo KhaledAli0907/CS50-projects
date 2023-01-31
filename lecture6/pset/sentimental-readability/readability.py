@@ -10,9 +10,9 @@ def main():
     sentences = 0
     # loop to go through text
     for i in range(len(text)):
-        if str.isalpha(text):
+        if text[i].isalpha():
             letters += 1
-        elif str.isspace(text):
+        elif text[i].isspace():
             words += 1
         elif text[i] == '.' or text[i] == '?' or text[i] == '!':
             sentences += 1
@@ -20,16 +20,17 @@ def main():
     L = (letters * 100) / (words + 1)
     S = (sentences * 100) / (words + 1)
     Grade = 0.0588 * L - 0.296 * S - 15.8
-    print(f"{Grade} G")
+    # round Grade to the nearest integer
+    Grade = round(Grade)
     # Print Grade
     #if it's less than 1
-    if round(Grade, 0) <= 1:
+    if Grade <= 1:
         print("Before Grade 1")
     # if it's between 1 and 16
-    elif round(Grade, 0) > 1 and int(Grade) < 16:
+    elif Grade > 1 and int(Grade) < 16:
         print(f"Grade: {Grade}")
     # if it's more than 16
-    elif round(Grade, 0) >= 16:
+    elif Grade >= 16:
         print("Grade 16+")
 
 
