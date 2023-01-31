@@ -22,8 +22,8 @@ def main():
         #read from the file
         reader = csv.DictReader(file)
         for teams in reader:
-            team["rating"] = int(teams["rating"])
-            
+            teams["rating"] = int(teams["rating"])
+            teams.append[]
 
 
 
