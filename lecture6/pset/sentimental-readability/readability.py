@@ -9,7 +9,8 @@ def main():
     words = 0
     sentence = 0
     # loop to go through text
-    for i in range(strln(text))
+    for i in range(len(text))
+        if 
 
 
 
