@@ -32,7 +32,7 @@ int main (void)
     float Grade = 0.0588 * L - 0.296 * S - 15.8;
         //printf("Your Grade is: %f \n",Grade);
 
-    if ((int) round(Grade)<=1)
+    if ((int) round(Grade) <= 1)
     {
         printf("Before Grade 1\n");
     }
