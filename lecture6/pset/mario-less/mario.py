@@ -2,7 +2,7 @@ from cs50 import get_int
 def main():
     height = get_height()
     for row in range(height):
-        for dot in range(7, row, -1):
+        for dot in range(height, row, -1):
             print(" ", end="")
         for colom in range(0, row, 1):
             print("#", end="")
