@@ -20,7 +20,7 @@ def main():
     L = (letters * 100) / (words + 1)
     S = (sentences * 100) / (words + 1)
     Grade = 0.0588 * L - 0.296 * S - 15.8
-    print
+    print(f"{Grade} G")
     # Print Grade
     #if it's less than 1
     if round(Grade, 0) <= 1:
