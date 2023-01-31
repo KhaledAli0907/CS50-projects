@@ -4,21 +4,21 @@ def main():
 
 class Jar:
     def __init__(self, capacity=12):
-        if size < 0:
+        if self.size < 0:
             raise ValueError("Only Positive integers allowed")
 
 
     def __str__(self):
-        n = size
+        n = self.size
         return n
 
     def deposit(self, n):
         for n in range(self.capacity):
-            size += n
+            self.size += n
 
     def withdraw(self, n):
         if n in range(self.size):
-            size -= n
+            self.size -= n
         else:
             raise ValueError("Not enough cookies in the jar")
 
@@ -29,8 +29,8 @@ class Jar:
 
     @property
     def size(self):
-        size = n
-        return size
+
+        return 
 
 main()
 
