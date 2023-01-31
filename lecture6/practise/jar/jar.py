@@ -1,5 +1,6 @@
 def main():
-    jar = Jar()
+
+    jar = Jar(12, 5)
     print(str(jar.capacity))
 
 class Jar:
@@ -25,7 +26,7 @@ class Jar:
 
     @property
     def capacity(self):
-        capacity = 12
+        capacity = 0
         return capacity
 
     @property
