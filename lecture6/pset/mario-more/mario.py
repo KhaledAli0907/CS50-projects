@@ -10,9 +10,13 @@ def main():
         # loop to print hashes
         for hash in range(0, row+1, +1):
             print("#", end="")
+        # print gape
+        print("  ", end="")
+        # loop to print hashes again
+        for hashes in range(0, row+1, +1):
+            print("#")
+        # Print new line
         print()
-
-
 
 
 # Fuction to ask for valid user input
