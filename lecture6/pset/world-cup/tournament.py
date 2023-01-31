@@ -21,7 +21,9 @@ def main():
     with open(FileName, "r") as f:
         #read from the file
         reader = csv.DictReader(file)
-        teams[reader]
+        for teams in reader:
+            team["rating"]
+
 
 
     counts = {}
