@@ -10,5 +10,10 @@ int main(argc, argv[])
     }
     int words = 0;
     int letters = 0;
-    int 
+    int sentence = 0;
+
+    for (int i = 0; i < strlen(argv[1]); i++)
+    {
+        
+    }
 }
