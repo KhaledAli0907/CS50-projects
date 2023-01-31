@@ -8,9 +8,11 @@ int main(void)
     {
         height = get_int("enter Positive Number: ")
     }
-    while (height)
+    while (height < 1 || height > 8)
+
     for (int i = 0; i < height; i++)
     {
+        printf("#");
         for (int j = 0; j < height; j++)
         {
             printf("#");
