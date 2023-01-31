@@ -12,9 +12,11 @@ def main():
     for i in range(len(text)):
         if str.isalpha(text):
             letters += 1
-        elif 
-
-
+        elif str.isspace(text):
+            words += 1
+        elif text[i] == '.' or text[i] == '?' or text[i] == '!':
+            sentence += 1
+    # 
 
 
 
