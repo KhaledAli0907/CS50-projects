@@ -16,7 +16,12 @@ def main():
             words += 1
         elif text[i] == '.' or text[i] == '?' or text[i] == '!':
             sentence += 1
-    # 
+    # calculate L, S and Grade values
+    L = (Letters * 100) / (words + 1)
+    S = (Sentences * 100) / (words + 1)
+    Grade = 0.0588 * L - 0.296 * S - 15.8
+    # Print Grade
+    if 
 
 
 
