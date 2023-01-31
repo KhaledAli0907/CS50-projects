@@ -12,7 +12,7 @@ def main():
             print("#", end="")
         # print gape
         print("  ", end="")
-        # loop to print hashes again
+        # loop to continue print hashes
         for hashes in range(0, row+1, +1):
             print("#", end="")
         # Print new line
