@@ -19,7 +19,7 @@ def main():
     #open teams csv file
     with open(sys.argv[1], "r") as file:
         #read from the file
-        reader = csv.DictReader(file, fieldnames = ["team, int(rating)])
+        reader = csv.DictReader(file, fieldnames = ["team", int("rating")])
         teams[reader]
 
 
