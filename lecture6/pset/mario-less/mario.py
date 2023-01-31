@@ -5,8 +5,8 @@ def main():
         for dot in range(height, row, -1):
             print(" ", end="")
         for colom in range(0, row, 1):
-            print("#", end="")
-        print()
+            print("#")
+        
 
 
 #function to get hight
