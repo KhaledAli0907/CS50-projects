@@ -9,8 +9,10 @@ def main():
     words = 0
     sentence = 0
     # loop to go through text
-    for i in range(len(text))
-        if 
+    for i in range(len(text)):
+        if str.isalpha(text):
+            letters += 1
+        elif 
 
 
 
