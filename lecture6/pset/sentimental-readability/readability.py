@@ -21,8 +21,12 @@ def main():
     S = (Sentences * 100) / (words + 1)
     Grade = 0.0588 * L - 0.296 * S - 15.8
     # Print Grade
-    if 
-
+    #if it's less than 1
+    if int(Grade) <= 1:
+        print("Before Grade 1")
+    # if it's between 1 and 16
+    if int(Grade) > 1 and int(Grade) < 16:
+        print 
 
 
 
