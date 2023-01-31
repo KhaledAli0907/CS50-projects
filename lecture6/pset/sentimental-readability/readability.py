@@ -20,15 +20,16 @@ def main():
     L = (letters * 100) / (words + 1)
     S = (sentences * 100) / (words + 1)
     Grade = 0.0588 * L - 0.296 * S - 15.8
+    print
     # Print Grade
     #if it's less than 1
-    if int(Grade) <= 1:
+    if round(Grade, 0) <= 1:
         print("Before Grade 1")
     # if it's between 1 and 16
-    elif int(Grade) > 1 and int(Grade) < 16:
+    elif round(Grade, 0) > 1 and int(Grade) < 16:
         print(f"Grade: {Grade}")
     # if it's more than 16
-    elif int(Grade) >= 16:
+    elif round(Grade, 0) >= 16:
         print("Grade 16+")
 
 
