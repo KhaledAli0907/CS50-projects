@@ -14,16 +14,22 @@ int main(void)
     for (int row = 0; row < height; row++)
     {
         // loop and print spaces
-        for (int space = height; space >= row+1; space--)
+        for (int space = height-1; space >= row; space--)
         {
             printf(" ");
         }
         // loop and print hashes
-        for (int hash = 0; hash <= row+1; hash++)
+        for (int hash = 0; hash <= row; hash++)
+        {
+            printf("#");
+        }
+        // print gap
+        printf("  ");
+        // loop to continue print hashes
+        for (int hash = 0; hash <= row; hash++)
         {
             printf("#");
         }
         printf("\n");
     }
-    printf("\n");
 }
