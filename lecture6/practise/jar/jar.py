@@ -22,7 +22,7 @@ class Jar:
         else:
             raise ValueError("Not enough cookies in the jar")
 
-    @property
+    @property 
     def capacity(self):
         return capacity
 
