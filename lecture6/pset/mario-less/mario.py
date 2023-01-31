@@ -16,7 +16,7 @@ def get_height():
         n = get_int("Height: ")
         if n > 0 or n <= 8:
             return n
-        except ValueError:
+        else:
             print("not between 1 and 8")
 
 main()
