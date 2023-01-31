@@ -14,7 +14,7 @@ def main():
         print("  ", end="")
         # loop to print hashes again
         for hashes in range(0, row+1, +1):
-            print("#")
+            print("#", end="")
         # Print new line
         print()
 
