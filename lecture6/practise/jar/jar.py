@@ -1,7 +1,4 @@
-def main():
-    jar = Jar()
-    print(str(jar.capacity))
-    print(str(jar))
+
 
 class Jar:
     def __init__(self, capacity=12):
@@ -31,4 +28,8 @@ class Jar:
     def size(self):
         return self.size
 
-main()
+def main():
+    jar = Jar()
+    print(str(jar.capacity))
+    print(str(jar))
+    jar
