@@ -1,6 +1,6 @@
 class Jar:
     def __init__(self, capacity=12):
-        if capacity < 0:
+        if get_size() < 0:
             raise ValueError("Only Positive integers allowed")
 
 
@@ -8,11 +8,11 @@ class Jar:
 
 
     def deposit(self, n):
-        while (n < capacity):
+        for n in range(12)
             size += n
 
     def withdraw(self, n):
-        ...
+
 
     @property
     def capacity(self):
