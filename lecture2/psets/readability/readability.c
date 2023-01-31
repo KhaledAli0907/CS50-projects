@@ -11,7 +11,7 @@ int main (void)
         int Words=0;
         int Sentence=0;
 
-        for (int l=0;l<strlen(Text);l++)
+        for (int l = 0; l < strlen(Text) ;l++)
             {
                 if(isalpha(Text[l]))
                 {
@@ -34,15 +34,14 @@ int main (void)
 
         if((int) round(Grade)<=1)
         {
-            printf("Before Grade 1 \n");
+            printf("Before Grade 1\n");
         }
         else if((int) round(Grade)>1 && (int) round(Grade)<16)
         {
-            printf("Grade %i \n",(int) round(Grade));
+            printf("Grade %i\n",(int) round(Grade));
         }
         else if((int) round(Grade)>=16)
         {
-            printf("Grade 16+ \n");
+            printf("Grade 16+\n");
         }
     }
-    
