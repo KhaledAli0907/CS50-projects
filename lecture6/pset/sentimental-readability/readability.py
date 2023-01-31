@@ -1,6 +1,7 @@
 # TODO
 from cs50 import get_string
 
+
 def main():
     # get the input from user
     text = get_string("Enter Text Here: ")
@@ -23,7 +24,7 @@ def main():
     # round Grade to the nearest integer
     Grade = round(Grade)
     # Print Grade
-    #if it's less than 1
+    # if it's less than 1
     if Grade <= 1:
         print("Before Grade 1")
     # if it's between 1 and 16
@@ -32,7 +33,6 @@ def main():
     # if it's more than 16
     elif Grade >= 16:
         print("Grade 16+")
-
 
 
 if __name__ == "__main__":
