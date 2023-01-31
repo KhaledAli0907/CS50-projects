@@ -1,25 +1,26 @@
-#include <cs50.h>
-#include <stdio.h>
+#include<stdio.h>
+#include<cs50.h>
+
 
 int main(void)
-{
-    int height;
+  {
+    int Height ;
     do
     {
-        height = get_int("enter Positive Number: ");
+        Height = get_int("Postive number: ");
     }
-    while (height < 1 || height > 8);
+    while(Height<1 || Height>8);
 
-    for (int i = 0; i < height; i++)
-    {
-        for (int space = 7; space <= i; space--)
+      for(int Row=0; Row<Height ;Row++)
+      {
+        for(int dot=7 ; dot>=Row ;dot--)
         {
-            printf("");
+            printf (" ");
         }
-        for (int hash = 0; hash >= i; hash++)
+        for(int Colum=0 ; Colum<=Row ;Colum++)
         {
             printf("#");
         }
-    printf("\n");
-    }
-}
+        printf( "\n");
+      }
+  }
