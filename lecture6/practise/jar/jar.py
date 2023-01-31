@@ -3,9 +3,8 @@ def main():
     print(str(jar.capacity))
 
 class Jar:
-    def __init__(self, capacity=12):
-        if self.size < 0:
-            raise ValueError("Only Positive integers allowed")
+    def __init__(self, capacity, size):
+
 
 
     def __str__(self):
