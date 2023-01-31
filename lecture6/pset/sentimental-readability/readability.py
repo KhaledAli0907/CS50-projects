@@ -26,7 +26,7 @@ def main():
         print("Before Grade 1")
     # if it's between 1 and 16
     if int(Grade) > 1 and int(Grade) < 16:
-        print 
+        print
 
 
 
