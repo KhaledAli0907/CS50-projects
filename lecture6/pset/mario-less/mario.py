@@ -1,12 +1,15 @@
-from cs50 import get_int
 def main():
+    #store height
     height = get_height()
+    #loop to through rows
     for row in range(height):
-        for dot in range(height, row, -1):
+        #loop to print spaces
+        for space in range(height, row+1, -1):
             print(" ", end="")
-        for colom in range(0, row, 1):
-            print("#")
-        
+        #loop to print hashes
+        for hash in range(0, row+1, 1):
+            print("#", end="")
+        print()
 
 
 #function to get hight
