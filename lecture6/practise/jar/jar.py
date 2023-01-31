@@ -8,11 +8,12 @@ class Jar:
 
 
     def deposit(self, n):
-        for n in range(self.capacity)
+        for n in range(self.capacity):
             self.size += n
 
     def withdraw(self, n):
-        
+        if n > self.size:
+            
 
 
     @property
