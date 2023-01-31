@@ -1,11 +1,18 @@
 #include <cs50.h>
+#include <stdio.h>
 
 int main(void)
 {
-    int height = get_int("Height: \n");
+    int height = get_int("Height: ");
     for (int i = 0; i < height; i++)
     {
-        printf("#");
-        printf("\n");
+        for (int j = 0; j < height; j++)
+        {
+            printf("#");
+            printf("\n");
+        }
+
+    printf("\n");
     }
+
 }
