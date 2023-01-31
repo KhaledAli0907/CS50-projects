@@ -4,23 +4,27 @@
 
 int main(void)
 {
-  int Height;
-  do
-  {
-      Height = get_int("Postive number: ");
-  }
-  while (Height<1 || Height>8);
-
-  for (int Row = 0; Row < Height; Row++)
-  {
-    for(int dot = Height - 2; dot >= Row; dot--)
+    int Height;
+    // get input while in valid range
+    do
     {
-        printf (" ");
+        Height = get_int("Postive number: ");
     }
-    for(int Colum=0; Colum <= Row; Colum++)
+    while (Height < 1 || Height > 8);
+    // loop through rows
+    for (int Row = 0; Row < Height; Row++)
     {
-        printf("#");
+        // print spaces
+        for (int dot = Height - 2; dot >= Row; dot--)
+        {
+            printf(" ");
+        }
+        // print hashes
+        for (int Colum = 0; Colum <= Row; Colum++)
+        {
+            printf("#");
+        }
+        // print new line
+        printf("\n");
     }
-    printf( "\n");
-  }
 }
