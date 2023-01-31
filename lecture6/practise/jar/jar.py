@@ -1,3 +1,7 @@
+def main()
+
+
+
 class Jar:
     def __init__(self, capacity=12):
         if get_size() < 0:
@@ -5,14 +9,15 @@ class Jar:
 
 
     def __str__(self):
-        
+        n = self.size
+        return n
 
     def deposit(self, n):
         for n in range(self.capacity):
             self.size += n
 
     def withdraw(self, n):
-        if n > self.size:
+        if n in range(self.size):
             self.size -= n
         else:
             raise ValueError("Not enough cookies in the jar")
