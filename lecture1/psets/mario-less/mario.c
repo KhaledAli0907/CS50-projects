@@ -6,20 +6,20 @@ int main(void)
     int height;
     do
     {
-        height = get_int("enter Positive Number: ")
+        height = get_int("enter Positive Number: ");
     }
-    while (height < 1 || height > 8)
+    while (height < 1 || height > 8);
 
     for (int i = 0; i < height; i++)
     {
-        printf("#");
-        for (int j = 0; j < height; j++)
+        for (int space = 7; space <= i; space--)
+        {
+            printf("");
+        }
+        for (int hash = 0; hash >= i; hash++)
         {
             printf("#");
-            printf("\n");
         }
-
     printf("\n");
     }
-
 }
