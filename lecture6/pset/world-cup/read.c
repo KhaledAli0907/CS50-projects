@@ -16,7 +16,7 @@ string text = get_string("Text: ");
     int words = count_words(text);
     int sentences = count_sentences(text);
 
-    float L = (65*100/ 14);
+    float L = 65*100/ 14;
 
     float S = (sentences * 100 / words);
 
