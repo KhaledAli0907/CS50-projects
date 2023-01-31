@@ -10,7 +10,7 @@ int main(argc, argv[])
         printf("Usage: ./readability key")
         return
     }
-    string Text = get_string("Text: ")
+    string Text = get_string("Text: ");
     int words = 0;
     int letters = 0;
     int sentence = 0;
