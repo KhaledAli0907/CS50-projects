@@ -5,7 +5,7 @@ class Jar:
 
 
     def __str__(self):
-
+        
 
     def deposit(self, n):
         for n in range(self.capacity):
@@ -13,8 +13,9 @@ class Jar:
 
     def withdraw(self, n):
         if n > self.size:
-            
-
+            self.size -= n
+        else:
+            raise ValueError("Not enough cookies in the jar")
 
     @property
     def capacity(self):
