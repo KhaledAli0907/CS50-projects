@@ -30,7 +30,7 @@ int main (void)
     float L = (Letters*100)/(Words+1);
     float S = (Sentence*100)/(Words+1);
     float Grade = 0.0588 * L - 0.296 * S - 15.8;
-        //printf("Your Grade is: %f \n",Grade);
+    //printf("Your Grade is: %f \n",Grade);
 
     if ((int) round(Grade) <= 1)
     {
