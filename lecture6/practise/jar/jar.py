@@ -1,10 +1,11 @@
-def main()
-
-
+def main():
+    jar = Jar()
+    print(str(jar.capacity))
+    print(str(jar))
 
 class Jar:
     def __init__(self, capacity=12):
-        if get_size() < 0:
+        if self.size < 0:
             raise ValueError("Only Positive integers allowed")
 
 
@@ -29,3 +30,5 @@ class Jar:
     @property
     def size(self):
         return self.size
+
+main()
