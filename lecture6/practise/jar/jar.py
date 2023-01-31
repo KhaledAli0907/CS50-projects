@@ -30,7 +30,7 @@ class Jar:
 
     @property
     def size(self):
-        
+
         return
 
 if __name__ == "__main__" :
