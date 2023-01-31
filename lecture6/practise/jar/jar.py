@@ -24,12 +24,12 @@ class Jar:
 
     @property
     def capacity(self):
-        capacity = self.capacity
+        capacity = 12
         return capacity
 
     @property
     def size(self):
-        size = self.size
+        size = n
         return size
 
 main()
