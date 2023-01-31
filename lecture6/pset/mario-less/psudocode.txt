@@ -1,0 +1,4 @@
+promt user for intger from 1 to 8
+    print spaces till the hight number
+    print hashes till the hight number
+    print new line
