@@ -18,7 +18,7 @@ string text = get_string("Text: ");
 
     float L = (65*100/ 14);
 
-    float S = (sentences / words) * 100;
+    float S = (sentences * 100 / words);
 
     float index = (0.0588 * L) - (0.296 * S) - 15.8;
 
