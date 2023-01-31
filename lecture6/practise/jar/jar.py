@@ -4,8 +4,10 @@ def main():
 
 class Jar:
     def __init__(self, capacity, size):
-
-
+        self.capacity = capacity
+        self.size = size
+        if size < 0 or size > capacity:
+            raise ValueError("Invaild Input")
 
     def __str__(self):
         n = self.size
@@ -23,11 +25,12 @@ class Jar:
 
     @property
     def capacity(self):
+        capacity = 12
         return capacity
 
     @property
     def size(self):
-
+        
         return
 
 if __name__ == "__main__" :
