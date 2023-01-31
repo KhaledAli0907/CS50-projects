@@ -1,5 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
+#include <ctype.h>
 
 int main(argc, argv[])
 {
@@ -8,12 +10,13 @@ int main(argc, argv[])
         printf("Usage: ./readability key")
         return
     }
+    string Text = get_string("Text: ")
     int words = 0;
     int letters = 0;
     int sentence = 0;
 
-    for (int i = 0; i < strlen(argv[1]); i++)
+    for (int i = 0; i < Text; i++)
     {
-        
+        if (isalpha(argv))
     }
 }
