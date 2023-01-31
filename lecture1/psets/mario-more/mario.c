@@ -9,7 +9,7 @@ int main(void)
     {
         height = get_int("Enter Height:");
     }
-    while(height < 1 || height > 8);
+    while (height < 1 || height > 8);
     // loop through raws
     for (int row = 0; row < height; row++)
     {
