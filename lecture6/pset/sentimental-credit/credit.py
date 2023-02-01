@@ -1,6 +1,8 @@
-# TODO
+import sys
+
+
 def main():
-    CridetCard = UserInput()
+    CreditCard = UserInput()
 
 def UserInput():
     while True:
@@ -11,8 +13,13 @@ def UserInput():
         except ValueError:
             print("Invalid Input")
 
-def ValidateCard(CridetCard):
-    if CridetCard < 13 or CridetCard > 16
+def ValidateCard(CreditCard):
+    if CreditCard < 13 or CreditCard > 16:
+        print("Inavild Card number")
+        sys.exit(0)
+
+    if CreditCard % 2 == 0:
+        for i in range()
 
 if __name__ == "__main__":
     main()
