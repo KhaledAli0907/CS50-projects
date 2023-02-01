@@ -16,7 +16,7 @@ if totalsum % 10 == 0:
         print("VISA")
     elif y == 15 and CreditCard[0:2] in ['34', '37']:
         print("AMEX")
-    elif y == 16 and 51 <= int(CreditCard[0:2]) <= 56:
+    elif y == 16 and 51 <= int(CreditCard[0:2]) <= 55:
         print("MASTERCARD")
     else:
         print("INVALID")
