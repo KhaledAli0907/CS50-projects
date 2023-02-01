@@ -1,7 +1,7 @@
 # TODO
 def main():
     # ask how many cents the customer is owed
-    cents = round(GetCents() * 100)
+    cents = GetCents()
     # Calculate the quarters
     quarters = CalculateQuarters(cents)
     cents = cents - quarters * 25
@@ -21,7 +21,8 @@ def main():
 def GetCents():
     while True:
         try:
-            cents = float(input("Change owed: "))
+            change = float(input("Change owed: "))
+            cents = round(change * 100)
             if cents > 0:
                 return cents
         except ValueError:
