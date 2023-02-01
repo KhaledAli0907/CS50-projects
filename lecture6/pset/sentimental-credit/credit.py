@@ -14,8 +14,8 @@ def UserInput():
             print("Invalid Input")
 
 def CheckCard(CreditCard):
-    # Hold the Card num. list
-    y = len(CreditCard)
+    # Hold the Card num. length
+    while
     # Copy the Card into list to modify
     copycard = CreditCard[::-1]
     # apply the algorithm
