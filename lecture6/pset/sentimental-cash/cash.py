@@ -1,7 +1,7 @@
 # TODO
 def main():
     # ask how many cents the customer is owed
-    cents = GetCents()
+    cents = round(GetCents() * 100)
     # Calculate the quarters
     quarters = CalculateQuarters(cents)
     cents = cents - quarters * 25
