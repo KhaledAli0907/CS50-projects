@@ -6,5 +6,9 @@ def main():
     quarters = (cents / 25) - (quarters * 25)
     # Calculate Dimes
 
+
+def GetInput():
+    
+
 if __name__ == "__main__":
     main()
