@@ -14,12 +14,16 @@ def UserInput():
             print("Invalid Input")
 
 def ValidateCard(CreditCard):
-    if CreditCard < 13 or CreditCard > 16:
+    # store the length of CridetCard Num.
+    x = len(CreditCard)
+    # check if the length is valid
+    if x < 13 or x > 16:
         print("Inavild Card number")
         sys.exit(0)
 
-    if CreditCard % 2 == 0:
-        for i in range()
+    if x % 2 == 0:
+        for i in range(x):
+            
 
 if __name__ == "__main__":
     main()
