@@ -1,6 +1,6 @@
 # TODO
 def main():
-    x = UserInput()
+    CridetCard = UserInput()
 
 def UserInput():
     while True:
@@ -11,7 +11,8 @@ def UserInput():
         except ValueError:
             print("Invalid Input")
 
-
+def ValidateCard(CridetCard):
+    if CridetCard < 13 or CridetCard > 16
 
 if __name__ == "__main__":
     main()
