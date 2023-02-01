@@ -10,7 +10,7 @@ copycard = CreditCard[::-1]
 firstnumbers = [int(i) for i in copycard[0::2]]
 othernumbers = [(int(x) * 2 // 10) + (int(x) * 2 % 10) for x in copycard[1::2]]
 totalsum = sum(firstnumbers) + sum(othernumbers)
-#check the type of Card if it's valid
+# check the type of Card if it's valid
 if totalsum % 10 == 0:
     if y in [13, 16] and CreditCard[0] == '4':
         print("VISA")
@@ -22,4 +22,3 @@ if totalsum % 10 == 0:
         print("INVALID")
 else:
     print("INVALID")
-# 5673598276138003
