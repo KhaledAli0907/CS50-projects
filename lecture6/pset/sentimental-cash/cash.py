@@ -5,7 +5,7 @@ def main():
     # Calculate the quarters
     quarters = (cents / 25) - (quarters * 25)
     # Calculate Dimes
-
+    
 
 def GetCents():
     while True:
