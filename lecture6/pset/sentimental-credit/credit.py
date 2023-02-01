@@ -21,9 +21,19 @@ def ValidateCard(CreditCard):
         print("Inavild Card number")
         sys.exit(0)
 
+    even, odd = 0, 0
     if x % 2 == 0:
         for i in range(x):
-            
+            num = int(CreditCard[i])
+            if i % 2 == 0:
+                multiply = num * 2
+                if multiply % 2 == 0:
+                    even = even // 10
+                    even = even % 10
+                else 
+
+
+
 
 if __name__ == "__main__":
     main()
