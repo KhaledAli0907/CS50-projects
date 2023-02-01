@@ -7,8 +7,8 @@ y = len(CreditCard)
 # Copy the Card into list to modify
 copycard = CreditCard[::-1]
 # apply the algorithm
-firstnumbers = [int(i) for i in range(copycard[0::2])]
-othernumbers = [(int(x) * 2 // 10) + (int(x) * 2 % 10) for x in range(copycard[1::0])]
+firstnumbers = [int(i) for i in copycard[0::2]]
+othernumbers = [(int(x) * 2 // 10) + (int(x) * 2 % 10) for x in copycard[1::2]]
 totalsum = sum(firstnumbers) + sum(othernumbers)
 #check the type of Card if it's valid
 if totalsum % 10 == 0:
