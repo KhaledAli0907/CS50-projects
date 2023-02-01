@@ -9,16 +9,17 @@ def main():
         if cents >= 25:
             cents = cents - 25
             coins += 1
-        elif cents >=10:
+        elif cents >= 10:
             cents = cents - 10
             coins += 1
         elif cents >= 5:
             cents = cents - 5
             coins += 1
-        elif cents >=1:
+        elif cents >= 1:
             cents = cents - 1
             coins += 1
     print(coins)
+
 
 def GetCents():
     while True:
@@ -29,7 +30,6 @@ def GetCents():
                 return cents
         except ValueError:
             print("Invaild value")
-
 
 
 if __name__ == "__main__":
