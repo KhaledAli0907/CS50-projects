@@ -2,6 +2,8 @@
 def main():
     CreditCard = UserInput()
 
+    CheckCard(CreditCard)
+
 def UserInput():
     while True:
         try:
@@ -26,7 +28,12 @@ def CheckCard(CreditCard):
             print("VISA")
         elif y == 15 and CreditCard[0:2] in [34, 37]:
             print("AMEX")
-        elif y == 16 and CreditCard[0]
+        elif y == 16 and 51 <= CreditCard[0:2] <= 56:
+            print("MASTERCARD")
+        else:
+            print("invalid")
+    else:
+        print("INVALID")
 
 
 
