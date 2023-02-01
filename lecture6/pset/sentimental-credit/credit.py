@@ -27,12 +27,16 @@ def ValidateCard(CreditCard):
             num = int(CreditCard[i])
             if i % 2 == 0:
                 multiply = num * 2
-                if multiply % 2 == 0:
-                    even = even // 10
-                    even = even % 10
-                else 
+                if multiply >= 10:
+                    even += multiply // 10
+                    even += multiply % 10
+                else:
+                    even += multiply
+            else:
+                odd += num
 
-
+    else:
+        for j in range(x)
 
 
 if __name__ == "__main__":
