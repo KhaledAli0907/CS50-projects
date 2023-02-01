@@ -51,7 +51,7 @@ int calculate_quarters(int cents)
 {
     // TODO
     int cents;
-    if (cents )
+    if (cents >= 25 && cents <= 49)
     return 0;
 }
 
