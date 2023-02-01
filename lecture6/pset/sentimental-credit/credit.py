@@ -19,6 +19,6 @@ if totalsum % 10 == 0:
     elif y == 16 and 51 <= int(CreditCard[0:2]) <= 56:
         print("MASTERCARD")
     else:
-        print("invalid")
+        print("INVALID")
 else:
     print("INVALID")
