@@ -1,22 +1,24 @@
 # TODO
 def main():
+    # Variable to keep track of coins
+    coins = 0
     # ask how many cents the customer is owed
     cents = GetCents()
     # Calculate the quarters
-    quarters = CalculateQuarters(cents)
-    cents = cents - quarters * 25
-    # Calculate Dimes
-    dimes = CalculateDimes(cents)
-    cents = cents - dimes * 10
-    # Calculate Nickels
-    nickels = CalculateNickels(cents)
-    cents = cents - nickels * 5
-    # Calculate Pennies
-    pennies = CalculatePennies(cents)
-    cents = cents - pennies * 1
-    # The total coind owned
-    coins = quarters + dimes + nickels + pennies
-    print(f"{coins}")
+    while cents > 0:
+        if cents >= 25:
+            cents = cents - 25
+            coins += 1
+        elif cents >=10:
+            cents = cents - 10
+            coins += 1
+        elif cents >= 5:
+            cents = cents - 5
+            coins += 1
+        elif cents >=1:
+            cents = cents - 1
+            coins += 1
+    print(coins)
 
 def GetCents():
     while True:
@@ -28,21 +30,6 @@ def GetCents():
         except ValueError:
             print("Invaild value")
 
-def CalculateQuarters(cents):
-    q = cents / 25
-    return q
-
-def CalculateDimes(cents):
-    d = cents / 10
-    return d
-
-def CalculateNickels(cents):
-    n = cents / 5
-    return n
-
-def CalculatePennies(cents):
-    p = cents / 1
-    return p
 
 
 if __name__ == "__main__":
