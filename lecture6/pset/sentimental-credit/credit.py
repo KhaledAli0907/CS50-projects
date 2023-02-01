@@ -6,7 +6,7 @@ CreditCard = get_string("CreditCard Number: ")
 y = len(CreditCard)
 # Copy the Card into list to modify
 copycard = CreditCard[::-1]
-# apply the algorithm
+# apply the algorithm with list comprehension
 firstnumbers = [int(i) for i in copycard[0::2]]
 othernumbers = [(int(x) * 2 // 10) + (int(x) * 2 % 10) for x in copycard[1::2]]
 totalsum = sum(firstnumbers) + sum(othernumbers)
