@@ -50,24 +50,21 @@ int get_cents(void)
 int calculate_quarters(int cents)
 {
     // TODO
-    int cents;
-    if (cents >= 25 && cents <= 49)
-    {
-        cents += 1;
-    }
-    
-    return cents;
+    int quarters = cents / 25;
+    return quarters;
 }
 
 int calculate_dimes(int cents)
 {
     // TODO
-    return 0;
+    int dimes = cents / 10;
+    return dimes;
 }
 
 int calculate_nickels(int cents)
 {
     // TODO
+    int nickels = cents / 5;
     return 0;
 }
 
