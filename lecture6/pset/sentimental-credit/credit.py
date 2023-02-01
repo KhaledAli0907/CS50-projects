@@ -1,21 +1,10 @@
+from cs50 import get_string
 
-def main():
-    CreditCard = UserInput()
 
-    CheckCard(CreditCard)
+    CreditCard = get_string("CreditCard Number: ")
 
-def UserInput():
-    while True:
-        try:
-            CNum = int(input("CridetCard Number: "))
-            if CNum > 0:
-                return CNum
-        except ValueError:
-            print("Invalid Input")
-
-def CheckCard(CreditCard):
     # Hold the Card num. length
-    while
+    y = len(CreditCard)
     # Copy the Card into list to modify
     copycard = CreditCard[::-1]
     # apply the algorithm
