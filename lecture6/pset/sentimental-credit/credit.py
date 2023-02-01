@@ -12,11 +12,11 @@ othernumbers = [(int(x) * 2 // 10) + (int(x) * 2 % 10) for x in range(copycard[1
 totalsum = sum(firstnumbers) + sum(othernumbers)
 #check the type of Card if it's valid
 if totalsum % 10 == 0:
-    if y in [13, 16] and CreditCard[0] == 4:
+    if y in [13, 16] and CreditCard[0] == '4':
         print("VISA")
-    elif y == 15 and CreditCard[0:2] in [34, 37]:
+    elif y == 15 and CreditCard[0:2] in ['34', '37']:
         print("AMEX")
-    elif y == 16 and 51 <= CreditCard[0:2] <= 56:
+    elif y == 16 and 51 <= int(CreditCard[0:2]) <= 56:
         print("MASTERCARD")
     else:
         print("invalid")
