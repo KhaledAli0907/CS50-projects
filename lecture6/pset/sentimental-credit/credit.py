@@ -27,7 +27,7 @@ def ValidateCard(CreditCard):
         # loop through card lengths
         for i in range(x):
             num = int(CreditCard[i])
-            # if the number we loppng over is even
+            # if the spot we looping over is even
             if i % 2 == 0:
                 multiply = num * 2
                 if multiply >= 10:
@@ -40,7 +40,7 @@ def ValidateCard(CreditCard):
     # if the card length is odd
     else:
         for j in range(x):
-            
+
 
 
 
