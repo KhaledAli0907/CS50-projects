@@ -13,8 +13,10 @@ def UserInput():
         except ValueError:
             print("Invalid Input")
 
-def ValidateCard(CreditCard):
-    
+def CheckCard(CreditCard):
+    copycard = CreditCard[]
+    firstnumbers = [int(i) for i in range(copycard[0::2])]
+    othernumbers = [(int(x) * 2 // 10) + (int(x) * 2 % 10) for x in range(copycard[1::0])]
 
 
 if __name__ == "__main__":
