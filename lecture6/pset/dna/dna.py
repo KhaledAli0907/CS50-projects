@@ -4,24 +4,26 @@ import sys
 
 def main():
     # Dealaring lists to sstore STRs and People
-    STRs = []
-    People = []
+
 
     # TODO: Check for command-line usage
     if len(sys.argv) != 3:
         print("Usage : python dna.py data.csv sequence.txt")
 
     # TODO: Read database file into a variable
+    database = []
     FileB = sys.argv[1]
     with open(FileB, "r") as DataBase:
-        STRs = csv.DictReader(DataBase)
-        for rows in STRs:
-            
+        reader = csv.DictReader(DataBase)
+        for rows in reader:
+            database.append(rows)
 
     # TODO: Read DNA sequence file into a variable
-
+    FileD = sys.argv[2]
+    with open(FileD, "r") as DNA:
+        DNASeq = DNA.read()
     # TODO: Find longest match of each STR in DNA sequence
-
+    
     # TODO: Check database for matching profiles
 
     return
