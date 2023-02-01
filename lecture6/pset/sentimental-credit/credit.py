@@ -17,7 +17,7 @@ def CheckCard(CreditCard):
     # Hold the Card num. list
     y = len(CreditCard)
     # Copy the Card into list to modify
-    copycard = CreditCard[]
+    copycard = CreditCard[::-1]
     # apply the algorithm
     firstnumbers = [int(i) for i in range(copycard[0::2])]
     othernumbers = [(int(x) * 2 // 10) + (int(x) * 2 % 10) for x in range(copycard[1::0])]
