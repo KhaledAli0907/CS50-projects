@@ -5,7 +5,7 @@ def main():
 def UserInput():
     while True:
         try:
-            CNum = long(input("CridetCard Number: "))
+            CNum = int(input("CridetCard Number: "))
             if CNum > 0:
                 return CNum
         except ValueError:
