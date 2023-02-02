@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 const int BITS_IN_BYTE = 8;
 
@@ -16,7 +17,8 @@ int main(void)
     // for loop to converts chars to the asci value
     for (int i = 0; i < strlen(text); i++)
     {
-        text[i] =
+        int char = atoi(text[i]);
+        chars[i] = char
     }
 }
 
