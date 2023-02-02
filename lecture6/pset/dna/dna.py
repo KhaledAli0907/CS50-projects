@@ -24,8 +24,9 @@ def main():
     # Dict. to stroe the matches result
     matches = {}
     # make Subsequence of headers to pass into longestmatch function
-    SubSeq = list(DataBase[0].keys
-
+    SubSeq = list(DataBase[0].keys())[1::]
+    # Store the result into the Dict.
+    matches[SubSeq] = longest_match(DNASeq, SubSeq)
 
     # TODO: Check database for matching profiles
 
