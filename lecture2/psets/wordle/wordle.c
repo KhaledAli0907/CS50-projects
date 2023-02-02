@@ -127,7 +127,7 @@ string get_guess(int wordsize)
     {
         guess = get_string("Guess: ");
     }
-    while(atoi(guess) > wordsize);
+    while(atoi(guess) < wordsize);
     return guess;
 }
 
