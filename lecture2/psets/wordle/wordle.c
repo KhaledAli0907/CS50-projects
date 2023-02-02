@@ -34,18 +34,18 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    //store the wordsize as temporary integer
-    int WS = atoi(argv[1]);
+    //store the wordsize
+    int wordsize = atoi(argv[1]);
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
-    if (WS < '5' || WS > '8')
+    if (wordsize < 5 || wordsize > 8)
     {
         printf("wordsize must be either 5, 6, 7, or 8 \n");
         return 1;
     }
     else
     {
-        wordsize = atoi(argv[1])
+        return wordsize;
     }
 
     // open correct file, each file has exactly LISTSIZE words
@@ -89,7 +89,7 @@ int main(int argc, string argv[])
 
         // set all elements of status array initially to 0, aka WRONG
         // TODO #4
-        status[] = {0};
+        status[wordsize] = {0};
 
         // Calculate score for the guess
         int score = check_word(guess, wordsize, status, choice);
