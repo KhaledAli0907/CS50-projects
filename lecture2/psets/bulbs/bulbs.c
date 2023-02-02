@@ -9,7 +9,13 @@ void print_bulb(int bit);
 int main(void)
 {
     // TODO
-    
+    // promt user for text
+    string text = get_string("Message: ");
+    // for loop to converts chars to the asci value
+    for (int i = 0; i < strlen(text); i++)
+    {
+        text[i] = 
+    }
 }
 
 void print_bulb(int bit)
