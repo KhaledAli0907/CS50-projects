@@ -27,7 +27,7 @@ int main(int argc, string argv[])
     // ask the user for text
     string Text = get_string("Enter Text Here: ");
     // return the cyphered text
-    printf("Cypherd Text: ");
+    printf("ciphertext: ");
     // encryption loop
     for (int i = 0; i < strlen(Text); i++)
     {
