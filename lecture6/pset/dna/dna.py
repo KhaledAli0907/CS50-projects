@@ -29,9 +29,14 @@ def main():
     for SubSeq in SubSeqs:
         matches[SubSeq] = longest_match(DNASeq, SubSeq)
 
-    
-
     # TODO: Check database for matching profiles
+    # loop through DataBase
+    for p in DataBase:
+        result = 0
+        #loop through persons to match the subsequence
+        for SubSeq in p:
+            result += 1
+            
 
     return
 
