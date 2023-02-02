@@ -24,7 +24,9 @@ def main():
     with open(FileD, "r") as DNA:
         DNASeq = DNA.read()
     # TODO: Find longest match of each STR in DNA sequence
-
+    STRcount={}
+    for SRT in DNASeq:
+        
     # TODO: Check database for matching profiles
 
     return
