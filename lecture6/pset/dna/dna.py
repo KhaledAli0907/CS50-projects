@@ -20,7 +20,7 @@ def main():
     fileDNA = sys.argv[2]
     with open(fileDNA, "r") as fd:
         DNASeq = fd.read()
-    matches= {}
+    matches = {}
     # TODO: Find longest match of each STR in DNA sequence
 
 
