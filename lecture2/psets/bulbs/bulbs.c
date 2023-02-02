@@ -11,14 +11,14 @@ int main(void)
 {
     // TODO
     //array to store the chars in intger form
-    int chars[BITS_IN_BYTE];
+    int chars[BITS_IN_BYTE] = {0};
     // promt user for text
     string text = get_string("Message: ");
     // for loop to go through Message
     for (int i = 0; i < strlen(text); i++)
     {
         int ascii = text[i];
-        
+
     }
 }
 
