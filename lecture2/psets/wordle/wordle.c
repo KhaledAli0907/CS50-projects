@@ -180,8 +180,11 @@ void print_word(string guess, int wordsize, int status[])
             {
                 printf(YELLOW"%c \n", guess[j]);
             }
+            else if (guess[j] != status[i])
+            {
+                printf(RED"%c \n", guess[j]);
+            }
         }
-
     }
 
     printf("\n");
