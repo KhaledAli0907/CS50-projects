@@ -3,9 +3,6 @@ import sys
 
 
 def main():
-    # Dealaring lists to sstore STRs and People
-
-
     # TODO: Check for command-line usage
     if len(sys.argv) != 3:
         sys.exit("Usage: python dna.py data.csv sequence.txt")
@@ -33,7 +30,7 @@ def main():
     # loop through DataBase
     for p in DataBase:
         result = 0
-        #loop through persons to match the subsequence
+        # loop through persons to match the subsequence
         for SubSeq in SubSeqs:
             # if we found a match
             if int(p[SubSeq]) == matches[SubSeq]:
@@ -42,7 +39,7 @@ def main():
         if result == len(SubSeqs):
             print(p["name"])
             return
-    print("Not Found!")
+    print("No match")
     return
 
 
