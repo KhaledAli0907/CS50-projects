@@ -13,7 +13,7 @@ int main(void)
     // promt user for text
     string text = get_string("Message: ");
     // for loop to go through Message
-    for ( int i = 0; i < strlen(text); i++)
+    for (int i = 0; i < strlen(text); i++)
     {
         // hold the ascii values
         int ascii = text[i];
@@ -26,7 +26,7 @@ int main(void)
             ascii /= 2;
             x++;
         }
-        for (int y = BITS_IN_BYTE - 1; y >=0; y--)
+        for (int y = BITS_IN_BYTE - 1; y >= 0; y--)
         {
             print_bulb(CIB[y]);
         }
