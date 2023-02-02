@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <stdlib.h>
+#include <stdlib.h>
 
 
 int main(int argc, string argv[])
@@ -9,21 +11,21 @@ int main(int argc, string argv[])
     // make the sure the user entered the right command
     if (argc != 2)
     {
-        printf("Usage: ./caesar key");
+        printf("Usage: ./caesar key\n");
         return 1;
     }
     for (int i = 0; i < strlen(argv[1]); i++)
     {
         if (!isdigit(argv[1][i]))
         {
-            printf("Usage: ./carsar key");
+            printf("Usage: ./carsar key\n");
             return 1;
         }
     }
     // store the key as an integer
     int key = atoi(argv[1]);
     // ask the user for text
-    string Text = get_string("Enter Text Here: ");
+    string Text = get_string("Enter Text Here: \n");
     // return the cyphered text
     printf("Cypherd Text: ");
     // encryption loop
@@ -47,7 +49,7 @@ int main(int argc, string argv[])
         }
         else
         {
-            printf("%c", Text[i])
+            printf("%c", Text[i]);
         }
     }
     printf("\n");
