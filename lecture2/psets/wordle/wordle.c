@@ -125,9 +125,9 @@ string get_guess(int wordsize)
     // TODO #3
     do
     {
-        guess = get_guess();
+        guess = get_string("Guess: ");
     }
-    while(guess > wordsize);
+    while(atoi(guess) > wordsize);
     return guess;
 }
 
@@ -172,13 +172,13 @@ void print_word(string guess, int wordsize, int status[])
     {
         for (int j = 0; j < wordsize; j++)
         {
-            if (guess[i] == statue[i])
+            if (guess[i] == status[i])
             {
-                printf(GREEN"%c", guess[i] RESET "\n");
+                printf(GREEN"%c \n", guess[i]);
             }
-            else if (guess[j] == statue[i])
+            else if (guess[j] == status[i])
             {
-                printf(YELLOW"%c", guess[j] RESET "\n");
+                printf(YELLOW"%c \n", guess[j]);
             }
         }
 
