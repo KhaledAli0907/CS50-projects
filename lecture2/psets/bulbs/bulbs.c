@@ -21,16 +21,16 @@ int main(void)
         // hold the ascii values
         int ascii = text[i++];
         // convert the value to binary
+        int x = 0;
         while (ascii > 0)
         {
             CIB[i] = ascii % 2;
             ascii /= 2;
+            x++;
         }
-
-
-        for (int x = BITS_IN_BYTE - 1; x >=0; x--)
+        for (int y = BITS_IN_BYTE - 1; x >=0; x--)
         {
-            print_bulb(CIB[x]);
+            print_bulb(CIB[y]);
         }
         printf("\n");
     }
