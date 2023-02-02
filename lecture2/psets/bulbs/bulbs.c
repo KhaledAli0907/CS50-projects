@@ -14,11 +14,11 @@ int main(void)
     int chars[BITS_IN_BYTE];
     // promt user for text
     string text = get_string("Message: ");
-    // for loop to converts chars to the asci value
+    // for loop to go through Message
     for (int i = 0; i < strlen(text); i++)
     {
-        int char = atoi(text[i]);
-        chars[i] = char
+        int ascii = text[i];
+        
     }
 }
 
