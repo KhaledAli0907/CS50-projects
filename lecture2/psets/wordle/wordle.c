@@ -146,15 +146,12 @@ int check_word(string guess, int wordsize, int status[], string choice)
                 score += EXACT;
                 break;
             }
-            if (choice[j] == guess[i])
+            else if (choice[i] != guess[i] && choice[j] == guess[i])
             {
                 score += CLOSE;
-                
+                break;
             }
         }
-
-        else if ()
-
     }
     // HINTS
     // iterate over each letter of the guess
