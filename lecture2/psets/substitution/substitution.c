@@ -17,9 +17,19 @@ int main(int argc, string argv[])
     // validate it's a 26 alpha chars.
     for (int i = 0; i < strlen(key); i++)
     {
+        // check alpha
         if (!isalpha(key[i]))
         {
-            printf()
+            printf("Usage: ./substitution Alphakey");
+            return 1;
+        }
+        // check it's a 26 chars.
+        for (int j = i + 1; j < strlen(key); j++)
+        {
+            if (key[i] == key[j])
+            {
+                print(")
+            }
         }
     }
 }
