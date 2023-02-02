@@ -25,7 +25,7 @@ int main(int argc, string argv[])
     // store the key as an integer
     int key = atoi(argv[1]);
     // ask the user for text
-    string Text = get_string("Enter Text Here: \n");
+    string Text = get_string("Enter Text Here: ");
     // return the cyphered text
     printf("Cypherd Text: ");
     // encryption loop
