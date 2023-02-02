@@ -34,9 +34,9 @@ def main():
     for p in DataBase:
         result = 0
         #loop through persons to match the subsequence
-        for SubSeq in p:
-            result += 1
-            
+        for SubSeq in SubSeqs:
+            if 
+
 
     return
 
