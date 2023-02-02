@@ -7,9 +7,10 @@
 int main(void)
 {
     string text = get_string("text: ");
+    int x = atoi(text);
     for (int i = 0; i < strlen(text);i++)
     {
-        int m = toascii(text[i]);
+        int m = toascii(x);
         printf("number: %i /n", m);
     }
 
