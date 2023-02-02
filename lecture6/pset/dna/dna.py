@@ -35,9 +35,14 @@ def main():
         result = 0
         #loop through persons to match the subsequence
         for SubSeq in SubSeqs:
-            if 
+            # if we found a match
+            if int(p[SubSeq]) == matches[SubSeq]:
+                result += 1
 
-
+        if result == len(SubSeqs):
+            print(p["name"])
+            return
+    print("Not Found!")
     return
 
 
