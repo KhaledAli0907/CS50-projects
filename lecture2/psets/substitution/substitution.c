@@ -48,7 +48,7 @@ int main(int argc, string argv[])
         }
     }
     // promt the user for text
-    string Text = get_string("plaintext: \n");
+    string Text = get_string("plaintext: ");
     // print the cypherd text
     printf("ciphertext: ");
     //encryption loop
