@@ -56,7 +56,10 @@ int main(int argc, string argv[])
     {
         if (isalpha(Text[i]))
         {
-            if ()
+            if (isupper(Text[i]))
+            {
+                int UpperC = Text[i]
+            }
         }
     }
 }
