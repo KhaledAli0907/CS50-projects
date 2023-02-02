@@ -112,7 +112,7 @@ int main(int argc, string argv[])
 
     // Print the game's result
     // TODO #7
-    printf()
+    printf("%s" , choice);
     // that's all folks!
     return 0;
 }
