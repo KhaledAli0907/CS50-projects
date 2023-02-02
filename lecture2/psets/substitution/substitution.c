@@ -29,7 +29,7 @@ int main(int argc, string argv[])
             if (toupper(key[x]) == toupper(key[y]))
             {
                 printf("No dublicate chars allowed");
-                return 2;
+                return 1;
             }
         }
     }
@@ -37,7 +37,7 @@ int main(int argc, string argv[])
     if (strlen(key) != 26)
     {
         printf("Key must contain 26 characters.");
-        return 2;
+        return 1;
     }
     // convert key to upper chars
     for (int k = 0; k < strlen(key); k++)
