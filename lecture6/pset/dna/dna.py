@@ -46,7 +46,7 @@ def main():
                 i += 1
         STRcount[STR] = LSeq
 
-        print(STRcount)
+    print(STRcount)
 
     # TODO: Check database for matching profiles
 
