@@ -24,6 +24,7 @@ int main(void)
         CIB[i] = ascii % 2;
         ascii /= 2;
     }
+    for (int j = BITS_IN_BYTE - 1; )
 }
 
 void print_bulb(int bit)
