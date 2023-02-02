@@ -10,17 +10,15 @@ void print_bulb(int bit);
 int main(void)
 {
     // TODO
-    //array to store the chars in binary form
-    int CIB[BITS_IN_BYTE] = {0};
-
     // promt user for text
     string text = get_string("Message: ");
     // for loop to go through Message
     for ( int i = 0; i < strlen(text); i++)
     {
         // hold the ascii values
-        int ascii = text[i++];
-        // convert the value to binary
+        int ascii = text[i];
+        //make array value to store th binary and make it all 0
+        int CIB[] = {0, 0, 0, 0, 0, 0, 0, 0};
         int x = 0;
         while (ascii > 0)
         {
@@ -28,7 +26,7 @@ int main(void)
             ascii /= 2;
             x++;
         }
-        for (int y = BITS_IN_BYTE - 1; x >=0; x--)
+        for (int y = BITS_IN_BYTE - 1; y >=0; y--)
         {
             print_bulb(CIB[y]);
         }
