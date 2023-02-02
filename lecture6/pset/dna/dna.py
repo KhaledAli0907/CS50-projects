@@ -34,7 +34,7 @@ def main():
     for i in range(len(header)):
         for j in STRseq:
             # compare the values
-            if str(STRseq[i] == header[i][j]):
+            if str(STRseq[j]) == header[i][j]:
                 Dnacounter += 1
         # if we found match
         if Dnacounter == len(STRseq):
