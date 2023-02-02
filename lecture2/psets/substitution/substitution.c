@@ -28,7 +28,7 @@ int main(int argc, string argv[])
         {
             if (toupper(key[x]) == toupper(key[y]))
             {
-                print("No dublicate chars allowed");
+                printf("No dublicate chars allowed");
                 return 2;
             }
         }
@@ -54,12 +54,27 @@ int main(int argc, string argv[])
     //encryption loop
     for (int i = 0; i < strlen(Text); i++)
     {
+        // check if its alpha
         if (isalpha(Text[i]))
         {
+            // if uppercase replace it with the key
             if (isupper(Text[i]))
             {
-                int UpperC = Text[i]
+                int UpperC = Text[i] - 65;
+                printf("%c", key[UpperC]);
+            }
+            // if lowercas replace with the key
+            else if (islower(Text[i]))
+            {
+                int LowerC = Text[i] - 97;
+                printf("%c", key[LowerC] + 32);
             }
         }
+        // else print the charecter as it is
+        else
+        {
+            printf("%c", Text[i]);
+        }
     }
+    printf("\n");
 }
