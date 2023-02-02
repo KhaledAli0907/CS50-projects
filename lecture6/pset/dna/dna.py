@@ -25,7 +25,14 @@ def main():
         DNASeq = DNA.read()
     # TODO: Find longest match of each STR in DNA sequence
     STRcount={}
-    for SRT in DNASeq:
+    for SRT in header:
+        # Varabils to hold the current and lognset sequenses
+        i = 0
+        LSeq = 0
+        CSeq = 0
+        while SRT < len(DNASeq):
+            if SRT == 
+
 
     # TODO: Check database for matching profiles
 
