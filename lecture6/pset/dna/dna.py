@@ -28,16 +28,21 @@ def main():
     for i in header:
         STRseq[i] = (longest_match(header, i))
     # TODO: Check database for matching profiles
-    STRcount = 'NoMatch'
+    STRs = 'NoMatch'
     Dnacounter = 1
     # 2d list to go throgh the list
-    for i in len(header):
-        for j in STRseq[]:
+    for i in range(len(header)):
+        for j in STRseq:
             # compare the values
             if str(STRseq[i] == header[i][j]):
                 Dnacounter += 1
-
-
+        # if we found match
+        if Dnacounter == len(STRseq):
+            STRs = header[i]['name']
+            break
+        else:
+            Dnacounter = 1
+    print(STRs)
     return
 
 
