@@ -39,6 +39,14 @@ int main(int argc, string argv[])
         printf("Key must contain 26 characters.");
         return 2;
     }
+    // convert key to upper chars
+    for (int k = 0; k < strlen(key); k++)
+    {
+        if (islower(key[k]))
+        {
+            key[k] = key[k] - 32;
+        }
+    }
     // promt the user for text
     string Text = get_string("plaintext: \n");
     // print the cypherd text
@@ -46,6 +54,6 @@ int main(int argc, string argv[])
     //encryption loop
     for (int i = 0; i < strlen(Text); i++)
     {
-        
+        for (i)
     }
 }
