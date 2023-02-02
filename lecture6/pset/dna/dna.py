@@ -10,9 +10,12 @@ def main():
     if len(sys.argv != 3):
         sys.exit("Usage: python dna.py data.csv sequence.txt")
     # TODO: Read database file into a variable
+    DataBase = {}
     FileD = sys.argv[1]
     with open(FileD, "r") as f:
-        DataBase = csv.DictReader(f)
+        reader = csv.DictReader(f)
+        for rows in reader:
+            DataBase.append(DataBase)
     # TODO: Read DNA sequence file into a variable
     fileDNA = sys.argv[2]
     with open(fileDNA, "r") as fd:
