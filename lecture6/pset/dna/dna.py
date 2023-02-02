@@ -22,11 +22,11 @@ def main():
     with open(FileD, "r") as DNA:
         DNASeq = DNA.read()
     # TODO: Find longest match of each STR in DNA sequence
-    STRcount={}
+    STRcount = {}
 
     # iterate over the header
     for i in header:
-        
+        STRcount[i] = (longest_match(header, i))
     # TODO: Check database for matching profiles
 
 
