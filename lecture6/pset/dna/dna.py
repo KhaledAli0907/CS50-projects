@@ -24,7 +24,27 @@ def main():
     with open(FileD, "r") as DNA:
         DNASeq = DNA.read()
     # TODO: Find longest match of each STR in DNA sequence
-    
+    STRcount={}
+    for STR in header:
+        # Varabils to hold the current and lognset sequenses
+        i = 0
+        LSeq = 0
+        CSeq = 0
+        while i < len(DNASeq):
+            # get the Current STR
+            CSTR = DNASeq[i: i + len(DNASeq)]
+            if CSTR == STR:
+                # increment the CSeq with 1
+                CSeq += 1
+                # Set The index == STR
+                i = len(STR)
+            else:
+                # Set the Longest seq. = to current and reset the current count
+                if CSeq > LSeq:
+                    LSeq = CSeq
+                CSeq = 0
+                i += 1
+        STRcount[STR] = LSeq
 
     print(STRcount)
 
