@@ -7,42 +7,23 @@ def main():
 
 
     # TODO: Check for command-line usage
-    if len(sys.argv) != 3:
-        print("Usage : python dna.py data.csv sequence.txt")
-
+    if len(sys.argv != 3):
+        sys.exit("Usage: python dna.py data.csv sequence.txt")
     # TODO: Read database file into a variable
-    database = []
-    FileB = sys.argv[1]
-    with open(FileB, "r") as DataBase:
-        reader = csv.DictReader(DataBase)
-        header = reader.fieldnames[1:]
-
+    FileD = sys.argv[1]
+    with open(FileD, "r") as f:
+        DataBase = csv.DictReader(f)
     # TODO: Read DNA sequence file into a variable
-    FileD = sys.argv[2]
-    with open(FileD, "r") as DNA:
-        DNASeq = DNA.read()
+    fileDNA = sys.argv[2]
+    with open(fileDNA, "r") as fd:
+        DNASeq = csv.DictReader(fd)
+    matches= {}
     # TODO: Find longest match of each STR in DNA sequence
-    STRseq = {}
+    
 
-    # iterate over the header
-    for i in header:
-        STRseq[i] = (longest_match(header, i))
+
     # TODO: Check database for matching profiles
-    STRs = 'NoMatch'
-    Dnacounter = 1
-    # 2d list to go throgh the list
-    for i in range(len(header)):
-        for j in STRseq:
-            # compare the values
-            if str(STRseq[j]) == header[i][j]:
-                Dnacounter += 1
-        # if we found match
-        if Dnacounter == len(STRseq):
-            STRs = header[i]['name']
-            break
-        else:
-            Dnacounter = 1
-    print(STRs)
+
     return
 
 
