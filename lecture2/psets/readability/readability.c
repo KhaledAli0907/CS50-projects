@@ -36,11 +36,11 @@ int main (void)
     {
         printf("Before Grade 1\n");
     }
-    else if ( round(Grade) > 1 && round(Grade) < 7.6)
+    else if ( round(Grade) > 1 && round(Grade) < 7.5)
     {
         printf("Grade %i\n", (int) round(Grade));
     }
-    else if ( round(Grade) > 7.7 &&  round(Grade) < 16)
+    else if ( round(Grade) > 7.6 &&  round(Grade) < 16)
     {
         printf("Grade %i\n",(int) round(Grade));
     }
