@@ -38,7 +38,7 @@ int main (void)
     }
     else if ((int) round(Grade) > 1 && (int) round(Grade) < 7.6)
     {
-        printf("Grade %i \n", (int) round(Grade);)
+        printf("Grade %i \n", (int) round(Grade));
     }
     else if ((int) round(Grade) > 7.7 && (int) round(Grade) < 16)
     {
