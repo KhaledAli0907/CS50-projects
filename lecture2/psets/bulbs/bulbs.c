@@ -16,15 +16,21 @@ int main(void)
     // promt user for text
     string text = get_string("Message: ");
     // for loop to go through Message
-    for ( i; i < strlen(text); i++)
+    for ( ; i < strlen(text); )
     {
         // hold the ascii values
-        int ascii = text[i];
+        int ascii = text[i++];
         // convert the value to binary
         CIB[i] = ascii % 2;
         ascii /= 2;
     }
-    for (int j = BITS_IN_BYTE - 1; )
+    //print the bulbs in correct order
+        for (int j = BITS_IN_BYTE - 1; j >=0; j--)
+        {
+            print_bulb(CIB[j]);
+        }
+        printf("\n");
+
 }
 
 void print_bulb(int bit)
