@@ -16,9 +16,7 @@ def main():
     with open(FileB, "r") as DataBase:
         reader = csv.DictReader(DataBase)
         header = reader.fieldnames[1:]
-        for rows in reader:
-            database.append(rows)
-
+        
     # TODO: Read DNA sequence file into a variable
     FileD = sys.argv[2]
     with open(FileD, "r") as DNA:
