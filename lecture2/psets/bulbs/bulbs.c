@@ -16,8 +16,8 @@ int main(void)
     for (int i = 0; i < strlen(text); i++)
     {
         //array to store the chars in intger form
-        int chars[BITS_IN_BYTE];
-        for (int)
+        char c = text[i];
+
     }
 }
 
