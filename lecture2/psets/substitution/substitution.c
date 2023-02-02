@@ -54,6 +54,9 @@ int main(int argc, string argv[])
     //encryption loop
     for (int i = 0; i < strlen(Text); i++)
     {
-        for (i)
+        if (isalpha(Text[i]))
+        {
+            if ()
+        }
     }
 }
