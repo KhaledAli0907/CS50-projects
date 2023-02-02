@@ -89,7 +89,10 @@ int main(int argc, string argv[])
 
         // set all elements of status array initially to 0, aka WRONG
         // TODO #4
-        status = 0;
+        for (int i = 0; i < wordsize; i++)
+        {
+            status[i] = 0;
+        }
 
         // Calculate score for the guess
         int score = check_word(guess, wordsize, status, choice);
@@ -134,7 +137,7 @@ int check_word(string guess, int wordsize, int status[], string choice)
 
     // compare guess to choice and score points as appropriate, storing points in status
     // TODO #5
-
+    
     // HINTS
     // iterate over each letter of the guess
         // iterate over each letter of the choice
