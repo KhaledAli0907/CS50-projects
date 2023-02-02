@@ -20,9 +20,11 @@ def main():
     fileDNA = sys.argv[2]
     with open(fileDNA, "r") as fd:
         DNASeq = fd.read()
-    matches = {}
     # TODO: Find longest match of each STR in DNA sequence
-
+    # Dict. to stroe the matches result
+    matches = {}
+    # make Subsequence of headers to pass into longestmatch function
+    SubSeq = list(DataBase[0].keys
 
 
     # TODO: Check database for matching profiles
