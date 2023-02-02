@@ -12,24 +12,30 @@ int main(void)
     // TODO
     //array to store the chars in binary form
     int CIB[BITS_IN_BYTE] = {0};
-    int i = 0;
+
     // promt user for text
     string text = get_string("Message: ");
     // for loop to go through Message
-    for ( ; i < strlen(text); )
+    for ( int i = 0; i < strlen(text); i++)
     {
         // hold the ascii values
         int ascii = text[i++];
         // convert the value to binary
-        CIB[i] = ascii % 2;
-        ascii /= 2;
-    }
-    //print the bulbs in correct order
-        for (int j = BITS_IN_BYTE - 1; j >=0; j--)
+        while (ascii > 0)
         {
-            print_bulb(CIB[j]);
+            CIB[i] = ascii % 2;
+            ascii /= 2;
+        }
+
+
+        for (int x = BITS_IN_BYTE - 1; x >=0; x--)
+        {
+            print_bulb(CIB[x]);
         }
         printf("\n");
+    }
+    //print the bulbs in correct order
+
 
 }
 
