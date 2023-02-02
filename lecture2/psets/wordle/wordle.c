@@ -112,7 +112,7 @@ int main(int argc, string argv[])
 
     // Print the game's result
     // TODO #7
-
+    
     // that's all folks!
     return 0;
 }
@@ -168,9 +168,20 @@ void print_word(string guess, int wordsize, int status[])
 {
     // print word character-for-character with correct color coding, then reset terminal font to normal
     // TODO #6
-    for (int i = 0; i < wordsize; i++)
+    for (int i = 0; i < strlen(guess); i++)
     {
-        
+        for (int j = 0; j < wordsize; j++)
+        {
+            if (guess[i] == statue[i])
+            {
+                printf(GREEN"%c", guess[i] RESET "\n");
+            }
+            else if (guess[j] == statue[i])
+            {
+                printf(YELLOW"%c", guess[j] RESET "\n");
+            }
+        }
+
     }
 
     printf("\n");
