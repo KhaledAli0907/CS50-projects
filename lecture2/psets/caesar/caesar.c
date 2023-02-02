@@ -47,6 +47,7 @@ int main(int argc, string argv[])
                 printf("%c", clower);
             }
         }
+        // print any symbol as it is
         else
         {
             printf("%c", Text[i]);
