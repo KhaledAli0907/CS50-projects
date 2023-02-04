@@ -1,1 +1,1 @@
-SELECT name FROM songs ORDER BY daceability, energy, valance > .75;
+SELECT name FROM songs WHERE daceability > .75 AND energy > .75 AND valance > .75;
