@@ -1,1 +1,1 @@
-SELECT *
+SELECT name from songs ORDER BY duration_ms;
