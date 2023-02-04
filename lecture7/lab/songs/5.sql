@@ -1,1 +1,1 @@
-SELECT energy FROM songs WHERE 
+SELECT AVG(energy) FROM songs;
