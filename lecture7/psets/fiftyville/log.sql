@@ -10,6 +10,13 @@ SELECT name, transcript FROM interviews
 WHERE year = 2021 AND month = 7
 AND day = 28 AND transcript LIKE '%bakery%';
 
+-- See the bakery security logs
+SELECT people.name, people.license_plate FROM people
+JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
+WHERE year = 2021 AND month = 7
+AND day = 28 AND hour = 10
+AND minute BETWEEN 15 and 25 AND activity = 'exit';
+
 -- See the atm trancations
 SELECT name FROM people
 JOIN bank_accounts ON people.id = bank_accounts.person_id
@@ -24,10 +31,6 @@ JOIN phone_calls ON people.phone_number = phone_calls.caller
 WHERE year = 2021 AND month = 7
 AND day = 28 AND duration < 60;
 
--- See the bakery security logs
-SELECT people.name, people.license_plate FROM people
-JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
-WHERE year = 2021 AND month = 7
-AND day = 28 AND hour = 10 AND minute BETWEEN 15 and 25 AND activity = 'exit';
+
 -- Sofia and Kelsey Susbects
 
