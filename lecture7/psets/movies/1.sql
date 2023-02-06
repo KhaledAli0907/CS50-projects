@@ -1,1 +1,1 @@
-SELECT * FROM 
+SELECT title FROM movies;
