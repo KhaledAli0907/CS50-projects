@@ -24,7 +24,7 @@ WHERE year = 2021 AND month = 7
 AND day = 28 AND duration < 60;
 
 -- See the bakery security logs
-SELECT people.name, bakery_security_logs.license_plate FROM people AND 
+SELECT people.name FROM people
 JOIN bakery_security_logs ON people.id = bakery_security_logs.id
 WHERE year = 2021 AND month = 7
 AND day = 28 AND hour = 10;
