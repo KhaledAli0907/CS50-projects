@@ -8,7 +8,7 @@ AND street = 'Humphrey Street';
 -- quarry to read the witnesses interviews
 SELECT name, transcript FROM interviews
 WHERE year = 2021 AND month = 7
-AND day = 28;
+AND day = 28 AND transcript LIKE '%bakery%';
 
 -- See the atm trancations
 SELECT * FROM people
