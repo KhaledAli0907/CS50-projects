@@ -17,4 +17,7 @@ JOIN atm_transactions ON bank_accounts.account_number = atm_transactions.account
 WHERE year = 2021 AND month = 7
 AND day = 28;
 
--- See the phone calls
+-- See the phone calls less than minute
+SELECT caller, receiver FROM phone_calls
+WHERE year = 2021 AND month = 7
+AND day = 28 AND duration = 100;
