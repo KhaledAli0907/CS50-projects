@@ -28,7 +28,7 @@ AND atm_location = 'Leggett Street'
 AND transaction_type = 'withdraw';
 
 -- See the phone calls less than minute
-SELECT people.name FROM people
+SELECT people.name, phone_calls.caller FROM people
 JOIN phone_calls ON people.phone_number = phone_calls.caller
 WHERE year = 2021 AND month = 7
 AND day = 28 AND duration < 60;
