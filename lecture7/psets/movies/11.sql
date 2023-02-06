@@ -1,3 +1,4 @@
+--SQL query to list the five highest rated Chadwick Boseman starred in
 SELECT title FROM movies
 JOIN stars ON movies.id = stars.movie_id
 JOIN ratings ON movies.id = ratings.movie_id
