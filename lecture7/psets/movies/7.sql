@@ -1,1 +1,1 @@
-SELECT 
+SELECT * FROM movies JOIN ratings WHERE movie
