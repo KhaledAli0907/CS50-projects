@@ -1,0 +1,1 @@
+SELECT people.name FROM people join stars ON people.id = start.person_id
