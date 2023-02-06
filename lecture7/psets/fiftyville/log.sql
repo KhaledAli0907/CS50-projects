@@ -9,3 +9,7 @@ AND street = 'Humphrey Street';
 SELECT * FROM interviews
 WHERE year = 2021 AND month = 7
 AND day = 28;
+
+-- See the atm trancation
+SELECT * FROM atm_transactions
+JOIN bank
