@@ -10,8 +10,8 @@ SELECT * FROM interviews
 WHERE year = 2021 AND month = 7
 AND day = 28;
 
--- See the atm trancation
-SELECT name FROM people
+-- See the atm trancations
+SELECT * FROM people
 JOIN bank_accounts ON people.id = bank_accounts.person_id
 JOIN atm_transactions ON bank_accounts.account_number = atm_transactions.account_number
 WHERE year = 2021 AND month = 7
