@@ -18,6 +18,6 @@ WHERE year = 2021 AND month = 7
 AND day = 28;
 
 -- See the phone calls less than minute
-SELECT caller, receiver FROM phone_calls
+SELECT caller, receiver, duration FROM phone_calls
 WHERE year = 2021 AND month = 7
 AND day = 28 AND duration = 100;
