@@ -1,8 +1,8 @@
 -- Keep a log of any SQL queries you execute as you solve the mystery.
 -- Create a Susbect table
 CREATE TABLE susbcets (
-    name TEXT,
-)
+    name TEXT
+);
 
 -- quarry to read the descrption of the Crime
 SELECT description FROM crime_scene_reports
@@ -56,6 +56,7 @@ JOIN flights ON passengers.flight_id = flights.id
 WHERE year = 2021 AND month = 7 AND
 day = 29 AND hour = 8 AND minute = 20
 ORDER BY people.name;
+
 
 -- bruce, diana, iman and luca are suspects
 
