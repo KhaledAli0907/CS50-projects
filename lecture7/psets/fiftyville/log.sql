@@ -80,7 +80,8 @@ WHERE people.name = 'Bruce';
 -- figure out who helped him
 SELECT people.name FROM people
 JOIN phone_calls ON people.phone_number = phone_calls.receiver
-WHERE 
+WHERE year = 2021 AND month = 7
+AND day = 28 AND phone_calls.caller = '(367) 555-5533';
 
 -- bruce, diana, iman and luca are suspects
 
