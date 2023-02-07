@@ -38,5 +38,11 @@ AND day = 28 AND duration < 60;
 -- See the name of the FarmVille airport
 SELECT abbreviation, full_name, city FROM airports;
 
+-- Find the next day's flights
+SELECT airports.city, flights.hour, flights.minute FROM airports
+join flights ON airports.id = flights.origin_airport_id
+WHERE airports.abbreviation = 'CSF' AND year = 2021
+AND month = 7 AND day = 29 ORDER BY flights.hour;
+
 -- bruce, diana, iman and luca are suspects
 
