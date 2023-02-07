@@ -79,7 +79,8 @@ WHERE people.name = 'Bruce';
 
 -- figure out who helped him
 SELECT people.name FROM people
-JOIN phone_calls ON people.id
+JOIN phone_calls ON people.phone_number = phone_calls.receiver
+WHERE 
 
 -- bruce, diana, iman and luca are suspects
 
