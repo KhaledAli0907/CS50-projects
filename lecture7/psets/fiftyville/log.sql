@@ -67,10 +67,13 @@ day = 29 AND hour = 8 AND minute = 20
 ORDER BY people.name;
 
 -- Update the susbicts list
-DELETE FROM susbects WHERE name = 'iman' AND name = 'Diana';
+DELETE FROM susbects WHERE name = 'iman' AND name = 'diana' AND name ='luca';
 
--- the theif's name is bruce
+-- the theif's name is bruce because he's the only one that made a phone call, withdrawed, and booked a ticket within the time period
 -- figure out where did he escape
+SELECT airports.city FROM airports
+JOIN flights ON airports.id = flights.destination_airport_id
+JOIN 
 
 
 -- bruce, diana, iman and luca are suspects
