@@ -44,5 +44,6 @@ join flights ON airports.id = flights.origin_airport_id
 WHERE airports.abbreviation = 'CSF' AND year = 2021
 AND month = 7 AND day = 29 ORDER BY flights.hour;
 
+
 -- bruce, diana, iman and luca are suspects
 
