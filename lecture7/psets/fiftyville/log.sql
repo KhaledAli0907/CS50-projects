@@ -47,7 +47,7 @@ WHERE year = 2021 AND month = 7
 AND day = 28 AND duration < 60;
 
 -- insert into suspects list
-INSERT INTO suspects VALUES (bruce, diana, iman, luca);
+--INSERT INTO suspects VALUES (bruce, diana, iman, luca);
 
 -- See the name of the FarmVille airport
 SELECT abbreviation, full_name, city FROM airports;
@@ -67,7 +67,7 @@ day = 29 AND hour = 8 AND minute = 20
 ORDER BY people.name;
 
 -- Update the suspects list
-DELETE FROM suspects WHERE name = 'iman' AND name = 'diana' AND name ='luca';
+--DELETE FROM suspects WHERE name = 'iman' AND name = 'diana' AND name ='luca';
 
 -- the theif's name is bruce because he's the only one that made a phone call, withdrawed, and booked a ticket within the time period
 -- figure out where did he escape
