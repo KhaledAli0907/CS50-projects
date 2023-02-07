@@ -69,6 +69,9 @@ ORDER BY people.name;
 -- Update the susbicts list
 DELETE FROM susbects WHERE name = 'iman' AND name = 'Diana';
 
+-- the theif's name is bruce
+-- figure out where did he escape
+
 
 -- bruce, diana, iman and luca are suspects
 
