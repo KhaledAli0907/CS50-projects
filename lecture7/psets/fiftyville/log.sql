@@ -1,4 +1,9 @@
 -- Keep a log of any SQL queries you execute as you solve the mystery.
+-- Create a Susbect table
+CREATE TABLE susbcets (
+    name TEXT,
+)
+
 -- quarry to read the descrption of the Crime
 SELECT description FROM crime_scene_reports
 WHERE year = 2021 AND month = 7
@@ -44,6 +49,13 @@ join flights ON airports.id = flights.origin_airport_id
 WHERE airports.abbreviation = 'CSF' AND year = 2021
 AND month = 7 AND day = 29 ORDER BY flights.hour;
 
+-- Find the Passengers names on the 8:20 flight
+SELECT people.name FROM people
+JOIN passengers ON people.passport_number = passengers.passport_number
+JOIN flights ON passengers.flight_id = flights.id
+WHERE year = 2021 AND month = 7 AND
+day = 29 AND hour = 8 AND minute = 20
+ORDER BY people.name;
 
 -- bruce, diana, iman and luca are suspects
 

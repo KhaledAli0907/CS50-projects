@@ -73,3 +73,15 @@
 | Fiftyville | 15   | 20     |
 | Fiftyville | 16   | 0      |
 +------------+------+--------+
++--------+
+|  name  |
++--------+
+| Bruce  |
+| Doris  |
+| Edward |
+| Kelsey |
+| Kenny  |
+| Luca   |
+| Sofia  |
+| Taylor |
++--------+
