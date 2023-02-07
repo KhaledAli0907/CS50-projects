@@ -35,8 +35,8 @@ JOIN phone_calls ON people.phone_number = phone_calls.caller
 WHERE year = 2021 AND month = 7
 AND day = 28 AND duration < 60;
 
--- search for the next day flights where origin airbort is farmville
-SELECT abbreviation, full_name, city FROM airports
+-- See the name of the FarmVille airport
+SELECT abbreviation, full_name, city FROM airports;
 
 -- bruce, diana, iman and luca are suspects
 
