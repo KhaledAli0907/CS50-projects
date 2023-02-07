@@ -77,6 +77,9 @@ JOIN passengers ON flights.id = passengers.flight_id
 JOIN people ON passengers.passport_number = people.passport_number
 WHERE people.name = 'Bruce';
 
+-- figure out who helped him
+SELECT people.name FROM people
+JOIN 
 
 -- bruce, diana, iman and luca are suspects
 
