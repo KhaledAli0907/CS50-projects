@@ -1,5 +1,5 @@
 -- Keep a log of any SQL queries you execute as you solve the mystery.
--- Create a Susbect table
+-- Create a suspects table
 --CREATE TABLE susbcets (
    -- name TEXT
 --);
@@ -47,7 +47,7 @@ WHERE year = 2021 AND month = 7
 AND day = 28 AND duration < 60;
 
 -- insert into susbects list
-INSERT INTO susbects VALUES (bruce, diana, iman, luca);
+INSERT INTO suspects VALUES (bruce, diana, iman, luca);
 
 -- See the name of the FarmVille airport
 SELECT abbreviation, full_name, city FROM airports;
@@ -66,8 +66,8 @@ WHERE year = 2021 AND month = 7 AND
 day = 29 AND hour = 8 AND minute = 20
 ORDER BY people.name;
 
--- Update the susbicts list
-DELETE FROM susbects WHERE name = 'iman' AND name = 'diana' AND name ='luca';
+-- Update the suspects list
+DELETE FROM suspects WHERE name = 'iman' AND name = 'diana' AND name ='luca';
 
 -- the theif's name is bruce because he's the only one that made a phone call, withdrawed, and booked a ticket within the time period
 -- figure out where did he escape
@@ -79,7 +79,7 @@ WHERE people.name = 'Bruce';
 
 -- figure out who helped him
 SELECT people.name FROM people
-JOIN 
+JOIN
 
 -- bruce, diana, iman and luca are suspects
 
