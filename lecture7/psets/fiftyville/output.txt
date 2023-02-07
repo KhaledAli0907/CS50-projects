@@ -48,3 +48,28 @@
 | Kenny   | (826) 555-1652 |
 | Benista | (338) 555-6650 |
 +---------+----------------+
++--------------+-----------------------------------------+---------------+
+| abbreviation |                full_name                |     city      |
++--------------+-----------------------------------------+---------------+
+| ORD          | O'Hare International Airport            | Chicago       |
+| PEK          | Beijing Capital International Airport   | Beijing       |
+| LAX          | Los Angeles International Airport       | Los Angeles   |
+| LGA          | LaGuardia Airport                       | New York City |
+| DFS          | Dallas/Fort Worth International Airport | Dallas        |
+| BOS          | Logan International Airport             | Boston        |
+| DXB          | Dubai International Airport             | Dubai         |
+| CSF          | Fiftyville Regional Airport             | Fiftyville    |
+| HND          | Tokyo International Airport             | Tokyo         |
+| CDG          | Charles de Gaulle Airport               | Paris         |
+| SFO          | San Francisco International Airport     | San Francisco |
+| DEL          | Indira Gandhi International Airport     | Delhi         |
++--------------+-----------------------------------------+---------------+
++------------+------+--------+
+|    city    | hour | minute |
++------------+------+--------+
+| Fiftyville | 8    | 20     |
+| Fiftyville | 9    | 30     |
+| Fiftyville | 12   | 15     |
+| Fiftyville | 15   | 20     |
+| Fiftyville | 16   | 0      |
++------------+------+--------+
