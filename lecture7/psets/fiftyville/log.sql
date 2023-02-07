@@ -46,8 +46,8 @@ JOIN phone_calls ON people.phone_number = phone_calls.receiver
 WHERE year = 2021 AND month = 7
 AND day = 28 AND duration < 60;
 
--- insert into susbects list
-INSERT INTO suspects [(name)] VALUES (bruce, diana, iman, luca);
+-- insert into suspects list
+INSERT INTO suspects VALUES (bruce, diana, iman, luca);
 
 -- See the name of the FarmVille airport
 SELECT abbreviation, full_name, city FROM airports;
