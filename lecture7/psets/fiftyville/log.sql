@@ -57,6 +57,9 @@ WHERE year = 2021 AND month = 7 AND
 day = 29 AND hour = 8 AND minute = 20
 ORDER BY people.name;
 
+-- Update the susbicts list
+UPDATE susbects SET name = bruce, luca
+
 
 -- bruce, diana, iman and luca are suspects
 
