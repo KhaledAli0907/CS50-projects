@@ -67,8 +67,11 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
-    
-    return false;
+    if (name == candidate.name)
+    {
+        candidate.votes++;
+    }
+    else return false;
 }
 
 // Print the winner (or winners) of the election
