@@ -36,6 +36,7 @@ WHERE year = 2021 AND month = 7
 AND day = 28 AND duration < 60;
 
 -- search for the next day flights where origin airbort is farmville
+SELECT 
 
 
 -- bruce, diana, iman and luca are suspects
