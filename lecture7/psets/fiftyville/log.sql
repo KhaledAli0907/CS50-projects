@@ -47,7 +47,7 @@ WHERE year = 2021 AND month = 7
 AND day = 28 AND duration < 60;
 
 -- insert into susbects list
-INSERT INTO suspects VALUES (bruce, diana, iman, luca);
+INSERT INTO suspects (name) VALUES (bruce, diana, iman, luca);
 
 -- See the name of the FarmVille airport
 SELECT abbreviation, full_name, city FROM airports;
@@ -81,7 +81,7 @@ WHERE people.name = 'Bruce';
 SELECT people.name FROM people
 JOIN phone_calls ON people.phone_number = phone_calls.receiver
 WHERE year = 2021 AND month = 7
-AND day = 28 AND phone_calls.caller = '(367) 555-5533';
+AND day = 28 AND duration < 60 AND phone_calls.caller = '(367) 555-5533';
 
--- bruce, diana, iman and luca are suspects
+
 
