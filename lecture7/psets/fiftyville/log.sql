@@ -1,8 +1,8 @@
 -- Keep a log of any SQL queries you execute as you solve the mystery.
 -- Create a Susbect table
-CREATE TABLE susbcets (
-    name TEXT
-);
+--CREATE TABLE susbcets (
+   -- name TEXT
+--);
 
 -- quarry to read the descrption of the Crime
 SELECT description FROM crime_scene_reports
@@ -64,7 +64,7 @@ day = 29 AND hour = 8 AND minute = 20
 ORDER BY people.name;
 
 -- Update the susbicts list
-UPDATE susbects SET name = bruce, luca
+INSERT INTO susbects SET name = bruce, luca ;
 
 
 -- bruce, diana, iman and luca are suspects
