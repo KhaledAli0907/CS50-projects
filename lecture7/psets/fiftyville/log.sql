@@ -75,7 +75,7 @@ SELECT airports.city FROM airports
 JOIN flights ON airports.id = flights.destination_airport_id
 JOIN passengers ON flights.id = passengers.flight_id
 JOIN people ON passengers.passport_number = people.passport_number
-WHERE people.name = 'bruce';
+WHERE people.name = 'Bruce';
 
 
 -- bruce, diana, iman and luca are suspects
