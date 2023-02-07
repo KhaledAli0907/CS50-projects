@@ -73,7 +73,9 @@ DELETE FROM susbects WHERE name = 'iman' AND name = 'diana' AND name ='luca';
 -- figure out where did he escape
 SELECT airports.city FROM airports
 JOIN flights ON airports.id = flights.destination_airport_id
-JOIN 
+JOIN passengers ON flights.id = passengers.flight_id
+JOIN people ON passengers.passport_number = people.passport_number
+WHERE people.name = 'bruce';
 
 
 -- bruce, diana, iman and luca are suspects
