@@ -25,7 +25,7 @@
                     document.querySelector('#feedback1').innerHTML = 'Correct';
                 });
                 document.querySelector('#check').addEventListener('click', function() {
-                    let input = document.querySelector('input');
+                    let input = document.querySelector(toLowerCase('input'));
                     // see if the value is correct
                     if (input.value == 'Russia')
                     {
