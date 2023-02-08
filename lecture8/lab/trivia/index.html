@@ -39,7 +39,23 @@
                         document.querySelector('#feedback2').innerHTML = 'Incorrect';
                     }
                 });
-                ducument.querySelector('check')
+                ducument.querySelector('#check').addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter')
+                    {
+                        let inputraw = document.querySelector('input');
+                        let input = inputraw.value.toLowerCase();
+                        // see if the value is correct
+                        if (input == 'russia')
+                        {
+                            inputraw.style.backgroundColor = 'green';
+                            document.querySelector('#feedback2').innerHTML = 'Correct';
+                        }
+                        else
+                        {
+                            inputraw.style.backgroundColor = 'red';
+                            document.querySelector('#feedback2').innerHTML = 'Incorrect';
+                        }
+                    }
             });
         </script>
     </head>
