@@ -9,6 +9,12 @@
             // TODO: Add code to check answers to questions
             // load the script when the page load
             document.addEventListener('DOMContentLoaded', function() {
+                // turn the correct answers to green
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function() {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#feedback1'.innerHTML = 'Correct')
+                });
                 // turn the incorrect answers to red when clicked
                 let incorrects = document.querySelectorAll('.incorrect');
                 for (let i = 0; i < incorrects.length; i++)
@@ -18,12 +24,7 @@
                         document.querySelector('#feedback1'.innerHTML = 'Incorrect');
                     });
                 }
-                // turn the correct answers to green
-                let correct = document.querySelector('.correct');
-                correct.addEventListener('click', function() {
-                    correct.style.backgroundColor = 'green';
-                    document.querySelector('#feedback1'.innerHTML = 'Correct')
-                });
+
             });
         </script>
     </head>
