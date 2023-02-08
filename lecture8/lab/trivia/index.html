@@ -25,17 +25,16 @@
                     document.querySelector('#feedback1').innerHTML = 'Correct';
                 });
                 document.querySelector('#check').addEventListener('click', function() {
-                    let inputRaw = document.querySelector('input');
-                    let input = toLowerCase(inputRaw.value);
+                    let input = document.querySelector('input');
                     // see if the value is correct
-                    if (input == 'russia')
+                    if (input.value == 'Russia')
                     {
-                        inputRaw.style.backgroundColor = 'green';
+                        input.style.backgroundColor = 'green';
                         document.querySelector('#feedback2').innerHTML = 'Correct';
                     }
                     else
                     {
-                        inputRaw.style.backgroundColor = 'red';
+                        input.style.backgroundColor = 'red';
                         document.querySelector('#feedback2').innerHTML = 'Incorrect';
                     }
                 });
