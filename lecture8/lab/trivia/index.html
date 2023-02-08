@@ -24,12 +24,20 @@
                     correct.style.backgroundColor = 'green';
                     document.querySelector('#feedback1').innerHTML = 'Correct';
                 });
-                let check = document.querySelector('.check');
-                for (let i = 0; i < check.length; i++)
-                {
-                    check[i]
-                }
-
+                document.querySelector('#check').addEventListener('click', function() {
+                    let input = document.querySelector('input');
+                    // see if the value is correct
+                    if (input.value == 'Russia')
+                    {
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#feedback2').innerHTML = 'Correct';
+                    }
+                    else
+                    {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#feedback2').innerHTML = 'Incorrect';
+                    }
+                });
             });
         </script>
     </head>
@@ -59,7 +67,7 @@
                 <!-- TODO: Add free response question here -->
                 <h3>What is the biggest country on earth?</h3>
                 <input type="text"></input>
-                <button class="check">Check answer</button>
+                <button id="check">Check answer</button>
 
                 <p id="feedback2"></p>
 
