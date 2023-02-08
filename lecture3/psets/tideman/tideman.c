@@ -176,25 +176,25 @@ void sort_pairs(void)
 bool HasCycle (int winner, int loser)
 {
     //back tracing the loob
-    while(winner != -1 && winner != loser)
+    while (winner != -1 && winner != loser)
     {
         bool found = false;
         //back tracing and replacing
-        for(int i = 0; i< candidate_count;i++)
+        for (int i = 0; i < candidate_count; i++)
         {
-            if(locked[i][winner])
+            if (locked[i][winner])
             {
                 found = true;
                 winner = i;
             }
         }
         //if we returned to the same spot
-        if(!found)
+        if (!found)
         {
             winner = -1;
         }
     }
-    if(winner==loser)
+    if (winner == loser)
     {
         return true;
     }
@@ -204,9 +204,9 @@ bool HasCycle (int winner, int loser)
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    for(int i = 0; i< candidate_count;i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        if(!HasCycle(pairs[i].winner,pairs[i].loser))
+        if (!HasCycle(pairs[i].winner, pairs[i].loser))
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
         }
@@ -219,10 +219,10 @@ void print_winner(void)
 {
     // TODO
     //finding the source to print it
-    for(int col = 0; col< MAX;col++)
+    for (int col = 0; col < MAX; col++)
     {
         bool FoundSource = true;
-        for(int row = 0; row < MAX; row++)
+        for (int row = 0; row < MAX; row++)
         {
             if(locked[row][col] == true)
             {
@@ -230,9 +230,9 @@ void print_winner(void)
                 break;
             }
         }
-        if(FoundSource)
+        if (FoundSource)
         {
-            printf("The Winner is : %s \n",candidates[col]);
+            printf("The Winner is : %s \n", candidates[col]);
             return;
         }
     }
