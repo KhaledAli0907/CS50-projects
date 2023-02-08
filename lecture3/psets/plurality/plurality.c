@@ -83,6 +83,7 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
+    // decalre a variable to keep track of the top vote
     int TopVote = 0;
     for (int i = 0; i < candidate_count; i++)
     {
