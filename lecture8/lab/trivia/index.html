@@ -10,8 +10,14 @@
             // load the script when the page load
             document.addEventListener('DOMContentLoaded', function(){
                 // turn the incorrect answers to red when clicked
-                document.querySelectorAll(')
-            })
+                let incorrects = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrects.length; i++)
+                {
+                    incorrects[i].addEventListener('click', function(){
+                        incorrects.style.backgroundColor = 'ed';
+                    });
+                }
+            });
         </script>
     </head>
     <body>
