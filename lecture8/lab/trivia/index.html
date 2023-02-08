@@ -13,7 +13,7 @@
                 let correct = document.querySelector('.correct');
                 correct.addEventListener('click', function() {
                     correct.style.backgroundColor = 'green';
-                    document.querySelector('#feedback1'.innerHTML = 'Correct')
+                    document.querySelector('#feedback1').innerHTML = 'Correct';
                 });
                 // turn the incorrect answers to red when clicked
                 let incorrects = document.querySelectorAll('.incorrect');
@@ -21,7 +21,7 @@
                 {
                     incorrects[i].addEventListener('click', function() {
                         incorrects[i].style.backgroundColor = 'red';
-                        document.querySelector('#feedback1'.innerHTML = 'Incorrect');
+                        document.querySelector('#feedback1').innerHTML = 'Incorrect';
                     });
                 }
 
@@ -40,12 +40,12 @@
                 <!-- TODO: Add multiple choice question here -->
                 <h3>What's Egypt's capital name? </h3>
 
-                <button id="incorrect">Dubai</button>
-                <button id="incorrect">Ryad</button>
-                <button id="correct">Cairo</button>
-                <button id="incorrect">NewYork</button>
+                <button class="incorrect">Dubai</button>
+                <button class="incorrect">Ryad</button>
+                <button class="correct">Cairo</button>
+                <button class="incorrect">NewYork</button>
 
-                <p class="feedback1"></p>
+                <p id="feedback1"></p>
             </div>
 
             <div class="section">
