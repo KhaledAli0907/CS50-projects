@@ -10,13 +10,11 @@
     <title>Entry</title>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            let button = document.querySelector('.button');
-            button.addEventListener('click', function(){});
             document.querySelector('#addteams').addEventListener('click', function() {
                 let input1 = document.querySelector('#input1');
                 let input2 = document.querySelector('#input2');
-                document.querySelector('#team1').innerHTML = input1;
-                document.querySelector('#team2').innerHTML = input2;
+                document.querySelector('#team1').innerHTML = input1.value;
+                document.querySelector('#team2').innerHTML = input2.value;
             });
         });
 
@@ -29,8 +27,7 @@
                 <hr>
                 <h3>Team 1: </h3><input type="text" id="input1">
                 <h3>Team 2: </h3><input type="text" id="input2">
-                <p id="team1"></p>
-                <p id="team2"></p>
+
                 <button id="addteams">Add Teams</button>
         </div>
         <table>
