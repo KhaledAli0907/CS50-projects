@@ -13,8 +13,8 @@
         const tbodyEl = document.querySelector("tbody");
         function onAddTeams(e) {
             e.preventDefault();
-            const input1 = document.querySelector('#input1');
-            const input2 = document.querySelector('#input2');
+            const input1 = document.getElementById("input1").value;
+            const input2 = document.getElementById("input2").value;
             tbodyEL.innerHTML += `
             <tr>
                 <td>$(input1)</td>
