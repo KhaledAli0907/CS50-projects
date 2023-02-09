@@ -12,7 +12,8 @@
         document.addEventListener('DOMContentLoaded', function() {
             let button = document.querySelector('.button');
             button.addEventListener('click', function(){});
-            let 
+            let input1 = document.querySelector('#input1');
+            document.querySelector('#team1').innerHTML = input1;
 
         });
 
@@ -23,8 +24,8 @@
             <div class="section">
                 <h2>Names of teams</h2>
                 <hr>
-                <h3>Team 1: </h3><input type="text">
-                <h3>Team 2: </h3><input type="text">
+                <h3>Team 1: </h3><input type="text" id="input1">
+                <h3>Team 2: </h3><input type="text" id="input2">
         </div>
         <table>
             <tr>
