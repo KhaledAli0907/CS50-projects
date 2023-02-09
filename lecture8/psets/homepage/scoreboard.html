@@ -11,16 +11,20 @@
     <script>
         const formEl = document.querySelector("form");
         const tbodyEl = document.querySelector("tbody");
-        function o
-
+        function onAddTeams(e) {
+            e.preventDefault();
+            const input1 = document.querySelector('#input1');
+            const input2 = document.querySelector('#input2');
+            tbodyEL.innerHTML += `
+            <tr>
+                <td>$(input1)</td>
+                <td>$(input2)</td>
+            </tr>
+            `;
+        }
+        formEl.addEventListener('#addtaems', onAddTeams);
 
         document.addEventListener('DOMContentLoaded', function() {
-            document.querySelector('#addteams').addEventListener('click', function() {
-                let input1 = document.querySelector('#input1');
-                let input2 = document.querySelector('#input2');
-                document.querySelector('#team1').innerHTML = input1.value;
-                document.querySelector('#team2').innerHTML = input2.value;
-            });
             // declare varabiles to keep track of the score
             let team1 = 0;
             let team2 = 0;
