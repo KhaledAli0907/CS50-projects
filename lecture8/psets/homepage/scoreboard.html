@@ -12,7 +12,7 @@
 
 
         document.addEventListener('DOMContentLoaded', function() {
-            const formEl = document.querySelector('.form');
+            const formEl = document.querySelector("form");
             const tbodyEl = document.querySelector("tbody");
             function onAddTeams(e) {
                 e.preventDefault();
@@ -44,12 +44,13 @@
     </head>
     <body>
         <h2>Scoreboard</h2>
-        <form class="form">
-            <div class="ask">
+        <form>
+            <div class="input-row">
                 <label>Team 1: </label>
                 <input type="text" id="input1">
-
-                <label>Team 2: </h3>
+            </div>
+            <div class="input-row">
+                <label>Team 2: </label>
                 <input type="text" id="input2">
             </div>
             <button id="addteams">Add Teams</button>
