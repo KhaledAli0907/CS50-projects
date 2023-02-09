@@ -16,6 +16,18 @@
                 document.querySelector('#team1').innerHTML = input1.value;
                 document.querySelector('#team2').innerHTML = input2.value;
             });
+            // declare varabiles to keep track of the score
+            let team1 = 0;
+            let team2 = 0;
+            // listen to click and incrument team scores
+            document.querySelector('#add1').addEventListener('click', function() {
+                team1++;
+                document.querySelector('#score1').innerHTML = team1;
+            });
+            document.querySelector('#add2').addEventListener('click', function() {
+                team2++;
+                document.querySelector('#score2').innerHTML = team2;
+            });
         });
 
     </script>
