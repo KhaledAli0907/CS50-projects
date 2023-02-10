@@ -27,8 +27,8 @@
             let input2Raw = document.querySelector('#input2');
             var input1 = input1Raw.value;
             var input2 = input2Raw.value;
-            
 
+            var counter = 1;
             //Event listner to add teams
             document.querySelector('#addteams').addEventListener('click', function (e) {
                 e.preventDefault();
@@ -36,8 +36,10 @@
                 var newRow = $("<tr>");
                 var cols = '';
 
+                cols += '<th scope="row">' + counter + '</th>';
                 cols += '<td>("#input1")</td>';
                 cols += '<td>("#input2")</td>';
+                cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
                 // insert columns inside a row
                 newRow.append(cols);
 
