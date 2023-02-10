@@ -22,21 +22,25 @@
                 team2++;
                 document.querySelector('#score2').innerHTML = team2;
             });
-        });
-        $(function () {
-            // start counter from the first row to add to the top
-            var counter = 1;
+            $(function () {
+                // start counter from the first row to add to the top
+                var counter = 1;
 
-            $("#addteams").on("click", function (event) {
-                event.preventDefault();
+                $("#addteams").on("click", function (event) {
+                    event.preventDefault();
 
-                var newRow = $("<tr>");
-                var cols = '';
+                    var newRow = $("<tr>");
+                    var cols = '';
+
+                    // table columns
+                    cols += '<th scope
+
+                });
+
 
             });
-
-
         });
+
     </script>
     </head>
     <body>
@@ -79,14 +83,17 @@
                 </thead>
                 <tbody>
                     <tr>
+                        <th scope="row"></th>
                         <td id="score1">0</td>
                         <td id="score2">0</td>
                     </tr>
                     <tr>
                         <td>
+                            <th scope="row"></th>
                             <button id="add1">+1</button>
                         </td>
                         <td>
+                            <th scope="row"></th>
                             <button id="add2">+1</button>
                         </td>
                     </tr>
