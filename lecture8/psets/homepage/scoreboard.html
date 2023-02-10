@@ -22,13 +22,16 @@
                 team2++;
                 document.querySelector('#score2').innerHTML = team2;
             });
+            // query for inputs and hold there values
             let input1Raw = document.querySelector('#input1');
             let input2Raw = document.querySelector('#input2');
             let input1 = input1Raw.value;
-            let input2 = input2Raw.value
-            document.querySelector('addteams').addEventListener('click', function () {
-                
-            })
+            let input2 = input2Raw.value;
+            // Event listner to add teams
+            document.querySelector('#addteams').addEventListener('click', function () {
+                document.querySelector('#team1').innerHTML = input1;
+                document.querySelector('#team2').innerHTML = input2;
+            });
         });
     </script>
     </head>
