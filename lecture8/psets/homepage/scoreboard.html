@@ -10,9 +10,15 @@
     <title>Scoreboard</title>
     <script>
         $(function () {
+            // start counter from the first row to add to the top
             var counter = 1;
 
-            
+            $("#addteams").on("click", function (event) {
+                event.preventDefault();
+
+                var newRow = $("<tr>");
+                var cols = '';
+            });
 
 
         });
