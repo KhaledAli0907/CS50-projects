@@ -30,10 +30,7 @@
             document.querySelector('#add1').addEventListener('click', function() {
                 team1++;
                 document.querySelector('#score1').innerHTML = team1;
-                if (team1 > 10)
-                {
-                    alert("team1 Won");
-                }
+                winner(team1);
             });
             document.querySelector('#add2').addEventListener('click', function() {
                 team2++;
