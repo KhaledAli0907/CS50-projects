@@ -22,27 +22,7 @@
                 team2++;
                 document.querySelector('#score2').innerHTML = team2;
             });
-            $(function () {
-                // start counter from the first row to add to the top
-                var counter = 1;
-
-                $("#addteams").on("click", function (event) {
-                    event.preventDefault();
-                    let input1 =  
-
-                    var newRow = $("<tr>");
-                    var cols = '';
-
-                    // table columns
-                    cols += '<th scope="row">' '</th>'
-                    cols += '<td>
-
-                });
-
-
-            });
         });
-
     </script>
     </head>
     <body>
@@ -85,17 +65,15 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row"></th>
+                        <th scope="row">1</th>
                         <td id="score1">0</td>
                         <td id="score2">0</td>
                     </tr>
                     <tr>
                         <td>
-                            <th scope="row"></th>
                             <button id="add1">+1</button>
                         </td>
                         <td>
-                            <th scope="row"></th>
                             <button id="add2">+1</button>
                         </td>
                     </tr>
