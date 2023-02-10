@@ -23,6 +23,7 @@
                 document.querySelector('#score2').innerHTML = team2;
             });
         });
+        // make function to add rows from the top
         function addrow() {
             // query for inputs and hold there values
             let input1Raw = document.querySelector('#input1');
@@ -39,10 +40,13 @@
             let c2 = row.insertCell(1);
             var c3 = row.insertCell(2);
 
+            // print the inputs into the cells
             c1.innerText = input1;
             c2.innerText = input2;
         }
-        
+
+        // function to calculate the winner
+
 
     </script>
     </head>
@@ -75,7 +79,7 @@
                 <input type="text" id="input2">
             </div>
             <!-- Button to add teams-->
-            <a class="btn btn-primary rounded-0 btn-block" id="insertRow" onclick="addrow()" href="#">Add Teams</a>
+            <a class="btn btn-primary rounded-0 btn-block" id="insertRow" onclick="addrow()" href="#">Submit</a>
         </form>
         <div class="container py-1">
             <div class="row">
