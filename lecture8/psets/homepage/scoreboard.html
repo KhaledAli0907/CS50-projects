@@ -17,6 +17,7 @@
             document.querySelector('#add1').addEventListener('click', function() {
                 team1++;
                 document.querySelector('#score1').innerHTML = team1;
+                winner(team1);
             });
             document.querySelector('#add2').addEventListener('click', function() {
                 team2++;
@@ -54,9 +55,8 @@
             if (team > 10)
             {
                 colum.innerText = 'Won'
-                alert("%)
+                alert(team + "Won");
             }
-
         }
 
     </script>
