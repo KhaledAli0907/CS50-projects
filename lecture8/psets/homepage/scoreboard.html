@@ -9,19 +9,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <title>Scoreboard</title>
     <script>
-        // function to calculate the winner
-        function winner(team) {
-            // store the table element
-            let table = document.getElementById("MainTable");
-
-            let colum = table.rows[3].cells[1];
-            if (team > 10)
-            {
-                colum.innerText = 'Won'
-                alert(team + "Won");
-            }
-        }
-
         document.addEventListener('DOMContentLoaded', function() {
             // declare varabiles to keep track of the score
             let team1 = 0;
@@ -30,7 +17,10 @@
             document.querySelector('#add1').addEventListener('click', function() {
                 team1++;
                 document.querySelector('#score1').innerHTML = team1;
-                winner(team1);
+                if (team1 > 10)
+                {
+                    alert("team1 Won");
+                }
             });
             document.querySelector('#add2').addEventListener('click', function() {
                 team2++;
@@ -63,7 +53,18 @@
             c2.innerText = input2;
         }
 
+        // function to calculate the winner
+        function winner(team) {
+            // store the table element
+            let table = document.getElementById("MainTable");
 
+            let colum = table.rows[3].cells[1];
+            if (team > 10)
+            {
+                colum.innerText = 'Won'
+                alert(team + "Won");
+            }
+        }
 
     </script>
     </head>
