@@ -28,7 +28,8 @@
             let input1 = input1Raw.value;
             let input2 = input2Raw.value;
             // Event listner to add teams
-            document.querySelector('#addteams').addEventListener('click', function () {
+            document.querySelector('#addteams').addEventListener('click', function (event) {
+                event.preventDefault();
                 document.querySelector('#team1').innerHTML = input1;
                 document.querySelector('#team2').innerHTML = input2;
             });
