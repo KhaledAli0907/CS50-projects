@@ -24,4 +24,12 @@ body {
     font-style: italic;
     font-size: 0.85rem;
     color: #aaa;
+    text-align: center;
+}
+
+form {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #aaa;
+    text-align: center;
 }
