@@ -9,21 +9,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <title>Scoreboard</title>
     <script>
-        $(function () {
-            // start counter from the first row to add to the top
-            var counter = 1;
-
-            $("#addteams").on("click", function (event) {
-                event.preventDefault();
-
-                var newRow = $("<tr>");
-                var cols = '';
-            });
-
-
-        });
-
-
         document.addEventListener('DOMContentLoaded', function() {
             // declare varabiles to keep track of the score
             let team1 = 0;
@@ -37,6 +22,20 @@
                 team2++;
                 document.querySelector('#score2').innerHTML = team2;
             });
+        });
+        $(function () {
+            // start counter from the first row to add to the top
+            var counter = 1;
+
+            $("#addteams").on("click", function (event) {
+                event.preventDefault();
+
+                var newRow = $("<tr>");
+                var cols = '';
+                
+            });
+
+
         });
     </script>
     </head>
