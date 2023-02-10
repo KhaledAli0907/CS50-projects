@@ -46,11 +46,16 @@
         }
 
         // function to calculate the winner
-        function winner() {
+        function winner(team) {
             // store the table element
             let table = document.getElementById("MainTable");
 
-            let colum = table.
+            let colum = table.rows[3].cells[1];
+            if (team > 10)
+            {
+                colum.innerText = 'Won'
+                alert("%)
+            }
 
         }
 
