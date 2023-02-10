@@ -17,11 +17,18 @@
             document.querySelector('#add1').addEventListener('click', function() {
                 team1++;
                 document.querySelector('#score1').innerHTML = team1;
-                winner(team1);
+                if (team1 > 10)
+                {
+                    alert("team1 Won");
+                }
             });
             document.querySelector('#add2').addEventListener('click', function() {
                 team2++;
                 document.querySelector('#score2').innerHTML = team2;
+                if (team2 > 10)
+                {
+                    alert("team2 Won");
+                }
             });
         });
         // make function to add rows from the top
