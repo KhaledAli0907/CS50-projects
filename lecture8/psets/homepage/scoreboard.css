@@ -15,8 +15,8 @@ h2 {
 
 body {
     background: #ADD8E6;
-    background: -webkit-linear-gradient(to right, #C7D0EE, #00B4DB);
-    background: linear-gradient(to right, #0083B0, #00B4DB);
+    background: -webkit-linear-gradient(to right, #C7D0EE, #BCD3EE);
+    background: linear-gradient(to right, #C7D0EE, #BCD3EE);
     min-height: 100vh;
 }
 
