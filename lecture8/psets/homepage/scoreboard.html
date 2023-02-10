@@ -27,14 +27,24 @@
             let input2Raw = document.querySelector('#input2');
             var input1 = input1Raw.value;
             var input2 = input2Raw.value;
+            
 
-            //var newRow = $("<tr>");
-            //var cols = '';
-            // Event listner to add teams
+            //Event listner to add teams
             document.querySelector('#addteams').addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector('#team1').innerHTML = input1;
-                document.querySelector('#team2').innerHTML = input2;
+
+                var newRow = $("<tr>");
+                var cols = '';
+
+                cols += '<td>("#input1")</td>';
+                cols += '<td>("#input2")</td>';
+                // insert columns inside a row
+                newRow.append(cols);
+
+                // insert the row inside the table
+                $("table").append(newRow);
+                //document.querySelector('#team1').innerHTML = input1;
+                //document.querySelector('#team2').innerHTML = input2;
             });
         });
     </script>
