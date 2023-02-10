@@ -22,6 +22,13 @@
                 team2++;
                 document.querySelector('#score2').innerHTML = team2;
             });
+            let input1Raw = document.querySelector('#input1');
+            let input2Raw = document.querySelector('#input2');
+            let input1 = input1Raw.value;
+            let input2 = input2Raw.value
+            document.querySelector('addteams').addEventListener('click', function () {
+                
+            })
         });
     </script>
     </head>
@@ -50,7 +57,7 @@
                 <label>Team2: </label>
                 <input type="text" id="input2">
             </div>
-            <!-- Button to add the teams-->
+            <!-- Button to add teams-->
             <button id="addteams" href="#">Add Teams</button>
         </form>
         <div class="container py-1">
