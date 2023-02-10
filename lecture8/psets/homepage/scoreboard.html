@@ -28,25 +28,20 @@
             var input1 = input1Raw.value;
             var input2 = input2Raw.value;
 
-            var counter = 1;
             //Event listner to add teams
-            document.querySelector('#insertRow').addEventListener('click', function (e) {
+            document.querySelector('#insertRow').addEventListener('click', function addrow(e) {
                 e.preventDefault();
+                let table = document.getElementById("MainTable");
+                // insert in index 0
+                let row = table.insertRow(0)
 
-                var newRow = $("<tr>");
-                var cols = '';
+                //create table cells
+                let c1 = row.InsertCell(0);
+                let c2 = row.InsertCell(1);
+                let c3 = row.InsertCell(2);
 
-                cols += '<th scope="row">' + counter + '</th>';
-                cols += '<td>("#input1")</td>';
-                cols += '<td>("#input2")</td>';
-                cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
-                // insert columns inside a row
-                newRow.append(cols);
-
-                // insert the row inside the table
-                $("#MainTable").append(newRow);
-                //document.querySelector('#team1').innerHTML = input1;
-                //document.querySelector('#team2').innerHTML = input2;
+                c2.innerText = input1;
+                c3.innerText = iput2;
             });
         });
     </script>
